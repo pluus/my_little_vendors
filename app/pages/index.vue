@@ -59,7 +59,7 @@
           </p>
           <button
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
-            @click="selectedBusiness = weeklyPick"
+            @click="selectVendor(weeklyPick)"
           >
             자세히 보기
             <svg
@@ -140,13 +140,7 @@
                 : ''
             "
           >
-            <BusinessCard
-              :business="biz"
-              @open="
-                selectedBusiness =
-                  selectedBusiness?.id === biz.id ? null : $event
-              "
-            />
+            <BusinessCard :business="biz" @open="selectVendor($event)" />
           </div>
           <!-- Panel injected after the last card in the clicked card's row -->
           <div v-if="i === panelAfterIndex" class="col-span-full">
@@ -301,9 +295,10 @@ function reset() {
   searchQuery.value = "";
 }
 
-// Scroll to the panel whenever a vendor is selected (works for first open and vendor switching)
-watch(selectedBusiness, async (val) => {
-  if (!val) return;
+// Unified vendor selection — handles scroll for both card clicks and featured banner
+async function selectVendor(biz: Business) {
+  selectedBusiness.value = selectedBusiness.value?.id === biz.id ? null : biz;
+  if (!selectedBusiness.value) return;
   await nextTick();
   setTimeout(() => {
     const el = document.getElementById("business-panel");
@@ -311,7 +306,7 @@ watch(selectedBusiness, async (val) => {
     const top = el.getBoundingClientRect().top + window.scrollY - 88;
     window.scrollTo({ top, behavior: "smooth" });
   }, 80);
-});
+}
 </script>
 
 <style>
