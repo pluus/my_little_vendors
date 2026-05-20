@@ -5,6 +5,20 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=G-BCEGFB9CDG",
+          async: true,
+        },
+        {
+          innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BCEGFB9CDG');`,
+        },
+      ],
+    },
+  },
+
   modules: ["@nuxtjs/tailwindcss"],
 
   tailwindcss: {
