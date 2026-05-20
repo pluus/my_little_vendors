@@ -43,7 +43,7 @@
           </div>
 
           <!-- Avatar row — sibling of carousel so it layers on top without being clipped -->
-          <div class="relative px-6 shrink-0 z-10 -mt-9 mb-0">
+          <div class="relative py-3 px-6 shrink-0 z-10 -mt-9 mb-0">
             <div class="flex items-end gap-3">
               <div
                 class="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white shadow-md shrink-0"
