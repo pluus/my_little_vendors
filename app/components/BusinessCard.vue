@@ -41,17 +41,8 @@
 
     <!-- Card body -->
     <div class="p-4 relative z-10 bg-white">
-      <!-- Avatar + name row -->
+      <!-- Name row -->
       <div class="flex items-start gap-3 mb-2">
-        <div
-          class="w-10 h-10 rounded-2xl overflow-hidden border-2 border-white shadow-sm shrink-0 -mt-7 ring-2 ring-stone-50"
-        >
-          <img
-            :src="business.avatar"
-            :alt="business.name"
-            class="w-full h-full object-cover"
-          />
-        </div>
         <div class="min-w-0 pt-0.5">
           <h3
             class="font-semibold text-stone-900 text-sm leading-tight truncate"

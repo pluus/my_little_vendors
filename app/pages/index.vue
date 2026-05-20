@@ -52,14 +52,14 @@
             이번 주 추천
           </p>
           <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
-            {{ featured[0].name }}
+            {{ weeklyPick.name }}
           </h2>
           <p class="text-stone-500 text-sm mb-5 max-w-xs">
-            {{ featured[0].description }}
+            {{ weeklyPick.description }}
           </p>
           <button
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
-            @click="selectedBusiness = featured[0]"
+            @click="selectedBusiness = weeklyPick"
           >
             자세히 보기
             <svg
@@ -81,8 +81,8 @@
           class="w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shrink-0 shadow-lg"
         >
           <img
-            :src="featured[0].cover"
-            :alt="featured[0].name"
+            :src="weeklyPick.cover"
+            :alt="weeklyPick.name"
             class="w-full h-full object-cover"
           />
         </div>
@@ -201,6 +201,26 @@ const activeCategory = ref(
 );
 const selectedBusiness = ref<Business | null>(null);
 
+// Shuffle (Fisher-Yates) — runs only on mount to avoid SSR hydration mismatch
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const shuffledBusinesses = ref([...businesses]);
+const weeklyPick = ref(businesses.find((b) => b.featured) ?? businesses[0]);
+
+onMounted(() => {
+  shuffledBusinesses.value = shuffle(businesses);
+  const featuredList = businesses.filter((b) => b.featured);
+  weeklyPick.value =
+    featuredList[Math.floor(Math.random() * featuredList.length)];
+});
+
 // Track visible column count to compute panel row position
 const gridCols = ref(1);
 if (import.meta.client) {
@@ -227,8 +247,6 @@ const panelAfterIndex = computed(() => {
   return Math.min(rowEnd, filteredBusinesses.value.length - 1);
 });
 
-const featured = computed(() => businesses.filter((b) => b.featured));
-
 // Weighted relevance score for a single business against the search tokens
 function scoreMatch(b: Business, tokens: string[]): number {
   const name = b.name.toLowerCase();
@@ -248,7 +266,7 @@ function scoreMatch(b: Business, tokens: string[]): number {
 }
 
 const filteredBusinesses = computed(() => {
-  let list = [...businesses];
+  let list = [...shuffledBusinesses.value];
 
   if (activeCategory.value !== "전체") {
     list = list.filter((b) => b.category === activeCategory.value);

@@ -59,15 +59,6 @@
         <div class="flex-1 p-6 sm:p-8 sm:overflow-y-auto sm:max-h-[72vh]">
           <!-- Name row + desktop close -->
           <div class="flex items-start gap-4 mb-5">
-            <div
-              class="w-14 h-14 rounded-2xl overflow-hidden border-2 border-stone-100 shadow-sm shrink-0"
-            >
-              <img
-                :src="business.avatar"
-                :alt="business.name"
-                class="w-full h-full object-cover"
-              />
-            </div>
             <div class="flex-1 min-w-0">
               <h2
                 class="text-xl sm:text-2xl font-bold text-stone-900 leading-tight"

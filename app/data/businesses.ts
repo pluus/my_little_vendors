@@ -3,11 +3,11 @@ import type { Business } from "~/types/business";
 export const businesses: Business[] = [
   {
     id: 1,
-    name: "봉마탱 베이커리",
+    name: "봉마탱 베이커리 [Demo]",
     description:
       "매일 아침 직접 구운 사워도우, 크루아상, 계절 페이스트리. 주말 픽업은 목요일까지 예약해 주세요.",
     category: "음식 & 베이커리",
-    location: "서울, 마포구",
+    location: "Vancouver, Kitsilano",
     tags: ["사워도우", "페이스트리", "글루텐프리 옵션", "예약주문"],
     cover:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
@@ -31,11 +31,11 @@ export const businesses: Business[] = [
   },
   {
     id: 2,
-    name: "Thread & Thyme",
+    name: "Thread & Thyme [Demo]",
     description:
       "손으로 짠 벽 장식, 마크라메 화분 걸이, 맞춤 섬유 예술 작품. 천연 염료로 하나하나 제작되는 유일무이한 작품들.",
     category: "수공예 & 공예",
-    location: "서울, 성수동",
+    location: "Vancouver, Mount Pleasant",
     tags: ["마크라메", "벽 장식", "천연 염료", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
@@ -58,11 +58,11 @@ export const businesses: Business[] = [
   },
   {
     id: 3,
-    name: "솔 스킨 스튜디오",
+    name: "솔 스킨 스튜디오 [Demo]",
     description:
       "소량 제작 식물성 스킨케어 — 유기농 원료로 만든 페이스 오일, 밤, 세럼. 합성 향료 제로.",
     category: "뷰티 & 웰니스",
-    location: "서울, 한남동",
+    location: "Vancouver, South Granville",
     tags: ["유기농", "식물성", "비건", "소량 제작"],
     cover:
       "https://images.unsplash.com/photo-1556228852-6d35a585d566?w=600&q=80",
@@ -86,11 +86,11 @@ export const businesses: Business[] = [
   },
   {
     id: 4,
-    name: "그린 썸 코.",
+    name: "그린 썸 코. [Demo]",
     description:
       "희귀 열대 실내 식물, 맞춤 화분, 초보자를 위한 스타터 키트. 직접 수령 및 지역 배송 가능.",
     category: "식물 & 가드닝",
-    location: "서울, 서대문구",
+    location: "Burnaby, Metrotown",
     tags: ["열대 식물", "희귀 식물", "배송 가능", "스타터 키트"],
     cover:
       "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
@@ -112,11 +112,11 @@ export const businesses: Business[] = [
   },
   {
     id: 5,
-    name: "잉크 앤 폼",
+    name: "잉크 앤 폼 [Demo]",
     description:
       "미니멀 리소그래프 프린트, 일러스트 카드, 맞춤 반려동물 초상화. 전 세계 배송 — 매월 한정판 출시.",
     category: "아트 & 디자인",
-    location: "부산, 해운대구",
+    location: "North Vancouver, Lonsdale",
     tags: ["리소그래프", "프린트", "반려동물 초상화", "한정판"],
     cover:
       "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
@@ -139,11 +139,11 @@ export const businesses: Business[] = [
   },
   {
     id: 6,
-    name: "룸 앤 스티치",
+    name: "룸 앤 스티치 [Demo]",
     description:
       "업사이클 데님, 손 자수 토트백, 개성을 살린 슬로 패션 아이템. 패스트 패션은 절대 없습니다.",
     category: "의류 & 패션",
-    location: "서울, 홍대",
+    location: "Vancouver, Commercial Drive",
     tags: ["업사이클", "자수", "슬로 패션", "데님"],
     cover:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80",
@@ -165,11 +165,11 @@ export const businesses: Business[] = [
   },
   {
     id: 7,
-    name: "하스 앤 홀드",
+    name: "하스 앤 홀드 [Demo]",
     description:
       "손으로 부은 소이 캔들, 세라믹 소품 트레이, 공간에 따뜻함을 더하는 홈 굿즈.",
     category: "홈 & 인테리어",
-    location: "서울, 이태원",
+    location: "Vancouver, Gastown",
     tags: ["소이 캔들", "세라믹", "홈 굿즈", "선물"],
     cover:
       "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
@@ -192,11 +192,11 @@ export const businesses: Business[] = [
   },
   {
     id: 8,
-    name: "포 앤 니트",
+    name: "포 앤 니트 [Demo]",
     description:
       "강아지와 고양이를 위한 맞춤 손뜨개 스웨터, 반다나, 보타이. 사이즈 가이드 제공 — 모두 주문 제작.",
     category: "반려동물",
-    location: "서울, 연남동",
+    location: "Vancouver, Main Street",
     tags: ["강아지", "고양이", "손뜨개", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
@@ -218,11 +218,11 @@ export const businesses: Business[] = [
   },
   {
     id: 9,
-    name: "달콤한 꿈 베이커리",
+    name: "달콤한 꿈 베이커리 [Demo]",
     description:
       "정통 멕시코식 팬 둘세, 트레스 레체스 케이크, 맞춤 기념 케이크. 망원동 직접 수령 가능.",
     category: "음식 & 베이커리",
-    location: "서울, 망원동",
+    location: "Richmond, Steveston",
     tags: ["팬 둘세", "트레스 레체스", "맞춤 케이크", "직접 수령"],
     cover:
       "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&q=80",
@@ -245,11 +245,11 @@ export const businesses: Business[] = [
   },
   {
     id: 10,
-    name: "클레이 아틀리에",
+    name: "클레이 아틀리에 [Demo]",
     description:
       "작은 홈 스튜디오에서 물레로 빚은 석기 머그컵, 그릇, 화병. 일상의 식탁을 위한 기능성 예술.",
     category: "홈 & 인테리어",
-    location: "경기, 성남시",
+    location: "Coquitlam, Burke Mountain",
     tags: ["석기", "물레 성형", "머그컵", "기능성 예술"],
     cover:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80",
@@ -271,11 +271,11 @@ export const businesses: Business[] = [
   },
   {
     id: 11,
-    name: "퍼먼트 앤 플러리시",
+    name: "퍼먼트 앤 플러리시 [Demo]",
     description:
       "수제 콤부차, 김치, 젖산 발효 핫소스. 소량 제작, 대량 생산 없는 건강한 발효 식품.",
     category: "음식 & 베이커리",
-    location: "서울, 서초구",
+    location: "Surrey, Cloverdale",
     tags: ["콤부차", "김치", "발효 식품", "장 건강"],
     cover:
       "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80",
@@ -298,11 +298,11 @@ export const businesses: Business[] = [
   },
   {
     id: 12,
-    name: "블룸 프레스 스튜디오",
+    name: "블룸 프레스 스튜디오 [Demo]",
     description:
       "식물 사이아노타입 프린트와 압화 액자 작품. 자연 속 찰나의 순간을 담은 벽 장식.",
     category: "아트 & 디자인",
-    location: "강원, 춘천시",
+    location: "Port Moody, Inlet Centre",
     tags: ["사이아노타입", "식물 압화", "벽 장식", "액자"],
     cover:
       "https://images.unsplash.com/photo-1490750967868-88df5691cc3e?w=600&q=80",
