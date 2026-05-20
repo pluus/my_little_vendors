@@ -42,8 +42,10 @@
 
       <!-- Nav actions -->
       <nav class="flex items-center gap-2">
-        <NuxtLink
-          to="/submit"
+        <a
+          href="https://forms.gle/5i7Bn9vaF8GYuLnu6"
+          target="_blank"
+          rel="noopener noreferrer"
           class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors"
         >
           <svg
@@ -60,7 +62,7 @@
             />
           </svg>
           내 가게 등록
-        </NuxtLink>
+        </a>
         <!-- Mobile search toggle -->
         <button
           class="sm:hidden p-2 rounded-full hover:bg-stone-100 transition"

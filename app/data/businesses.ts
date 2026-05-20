@@ -15,6 +15,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
       "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&q=80",
     ],
+    hours: "월-턤0 08:00–19:00 · 일 09:00–14:00",
+    website: "https://bonmatinbakery.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
+      "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
     instagram: "bonmatinbakery",
@@ -36,6 +43,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
       "https://images.unsplash.com/photo-1597696929736-6d13bed8e6a8?w=600&q=80",
     ],
+    hours: "화-일 12:00–20:00 · 월 휴무",
+    website: "https://threadandthyme.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1617450365226-9bf28c485e89?w=600&q=80",
+      "https://images.unsplash.com/photo-1598897516650-0a71d4765b18?w=600&q=80",
+      "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     instagram: "threadandthyme",
@@ -55,6 +69,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80",
       "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+    ],
+    hours: "월-금 10:00–18:00 · 주말 예약제",
+    website: "https://solskinstudio.co.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&q=80",
+      "https://images.unsplash.com/photo-1552693673-1bf823388162?w=600&q=80",
+      "https://images.unsplash.com/photo-1598452963314-b09f397a5c48?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
@@ -77,6 +98,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=600&q=80",
       "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80",
     ],
+    hours: "화-일 10:00–19:00 · 월 휴무",
+    website: "https://greenthumbco.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1459156212016-c812468e2115?w=600&q=80",
+      "https://images.unsplash.com/photo-1444318426923-cb2abc3ff966?w=600&q=80",
+      "https://images.unsplash.com/photo-1520302630591-fd1717d9de04?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
     instagram: "greenthumbco",
@@ -95,6 +123,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80",
       "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600&q=80",
+    ],
+    hours: "온라인 스토어 24시간",
+    website: "https://inkandform.art",
+    gallery: [
+      "https://images.unsplash.com/photo-1579965342575-16428a7c8881?w=600&q=80",
+      "https://images.unsplash.com/photo-1502101872923-d48509bff386?w=600&q=80",
+      "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80",
@@ -116,6 +151,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
     ],
+    hours: "화-일 12:00–19:00 · 월 휴무",
+    website: "https://loomandstitch.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     instagram: "loomandstitch",
@@ -134,6 +176,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1608181831718-c9a24f6a26b7?w=600&q=80",
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
+    ],
+    hours: "월-턤0 11:00–20:00 · 일 휴무",
+    website: "https://hearthandhold.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=600&q=80",
+      "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=600&q=80",
+      "https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80",
@@ -155,6 +204,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80",
       "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
     ],
+    hours: "온라인 주문 24시간 · 상담 월-금",
+    website: "https://pawandknit.co.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80",
+      "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&q=80",
+      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&q=80",
     instagram: "pawandknit",
@@ -173,6 +229,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
       "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80",
+    ],
+    hours: "수-일 10:00–18:00 · 월화 휴무",
+    website: "https://dulcedreamsbakery.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80",
+      "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=600&q=80",
+      "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&q=80",
@@ -194,6 +257,13 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
       "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=600&q=80",
     ],
+    hours: "화-턤0 11:00–18:00 · 일월 휴무",
+    website: "https://theclaytelier.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80",
+      "https://images.unsplash.com/photo-1604326531570-1a56be1aff37?w=600&q=80",
+      "https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80",
     instagram: "theclaytelier",
@@ -212,6 +282,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=600&q=80",
       "https://images.unsplash.com/photo-1583394293214-deb5b8f6db43?w=600&q=80",
+    ],
+    hours: "월-턤0 09:00–17:00 · 일 휴무",
+    website: "https://fermentandflourish.kr",
+    gallery: [
+      "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80",
+      "https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=600&q=80",
+      "https://images.unsplash.com/photo-1506802913710-d90dbad888a3?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&q=80",
@@ -232,6 +309,13 @@ export const businesses: Business[] = [
     images: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
       "https://images.unsplash.com/photo-1548460893-2d165c9e3f3e?w=600&q=80",
+    ],
+    hours: "온라인 스토어 · 방문 예약제",
+    website: "https://bloompressstudio.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&q=80",
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80",
+      "https://images.unsplash.com/photo-1519996409144-56c88c17a0e8?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80",

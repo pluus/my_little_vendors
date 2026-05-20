@@ -18,6 +18,7 @@
           <!-- Cover carousel -->
           <div class="relative h-64 sm:h-96 shrink-0 bg-stone-100">
             <ImageCarousel
+              ref="carouselRef"
               :images="[business.cover, ...(business.images ?? [])]"
               :alt="business.name"
               class="w-full h-full"
@@ -67,15 +68,74 @@
           <div class="overflow-y-auto px-6 pb-8 pt-4 flex-1">
             <!-- Category badge -->
             <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium border border-amber-100 mb-4"
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium border border-amber-100 mb-3"
             >
               {{ categoryEmoji(business.category) }} {{ business.category }}
             </span>
+
+            <!-- Hours -->
+            <div
+              v-if="business.hours"
+              class="flex items-center gap-2 text-sm text-stone-500 mb-4"
+            >
+              <svg
+                class="w-4 h-4 text-stone-400 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6l4 2"
+                />
+              </svg>
+              {{ business.hours }}
+            </div>
 
             <!-- Description -->
             <p class="text-stone-600 text-sm leading-relaxed mb-5">
               {{ business.description }}
             </p>
+
+            <!-- Gallery grid -->
+            <div
+              v-if="galleryImages.length > 0"
+              class="grid gap-1.5 rounded-2xl overflow-hidden mb-6"
+              :class="
+                galleryImages.length >= 3
+                  ? 'grid-cols-3 grid-rows-2 h-52'
+                  : 'grid-cols-2 h-36'
+              "
+            >
+              <div
+                class="overflow-hidden cursor-pointer"
+                :class="
+                  galleryImages.length >= 3 ? 'col-span-2 row-span-2' : ''
+                "
+                @click="jumpToSlide(0)"
+              >
+                <img
+                  :src="galleryImages[0]"
+                  :alt="`${business.name} 1`"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div
+                v-for="(src, i) in galleryImages.slice(1)"
+                :key="i"
+                class="overflow-hidden cursor-pointer"
+                @click="jumpToSlide(i + 1)"
+              >
+                <img
+                  :src="src"
+                  :alt="`${business.name} ${i + 2}`"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2 mb-6">
@@ -86,6 +146,29 @@
 
             <!-- Contact links -->
             <div class="flex flex-wrap gap-3">
+              <a
+                v-if="business.website"
+                :href="business.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+              >
+                <svg
+                  class="w-4 h-4 text-sky-400"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                웹사이트
+              </a>
               <a
                 v-if="business.instagram"
                 :href="`https://instagram.com/${business.instagram}`"
@@ -149,8 +232,15 @@
 <script setup lang="ts">
 import type { Business } from "~/types/business";
 
-defineProps<{ business: Business | null }>();
+const props = defineProps<{ business: Business | null }>();
 defineEmits(["close"]);
+
+const carouselRef = ref();
+const galleryImages = computed(() => props.business?.gallery ?? []);
+
+function jumpToSlide(i: number) {
+  carouselRef.value?.goTo(i);
+}
 
 const categoryMap: Record<string, string> = {
   "음식 & 베이커리": "🍞",

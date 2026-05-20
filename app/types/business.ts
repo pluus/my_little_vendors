@@ -7,6 +7,9 @@ export interface Business {
   tags: string[];
   cover: string;
   images?: string[];
+  gallery?: string[];
+  hours?: string;
+  website?: string;
   avatar: string;
   instagram?: string;
   kakao?: string;
