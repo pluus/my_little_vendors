@@ -11,6 +11,10 @@ export const businesses: Business[] = [
     tags: ["사워도우", "페이스트리", "글루텐프리 옵션", "예약주문"],
     cover:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
+      "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
     instagram: "bonmatinbakery",
@@ -27,6 +31,10 @@ export const businesses: Business[] = [
     tags: ["마크라메", "벽 장식", "천연 염료", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
+      "https://images.unsplash.com/photo-1597696929736-6d13bed8e6a8?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     instagram: "threadandthyme",
@@ -42,6 +50,10 @@ export const businesses: Business[] = [
     tags: ["유기농", "식물성", "비건", "소량 제작"],
     cover:
       "https://images.unsplash.com/photo-1556228852-6d35a585d566?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
     instagram: "solskinstudio",
@@ -58,6 +70,10 @@ export const businesses: Business[] = [
     tags: ["열대 식물", "희귀 식물", "배송 가능", "스타터 키트"],
     cover:
       "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=600&q=80",
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
     instagram: "greenthumbco",
@@ -72,6 +88,10 @@ export const businesses: Business[] = [
     tags: ["리소그래프", "프린트", "반려동물 초상화", "한정판"],
     cover:
       "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80",
+      "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80",
     instagram: "inkandform",
@@ -87,6 +107,10 @@ export const businesses: Business[] = [
     tags: ["업사이클", "자수", "슬로 패션", "데님"],
     cover:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     instagram: "loomandstitch",
@@ -101,6 +125,10 @@ export const businesses: Business[] = [
     tags: ["소이 캔들", "세라믹", "홈 굿즈", "선물"],
     cover:
       "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1608181831718-c9a24f6a26b7?w=600&q=80",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80",
     instagram: "hearthandhold",
@@ -116,6 +144,10 @@ export const businesses: Business[] = [
     tags: ["강아지", "고양이", "손뜨개", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80",
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&q=80",
     instagram: "pawandknit",
@@ -130,6 +162,10 @@ export const businesses: Business[] = [
     tags: ["팬 둘세", "트레스 레체스", "맞춤 케이크", "직접 수령"],
     cover:
       "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
+      "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&q=80",
     instagram: "dulcedreams_la",
@@ -145,6 +181,10 @@ export const businesses: Business[] = [
     tags: ["석기", "물레 성형", "머그컵", "기능성 예술"],
     cover:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80",
+      "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80",
     instagram: "theclaytelier",
@@ -159,6 +199,10 @@ export const businesses: Business[] = [
     tags: ["콤부차", "김치", "발효 식품", "장 건강"],
     cover:
       "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=600&q=80",
+      "https://images.unsplash.com/photo-1583394293214-deb5b8f6db43?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&q=80",
     instagram: "fermentflourish",
@@ -174,6 +218,10 @@ export const businesses: Business[] = [
     tags: ["사이아노타입", "식물 압화", "벽 장식", "액자"],
     cover:
       "https://images.unsplash.com/photo-1490750967868-88df5691cc3e?w=600&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+      "https://images.unsplash.com/photo-1548460893-2d165c9e3f3e?w=600&q=80",
+    ],
     avatar:
       "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80",
     instagram: "bloompressstudio",

@@ -15,15 +15,15 @@
         <div
           class="relative bg-white w-full sm:max-w-lg sm:rounded-3xl rounded-t-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
         >
-          <!-- Cover -->
+          <!-- Cover carousel -->
           <div class="relative h-56 sm:h-64 shrink-0 bg-stone-100">
-            <img
-              :src="business.cover"
+            <ImageCarousel
+              :images="[business.cover, ...(business.images ?? [])]"
               :alt="business.name"
-              class="w-full h-full object-cover"
+              class="w-full h-full"
             />
             <button
-              class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/50 transition"
+              class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/50 transition z-10"
               @click="$emit('close')"
             >
               <svg

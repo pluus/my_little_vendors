@@ -6,6 +6,7 @@ export interface Business {
   location: string;
   tags: string[];
   cover: string;
+  images?: string[];
   avatar: string;
   instagram?: string;
   contact?: string;

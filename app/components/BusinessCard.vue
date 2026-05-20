@@ -3,23 +3,22 @@
     class="group bg-white rounded-3xl overflow-hidden border border-stone-100 card-hover cursor-pointer"
     @click="$emit('open', business)"
   >
-    <!-- Cover image -->
+    <!-- Cover carousel -->
     <div class="relative overflow-hidden aspect-[4/3] bg-stone-100">
-      <img
-        :src="business.cover"
+      <ImageCarousel
+        :images="[business.cover, ...(business.images ?? [])]"
         :alt="business.name"
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        loading="lazy"
+        class="w-full h-full"
       />
       <!-- Category badge -->
       <span
-        class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-medium backdrop-blur-sm bg-white/80 text-stone-700 border border-white/60"
+        class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-medium backdrop-blur-sm bg-white/80 text-stone-700 border border-white/60 z-10"
       >
         {{ categoryEmoji(business.category) }} {{ business.category }}
       </span>
       <!-- Favorite button -->
       <button
-        class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors border border-white/60"
+        class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors border border-white/60 z-10"
         @click.stop="toggleFav"
         :aria-label="isFav ? 'Remove from favorites' : 'Add to favorites'"
       >
