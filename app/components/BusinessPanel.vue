@@ -2,6 +2,7 @@
   <Transition name="panel">
     <section
       v-if="business"
+      id="business-panel"
       ref="panelEl"
       class="mt-6 rounded-3xl border border-stone-100 shadow-xl overflow-hidden bg-white"
     >
@@ -223,16 +224,6 @@ defineEmits(["close"]);
 const panelEl = ref<HTMLElement | null>(null);
 const carouselRef = ref();
 const galleryImages = computed(() => props.business?.gallery ?? []);
-
-watch(
-  () => props.business,
-  async (val) => {
-    if (val) {
-      await nextTick();
-      panelEl.value?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-  },
-);
 
 const categoryMap: Record<string, string> = {
   "음식 & 베이커리": "🍞",

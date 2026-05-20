@@ -300,6 +300,18 @@ function reset() {
   activeCategory.value = "전체";
   searchQuery.value = "";
 }
+
+// Scroll to the panel whenever a vendor is selected (works for first open and vendor switching)
+watch(selectedBusiness, async (val) => {
+  if (!val) return;
+  await nextTick();
+  setTimeout(() => {
+    const el = document.getElementById("business-panel");
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 88;
+    window.scrollTo({ top, behavior: "smooth" });
+  }, 80);
+});
 </script>
 
 <style>
