@@ -16,43 +16,16 @@
         </p>
       </div>
       <div>
-        <h4 class="font-medium text-stone-700 mb-3 text-sm">탐색하기</h4>
-        <ul class="space-y-2 text-sm text-stone-500">
-          <li>
-            <NuxtLink to="/" class="hover:text-amber-600 transition-colors"
-              >전체 보기</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/?category=음식 %26 베이커리"
-              class="hover:text-amber-600 transition-colors"
-              >음식 & 베이커리</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/?category=수공예 %26 공예"
-              class="hover:text-amber-600 transition-colors"
-              >수공예 & 공예</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              to="/?category=뷰티 %26 웰니스"
-              class="hover:text-amber-600 transition-colors"
-              >뷰티 & 웰니스</NuxtLink
-            >
-          </li>
-        </ul>
+        <h4 class="font-medium text-stone-700 mb-3 text-sm"></h4>
       </div>
       <div>
         <h4 class="font-medium text-stone-700 mb-3 text-sm">입점 안내</h4>
         <ul class="space-y-2 text-sm text-stone-500">
           <li>
             <NuxtLink
-              to="/submit"
+              to="https://forms.gle/5i7Bn9vaF8GYuLnu6"
               class="hover:text-amber-600 transition-colors"
+              target="_blank"
               >내 가게 등록하기</NuxtLink
             >
           </li>

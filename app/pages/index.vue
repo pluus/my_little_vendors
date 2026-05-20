@@ -129,19 +129,37 @@
       </Transition>
       <div
         v-if="filteredBusinesses.length"
-        class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
       >
-        <div
-          v-for="biz in filteredBusinesses"
-          :key="biz.id"
-          class="break-inside-avoid"
-        >
-          <BusinessCard :business="biz" @open="selectedBusiness = $event" />
-        </div>
+        <template v-for="(biz, i) in filteredBusinesses" :key="biz.id">
+          <div
+            class="rounded-3xl transition-all duration-200"
+            :class="
+              selectedBusiness?.id === biz.id
+                ? 'ring-2 ring-amber-400 ring-offset-2'
+                : ''
+            "
+          >
+            <BusinessCard
+              :business="biz"
+              @open="
+                selectedBusiness =
+                  selectedBusiness?.id === biz.id ? null : $event
+              "
+            />
+          </div>
+          <!-- Panel injected after the last card in the clicked card's row -->
+          <div v-if="i === panelAfterIndex" class="col-span-full">
+            <BusinessPanel
+              :business="selectedBusiness"
+              @close="selectedBusiness = null"
+            />
+          </div>
+        </template>
       </div>
 
       <!-- Empty state -->
-      <div v-else class="text-center py-24">
+      <div v-if="!filteredBusinesses.length" class="text-center py-24">
         <p class="text-4xl mb-4">🔍</p>
         <h3 class="font-semibold text-stone-700 mb-1">검색 결과가 없습니다</h3>
         <p class="text-stone-400 text-sm">
@@ -155,12 +173,6 @@
         </button>
       </div>
     </section>
-
-    <!-- Business detail modal -->
-    <BusinessModal
-      :business="selectedBusiness"
-      @close="selectedBusiness = null"
-    />
   </div>
 </template>
 
@@ -169,7 +181,7 @@ import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
 useHead({
-  title: "my little vendors — 소상공인 타임",
+  title: "My Little Vendors — 우리들의 소상공인",
   meta: [
     {
       name: "description",
@@ -188,6 +200,32 @@ const activeCategory = ref(
     : "전체",
 );
 const selectedBusiness = ref<Business | null>(null);
+
+// Track visible column count to compute panel row position
+const gridCols = ref(1);
+if (import.meta.client) {
+  const updateCols = () => {
+    if (window.innerWidth >= 1024) gridCols.value = 3;
+    else if (window.innerWidth >= 640) gridCols.value = 2;
+    else gridCols.value = 1;
+  };
+  onMounted(() => {
+    updateCols();
+    window.addEventListener("resize", updateCols);
+  });
+  onUnmounted(() => window.removeEventListener("resize", updateCols));
+}
+
+// Index of the last card in the same row as the selected card
+const panelAfterIndex = computed(() => {
+  if (!selectedBusiness.value) return -1;
+  const idx = filteredBusinesses.value.findIndex(
+    (b) => b.id === selectedBusiness.value!.id,
+  );
+  if (idx === -1) return -1;
+  const rowEnd = Math.ceil((idx + 1) / gridCols.value) * gridCols.value - 1;
+  return Math.min(rowEnd, filteredBusinesses.value.length - 1);
+});
 
 const featured = computed(() => businesses.filter((b) => b.featured));
 

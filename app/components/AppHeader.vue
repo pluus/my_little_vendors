@@ -12,7 +12,7 @@
           >m</span
         >
         <span class="font-semibold text-stone-800 text-base tracking-tight"
-          >my little vendors</span
+          >My Little Vendors</span
         >
       </NuxtLink>
 
