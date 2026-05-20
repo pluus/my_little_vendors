@@ -9,7 +9,7 @@
             class="w-7 h-7 rounded-lg bg-amber-400 flex items-center justify-center text-white font-bold text-xs"
             >m</span
           >
-          <span class="font-semibold text-stone-800">my little vendors</span>
+          <span class="font-semibold text-stone-800">My Little Vendors</span>
         </div>
         <p class="text-stone-500 text-sm leading-relaxed">
           우리 동네 소상공인과 홈비즈니스를 발견하고 응원하세요.

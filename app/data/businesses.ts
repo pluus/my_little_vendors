@@ -15,7 +15,7 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
       "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&q=80",
     ],
-    hours: "월-턤0 08:00–19:00 · 일 09:00–14:00",
+    hours: "월-금0 08:00–19:00 · 일 09:00–14:00",
     website: "https://bonmatinbakery.kr",
     gallery: [
       "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
@@ -38,17 +38,17 @@ export const businesses: Business[] = [
     location: "Vancouver, Mount Pleasant",
     tags: ["마크라메", "벽 장식", "천연 염료", "주문 제작"],
     cover:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
     images: [
-      "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
-      "https://images.unsplash.com/photo-1597696929736-6d13bed8e6a8?w=600&q=80",
+      "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80",
+      "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&q=80",
     ],
-    hours: "화-일 12:00–20:00 · 월 휴무",
-    website: "https://threadandthyme.com",
+    hours: "월-금0 08:00–19:00 · 일 09:00–14:00",
+    website: "https://bonmatinbakery.kr",
     gallery: [
-      "https://images.unsplash.com/photo-1617450365226-9bf28c485e89?w=600&q=80",
-      "https://images.unsplash.com/photo-1598897516650-0a71d4765b18?w=600&q=80",
-      "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+      "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
+      "https://images.unsplash.com/photo-1517433367423-c7e5b0f35086?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
@@ -177,7 +177,7 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1608181831718-c9a24f6a26b7?w=600&q=80",
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
     ],
-    hours: "월-턤0 11:00–20:00 · 일 휴무",
+    hours: "월-금0 11:00–20:00 · 일 휴무",
     website: "https://hearthandhold.com",
     gallery: [
       "https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=600&q=80",
@@ -283,7 +283,7 @@ export const businesses: Business[] = [
       "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=600&q=80",
       "https://images.unsplash.com/photo-1583394293214-deb5b8f6db43?w=600&q=80",
     ],
-    hours: "월-턤0 09:00–17:00 · 일 휴무",
+    hours: "월-금 09:00–17:00 · 일 휴무",
     website: "https://fermentandflourish.kr",
     gallery: [
       "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80",
@@ -305,7 +305,7 @@ export const businesses: Business[] = [
     location: "Port Moody, Inlet Centre",
     tags: ["사이아노타입", "식물 압화", "벽 장식", "액자"],
     cover:
-      "https://images.unsplash.com/photo-1490750967868-88df5691cc3e?w=600&q=80",
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&q=80",
     images: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
       "https://images.unsplash.com/photo-1548460893-2d165c9e3f3e?w=600&q=80",
@@ -315,7 +315,9 @@ export const businesses: Business[] = [
     gallery: [
       "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600&q=80",
       "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80",
-      "https://images.unsplash.com/photo-1519996409144-56c88c17a0e8?w=600&q=80",
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80",
+
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80",
     ],
     avatar:
       "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80",
