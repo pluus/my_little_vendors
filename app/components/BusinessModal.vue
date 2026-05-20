@@ -13,10 +13,10 @@
         />
 
         <div
-          class="relative bg-white w-full sm:max-w-lg sm:rounded-3xl rounded-t-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
+          class="relative bg-white w-full sm:max-w-4xl sm:rounded-3xl rounded-t-3xl overflow-hidden shadow-2xl max-h-[90vh] sm:h-[85vh] flex flex-col"
         >
           <!-- Cover carousel -->
-          <div class="relative h-56 sm:h-64 shrink-0 bg-stone-100">
+          <div class="relative h-64 sm:h-96 shrink-0 bg-stone-100">
             <ImageCarousel
               :images="[business.cover, ...(business.images ?? [])]"
               :alt="business.name"
@@ -42,12 +42,11 @@
             </button>
           </div>
 
-          <!-- Scrollable body -->
-          <div class="overflow-y-auto px-6 pb-8 pt-0">
-            <!-- Avatar row -->
-            <div class="flex items-end gap-3 -mt-6 mb-4">
+          <!-- Avatar row — sibling of carousel so it layers on top without being clipped -->
+          <div class="relative px-6 shrink-0 z-10 -mt-9 mb-0">
+            <div class="flex items-end gap-3">
               <div
-                class="w-16 h-16 rounded-2xl overflow-hidden border-4 border-white shadow-md shrink-0"
+                class="w-20 h-20 rounded-2xl overflow-hidden border-4 border-white shadow-md shrink-0"
               >
                 <img
                   :src="business.avatar"
@@ -56,13 +55,16 @@
                 />
               </div>
               <div class="pb-1">
-                <h2 class="text-lg font-bold text-stone-900 leading-tight">
+                <h2 class="text-xl font-bold text-stone-900 leading-tight">
                   {{ business.name }}
                 </h2>
                 <p class="text-sm text-stone-400">{{ business.location }}</p>
               </div>
             </div>
+          </div>
 
+          <!-- Scrollable body -->
+          <div class="overflow-y-auto px-6 pb-8 pt-4 flex-1">
             <!-- Category badge -->
             <span
               class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium border border-amber-100 mb-4"
