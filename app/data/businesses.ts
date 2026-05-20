@@ -3,12 +3,12 @@ import type { Business } from "~/types/business";
 export const businesses: Business[] = [
   {
     id: 1,
-    name: "Bon Matin Bakery",
+    name: "봉마탱 베이커리",
     description:
-      "Freshly baked sourdough, croissants, and seasonal pastries made at home every morning. Order by Thursday for weekend pickup.",
-    category: "Food & Bakery",
-    location: "Brooklyn, NY",
-    tags: ["sourdough", "pastries", "gluten-free option", "pre-order"],
+      "매일 아침 직접 구운 사워도우, 크루아상, 계절 페이스트리. 주말 픽업은 목요일까지 예약해 주세요.",
+    category: "음식 & 베이커리",
+    location: "서울, 마포구",
+    tags: ["사워도우", "페이스트리", "글루텐프리 옵션", "예약주문"],
     cover:
       "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
     avatar:
@@ -21,10 +21,10 @@ export const businesses: Business[] = [
     id: 2,
     name: "Thread & Thyme",
     description:
-      "Handwoven wall hangings, macramé planters, and custom fiber art. Each piece is one-of-a-kind, woven with natural dyes.",
-    category: "Handmade & Crafts",
-    location: "Portland, OR",
-    tags: ["macramé", "wall art", "natural dyes", "custom orders"],
+      "손으로 짠 벽 장식, 마크라메 화분 걸이, 맞춤 섬유 예술 작품. 천연 염료로 하나하나 제작되는 유일무이한 작품들.",
+    category: "수공예 & 공예",
+    location: "서울, 성수동",
+    tags: ["마크라메", "벽 장식", "천연 염료", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
     avatar:
@@ -34,12 +34,12 @@ export const businesses: Business[] = [
   },
   {
     id: 3,
-    name: "Sol Skin Studio",
+    name: "솔 스킨 스튜디오",
     description:
-      "Small-batch botanical skincare — face oils, balms, and serums crafted with organic ingredients and zero synthetic fragrance.",
-    category: "Beauty & Wellness",
-    location: "Austin, TX",
-    tags: ["organic", "botanical", "vegan", "small-batch"],
+      "소량 제작 식물성 스킨케어 — 유기농 원료로 만든 페이스 오일, 밤, 세럼. 합성 향료 제로.",
+    category: "뷰티 & 웰니스",
+    location: "서울, 한남동",
+    tags: ["유기농", "식물성", "비건", "소량 제작"],
     cover:
       "https://images.unsplash.com/photo-1556228852-6d35a585d566?w=600&q=80",
     avatar:
@@ -50,12 +50,12 @@ export const businesses: Business[] = [
   },
   {
     id: 4,
-    name: "Green Thumb Co.",
+    name: "그린 썸 코.",
     description:
-      "Rare tropical houseplants, custom planters, and curated starter kits for beginners. Local pickup and metro delivery available.",
-    category: "Plants & Garden",
-    location: "Chicago, IL",
-    tags: ["tropical plants", "rare finds", "delivery", "starter kits"],
+      "희귀 열대 실내 식물, 맞춤 화분, 초보자를 위한 스타터 키트. 직접 수령 및 지역 배송 가능.",
+    category: "식물 & 가드닝",
+    location: "서울, 서대문구",
+    tags: ["열대 식물", "희귀 식물", "배송 가능", "스타터 키트"],
     cover:
       "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
     avatar:
@@ -64,12 +64,12 @@ export const businesses: Business[] = [
   },
   {
     id: 5,
-    name: "Ink & Form",
+    name: "잉크 앤 폼",
     description:
-      "Minimalist risograph prints, illustrated cards, and custom pet portraits. Ships worldwide — limited edition drops monthly.",
-    category: "Art & Design",
-    location: "Seattle, WA",
-    tags: ["risograph", "prints", "pet portraits", "limited edition"],
+      "미니멀 리소그래프 프린트, 일러스트 카드, 맞춤 반려동물 초상화. 전 세계 배송 — 매월 한정판 출시.",
+    category: "아트 & 디자인",
+    location: "부산, 해운대구",
+    tags: ["리소그래프", "프린트", "반려동물 초상화", "한정판"],
     cover:
       "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
     avatar:
@@ -79,12 +79,12 @@ export const businesses: Business[] = [
   },
   {
     id: 6,
-    name: "Loom & Stitch",
+    name: "룸 앤 스티치",
     description:
-      "Upcycled denim, hand-embroidered tote bags, and slow-fashion pieces that celebrate individuality. No fast fashion, ever.",
-    category: "Clothing & Fashion",
-    location: "Los Angeles, CA",
-    tags: ["upcycled", "embroidery", "slow fashion", "denim"],
+      "업사이클 데님, 손 자수 토트백, 개성을 살린 슬로 패션 아이템. 패스트 패션은 절대 없습니다.",
+    category: "의류 & 패션",
+    location: "서울, 홍대",
+    tags: ["업사이클", "자수", "슬로 패션", "데님"],
     cover:
       "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80",
     avatar:
@@ -93,12 +93,12 @@ export const businesses: Business[] = [
   },
   {
     id: 7,
-    name: "Hearth & Hold",
+    name: "하스 앤 홀드",
     description:
-      "Hand-poured soy candles, ceramic catch-alls, and cozy home goods designed to bring warmth to every room.",
-    category: "Home & Decor",
-    location: "Nashville, TN",
-    tags: ["soy candles", "ceramics", "home goods", "gifts"],
+      "손으로 부은 소이 캔들, 세라믹 소품 트레이, 공간에 따뜻함을 더하는 홈 굿즈.",
+    category: "홈 & 인테리어",
+    location: "서울, 이태원",
+    tags: ["소이 캔들", "세라믹", "홈 굿즈", "선물"],
     cover:
       "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
     avatar:
@@ -108,12 +108,12 @@ export const businesses: Business[] = [
   },
   {
     id: 8,
-    name: "Paw & Knit",
+    name: "포 앤 니트",
     description:
-      "Custom hand-knitted sweaters, bandanas, and bow ties for dogs and cats. Sizing guide available — every piece is made to order.",
-    category: "Pets",
-    location: "Denver, CO",
-    tags: ["dogs", "cats", "handknit", "made to order"],
+      "강아지와 고양이를 위한 맞춤 손뜨개 스웨터, 반다나, 보타이. 사이즈 가이드 제공 — 모두 주문 제작.",
+    category: "반려동물",
+    location: "서울, 연남동",
+    tags: ["강아지", "고양이", "손뜨개", "주문 제작"],
     cover:
       "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
     avatar:
@@ -122,12 +122,12 @@ export const businesses: Business[] = [
   },
   {
     id: 9,
-    name: "Dulce Dreams",
+    name: "달콤한 꿈 베이커리",
     description:
-      "Authentic Mexican pan dulce, tres leches cakes, and custom celebration cakes. Available for local pickup in East LA.",
-    category: "Food & Bakery",
-    location: "Los Angeles, CA",
-    tags: ["pan dulce", "tres leches", "custom cakes", "pickup"],
+      "정통 멕시코식 팬 둘세, 트레스 레체스 케이크, 맞춤 기념 케이크. 망원동 직접 수령 가능.",
+    category: "음식 & 베이커리",
+    location: "서울, 망원동",
+    tags: ["팬 둘세", "트레스 레체스", "맞춤 케이크", "직접 수령"],
     cover:
       "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=600&q=80",
     avatar:
@@ -137,12 +137,12 @@ export const businesses: Business[] = [
   },
   {
     id: 10,
-    name: "The Clay Atelier",
+    name: "클레이 아틀리에",
     description:
-      "Wheel-thrown stoneware mugs, bowls, and vases fired in a tiny home studio. Functional art for your everyday table.",
-    category: "Home & Decor",
-    location: "Asheville, NC",
-    tags: ["stoneware", "wheel-thrown", "mugs", "functional art"],
+      "작은 홈 스튜디오에서 물레로 빚은 석기 머그컵, 그릇, 화병. 일상의 식탁을 위한 기능성 예술.",
+    category: "홈 & 인테리어",
+    location: "경기, 성남시",
+    tags: ["석기", "물레 성형", "머그컵", "기능성 예술"],
     cover:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80",
     avatar:
@@ -151,12 +151,12 @@ export const businesses: Business[] = [
   },
   {
     id: 11,
-    name: "Ferment & Flourish",
+    name: "퍼먼트 앤 플러리시",
     description:
-      "Artisan kombucha, kimchi, and lacto-fermented hot sauces. Gut-friendly goods made in small batches, never mass produced.",
-    category: "Food & Bakery",
-    location: "San Francisco, CA",
-    tags: ["kombucha", "kimchi", "fermented", "gut health"],
+      "수제 콤부차, 김치, 젖산 발효 핫소스. 소량 제작, 대량 생산 없는 건강한 발효 식품.",
+    category: "음식 & 베이커리",
+    location: "서울, 서초구",
+    tags: ["콤부차", "김치", "발효 식품", "장 건강"],
     cover:
       "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80",
     avatar:
@@ -166,12 +166,12 @@ export const businesses: Business[] = [
   },
   {
     id: 12,
-    name: "Bloom Press Studio",
+    name: "블룸 프레스 스튜디오",
     description:
-      "Botanical cyanotype prints and pressed flower art framed for your walls. Every print captures a fleeting moment in nature.",
-    category: "Art & Design",
-    location: "Burlington, VT",
-    tags: ["cyanotype", "botanicals", "pressed flowers", "wall art"],
+      "식물 사이아노타입 프린트와 압화 액자 작품. 자연 속 찰나의 순간을 담은 벽 장식.",
+    category: "아트 & 디자인",
+    location: "강원, 춘천시",
+    tags: ["사이아노타입", "식물 압화", "벽 장식", "액자"],
     cover:
       "https://images.unsplash.com/photo-1490750967868-88df5691cc3e?w=600&q=80",
     avatar:
@@ -181,13 +181,13 @@ export const businesses: Business[] = [
 ];
 
 export const categories = [
-  "All",
-  "Food & Bakery",
-  "Handmade & Crafts",
-  "Beauty & Wellness",
-  "Plants & Garden",
-  "Art & Design",
-  "Clothing & Fashion",
-  "Home & Decor",
-  "Pets",
+  "전체",
+  "음식 & 베이커리",
+  "수공예 & 공예",
+  "뷰티 & 웰니스",
+  "식물 & 가드닝",
+  "아트 & 디자인",
+  "의류 & 패션",
+  "홈 & 인테리어",
+  "반려동물",
 ];

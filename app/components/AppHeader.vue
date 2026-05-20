@@ -34,7 +34,7 @@
           <input
             v-model="search"
             type="text"
-            placeholder="Search businesses…"
+            placeholder="가게 검색…"
             class="w-full pl-9 pr-4 py-2 text-sm rounded-full border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-transparent placeholder:text-stone-400 transition"
             @input="$emit('search', search)"
           />
@@ -60,7 +60,7 @@
               d="M12 4v16m8-8H4"
             />
           </svg>
-          List your business
+          내 가게 등록
         </NuxtLink>
         <!-- Mobile search toggle -->
         <button
@@ -103,7 +103,7 @@
           <input
             v-model="search"
             type="text"
-            placeholder="Search businesses…"
+            placeholder="가게 검색…"
             class="w-full pl-9 pr-4 py-2.5 text-sm rounded-full border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-transparent placeholder:text-stone-400 transition"
             @input="$emit('search', search)"
           />

@@ -1,21 +1,20 @@
 <template>
-  <NuxtLayout>
+  <div>
     <!-- Hero -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
       <div
         class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-100 text-amber-700 text-xs font-medium mb-5"
       >
-        🛍️ Discover independent businesses near you
+        🛒️ 당신 주변의 소상공인을 발견해보세요
       </div>
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
-        Shop small.<br />
-        <span class="text-amber-400">Support local.</span>
+        작은 가게를,<br />
+        <span class="text-amber-400">함께 응원해요.</span>
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
-        Browse handpicked small businesses and home entrepreneurs — real people
-        making real things.
+        직접 발굴한 소상공인과 홈비즈니스 — 진짜 사람들이 만들는 진짜 물건들.
       </p>
     </section>
 
@@ -40,7 +39,7 @@
 
     <!-- Featured banner (only when All selected) -->
     <section
-      v-if="activeCategory === 'All' && !searchQuery"
+      v-if="activeCategory === '전체' && !searchQuery"
       class="max-w-6xl mx-auto px-4 sm:px-6 mb-10"
     >
       <div
@@ -50,7 +49,7 @@
           <p
             class="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2"
           >
-            Featured this week
+            이번 주 추천
           </p>
           <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
             {{ featured[0].name }}
@@ -62,7 +61,7 @@
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
             @click="selectedBusiness = featured[0]"
           >
-            View business
+            자세히 보기
             <svg
               class="w-3.5 h-3.5"
               fill="none"
@@ -108,15 +107,15 @@
       <!-- Empty state -->
       <div v-else class="text-center py-24">
         <p class="text-4xl mb-4">🔍</p>
-        <h3 class="font-semibold text-stone-700 mb-1">No results found</h3>
+        <h3 class="font-semibold text-stone-700 mb-1">검색 결과가 없습니다</h3>
         <p class="text-stone-400 text-sm">
-          Try a different search or browse all categories.
+          다른 검색어를 사용하거나 전체 카테고리를 탐색해보세요.
         </p>
         <button
           class="mt-4 text-sm text-amber-600 hover:underline"
           @click="reset"
         >
-          Clear filters
+          필터 초기화
         </button>
       </div>
     </section>
@@ -126,7 +125,7 @@
       :business="selectedBusiness"
       @close="selectedBusiness = null"
     />
-  </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -134,12 +133,12 @@ import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
 useHead({
-  title: "my little vendors — Discover Small Businesses",
+  title: "my little vendors — 소상공인 타임",
   meta: [
     {
       name: "description",
       content:
-        "Browse handpicked small businesses and home entrepreneurs. Support local, shop small.",
+        "직접 발굴한 소상공인과 홈비즈니스를 둘러보세요. 작은 가게를 응원해주세요.",
     },
   ],
 });
@@ -148,7 +147,7 @@ const route = useRoute();
 const activeCategory = ref(
   categories.includes(route.query.category as string)
     ? (route.query.category as string)
-    : "All",
+    : "전체",
 );
 const searchQuery = ref("");
 const selectedBusiness = ref<Business | null>(null);
