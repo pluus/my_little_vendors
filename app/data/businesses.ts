@@ -18,6 +18,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
     instagram: "bonmatinbakery",
+    kakao: "https://open.kakao.com/o/sBonMatin",
     contact: "hello@bonmatin.com",
     featured: true,
   },
@@ -38,6 +39,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
     instagram: "threadandthyme",
+    kakao: "https://open.kakao.com/o/sTdThyme",
     featured: true,
   },
   {
@@ -57,6 +59,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80",
     instagram: "solskinstudio",
+    kakao: "https://open.kakao.com/o/sSolSkin",
     contact: "sol@solskin.co",
     featured: true,
   },
@@ -77,6 +80,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80",
     instagram: "greenthumbco",
+    kakao: "https://open.kakao.com/o/sGrnThmb",
   },
   {
     id: 5,
@@ -95,6 +99,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80",
     instagram: "inkandform",
+    kakao: "https://open.kakao.com/o/sInkForm",
     contact: "hello@inkandform.art",
   },
   {
@@ -114,6 +119,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
     instagram: "loomandstitch",
+    kakao: "https://open.kakao.com/o/sLoomStch",
   },
   {
     id: 7,
@@ -132,6 +138,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80",
     instagram: "hearthandhold",
+    kakao: "https://open.kakao.com/o/sHrthHold",
     contact: "shop@hearthandhold.com",
   },
   {
@@ -151,6 +158,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&q=80",
     instagram: "pawandknit",
+    kakao: "https://open.kakao.com/o/sPawKnit",
   },
   {
     id: 9,
@@ -169,6 +177,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&q=80",
     instagram: "dulcedreams_la",
+    kakao: "https://open.kakao.com/o/sDulceDrm",
     contact: "orders@dulcedreams.com",
   },
   {
@@ -188,6 +197,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80",
     instagram: "theclaytelier",
+    kakao: "https://open.kakao.com/o/sClayAtl",
   },
   {
     id: 11,
@@ -206,6 +216,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&q=80",
     instagram: "fermentflourish",
+    kakao: "https://open.kakao.com/o/sFrmntFl",
     contact: "hi@fermentflourish.com",
   },
   {
@@ -225,6 +236,7 @@ export const businesses: Business[] = [
     avatar:
       "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80",
     instagram: "bloompressstudio",
+    kakao: "https://open.kakao.com/o/sBlmPrss",
   },
 ];
 

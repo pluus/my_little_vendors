@@ -9,6 +9,7 @@ export interface Business {
   images?: string[];
   avatar: string;
   instagram?: string;
+  kakao?: string;
   contact?: string;
   featured?: boolean;
 }

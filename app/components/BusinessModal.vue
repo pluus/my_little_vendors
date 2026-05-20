@@ -85,13 +85,13 @@
             </div>
 
             <!-- Contact links -->
-            <div class="grid grid-cols-2 gap-3">
+            <div class="flex flex-wrap gap-3">
               <a
                 v-if="business.instagram"
                 :href="`https://instagram.com/${business.instagram}`"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+                class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
               >
                 <svg
                   class="w-4 h-4 text-rose-400"
@@ -105,9 +105,23 @@
                 인스타그램
               </a>
               <a
+                v-if="business.kakao"
+                :href="business.kakao"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-[#FEE500]/20 hover:border-[#FEE500] transition-colors"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#3A1D1D">
+                  <path
+                    d="M12 3C6.477 3 2 6.589 2 11c0 2.843 1.738 5.355 4.377 6.882-.193.702-.7 2.54-.8 2.937-.124.483.178.478.374.347.155-.103 2.456-1.664 3.449-2.34.517.072 1.05.11 1.6.11 5.523 0 10-3.589 10-8s-4.477-8-10-8z"
+                  />
+                </svg>
+                카카오톡
+              </a>
+              <a
                 v-if="business.contact"
                 :href="`mailto:${business.contact}`"
-                class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+                class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
               >
                 <svg
                   class="w-4 h-4 text-amber-400"
