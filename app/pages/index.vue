@@ -144,12 +144,12 @@ useHead({
 });
 
 const route = useRoute();
+const searchQuery = useSearch();
 const activeCategory = ref(
   categories.includes(route.query.category as string)
     ? (route.query.category as string)
     : "전체",
 );
-const searchQuery = ref("");
 const selectedBusiness = ref<Business | null>(null);
 
 const featured = computed(() => businesses.filter((b) => b.featured));
@@ -157,7 +157,7 @@ const featured = computed(() => businesses.filter((b) => b.featured));
 const filteredBusinesses = computed(() => {
   let list = businesses;
 
-  if (activeCategory.value !== "All") {
+  if (activeCategory.value !== "전체") {
     list = list.filter((b) => b.category === activeCategory.value);
   }
 
@@ -176,7 +176,7 @@ const filteredBusinesses = computed(() => {
 });
 
 function reset() {
-  activeCategory.value = "All";
+  activeCategory.value = "전체";
   searchQuery.value = "";
 }
 </script>

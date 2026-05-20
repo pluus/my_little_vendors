@@ -36,7 +36,6 @@
             type="text"
             placeholder="가게 검색…"
             class="w-full pl-9 pr-4 py-2 text-sm rounded-full border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-transparent placeholder:text-stone-400 transition"
-            @input="$emit('search', search)"
           />
         </div>
       </div>
@@ -105,7 +104,6 @@
             type="text"
             placeholder="가게 검색…"
             class="w-full pl-9 pr-4 py-2.5 text-sm rounded-full border border-stone-200 bg-stone-50 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:border-transparent placeholder:text-stone-400 transition"
-            @input="$emit('search', search)"
           />
         </div>
       </div>
@@ -114,9 +112,7 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(["search"]);
-
-const search = ref("");
+const search = useSearch();
 const mobileSearch = ref(false);
 </script>
 
