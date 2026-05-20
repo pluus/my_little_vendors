@@ -2,19 +2,15 @@
   <div>
     <!-- Hero -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
-      <div
-        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-100 text-amber-700 text-xs font-medium mb-5"
-      >
-        🛒️ 당신 주변의 소상공인을 발견해보세요
-      </div>
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
-        작은 가게를,<br />
+        이웃주민의 작은 가게를,<br />
         <span class="text-amber-400">함께 응원해요.</span>
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
-        직접 발굴한 소상공인과 홈비즈니스 — 진짜 사람들이 만들는 진짜 물건들.
+        직접 발굴한 소상공인과 홈비즈니스<br />— 진짜 사람들이 만들는 진짜
+        물건들.
       </p>
     </section>
 
