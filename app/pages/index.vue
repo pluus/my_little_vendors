@@ -91,6 +91,42 @@
 
     <!-- Grid -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+      <!-- Result count / active query badge -->
+      <Transition name="fade">
+        <div
+          v-if="debouncedSearch.trim()"
+          class="flex items-center justify-between mb-5"
+        >
+          <p class="text-sm text-stone-500">
+            <span class="font-semibold text-stone-800"
+              >{{ filteredBusinesses.length }}개</span
+            >
+            결과 &middot;
+            <span class="text-amber-600"
+              >&ldquo;{{ debouncedSearch }}&rdquo;</span
+            >
+          </p>
+          <button
+            class="inline-flex items-center gap-1 text-xs text-stone-400 hover:text-stone-700 transition-colors"
+            @click="searchQuery = ''"
+          >
+            <svg
+              class="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+            검색 초기화
+          </button>
+        </div>
+      </Transition>
       <div
         v-if="filteredBusinesses.length"
         class="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5"
@@ -145,6 +181,7 @@ useHead({
 
 const route = useRoute();
 const searchQuery = useSearch();
+const debouncedSearch = useDebouncedSearch(150);
 const activeCategory = ref(
   categories.includes(route.query.category as string)
     ? (route.query.category as string)
@@ -154,25 +191,53 @@ const selectedBusiness = ref<Business | null>(null);
 
 const featured = computed(() => businesses.filter((b) => b.featured));
 
+// Weighted relevance score for a single business against the search tokens
+function scoreMatch(b: Business, tokens: string[]): number {
+  const name = b.name.toLowerCase();
+  const desc = b.description.toLowerCase();
+  const loc = b.location.toLowerCase();
+  const tags = b.tags.map((t) => t.toLowerCase());
+
+  return tokens.reduce((total, token) => {
+    let s = 0;
+    if (name.includes(token)) s += 10;
+    if (tags.some((t) => t === token)) s += 6;
+    else if (tags.some((t) => t.includes(token))) s += 3;
+    if (loc.includes(token)) s += 4;
+    if (desc.includes(token)) s += 1;
+    return total + s;
+  }, 0);
+}
+
 const filteredBusinesses = computed(() => {
-  let list = businesses;
+  let list = [...businesses];
 
   if (activeCategory.value !== "전체") {
     list = list.filter((b) => b.category === activeCategory.value);
   }
 
-  if (searchQuery.value.trim()) {
-    const q = searchQuery.value.toLowerCase();
-    list = list.filter(
-      (b) =>
-        b.name.toLowerCase().includes(q) ||
-        b.description.toLowerCase().includes(q) ||
-        b.tags.some((t) => t.toLowerCase().includes(q)) ||
-        b.location.toLowerCase().includes(q),
-    );
-  }
+  const raw = debouncedSearch.value.trim();
+  if (!raw) return list;
 
-  return list;
+  // Tokenize on whitespace — AND logic: every token must match somewhere
+  const tokens = raw.toLowerCase().split(/\s+/).filter(Boolean);
+
+  list = list.filter((b) => {
+    const name = b.name.toLowerCase();
+    const desc = b.description.toLowerCase();
+    const loc = b.location.toLowerCase();
+    const tags = b.tags.map((t) => t.toLowerCase());
+    return tokens.every(
+      (token) =>
+        name.includes(token) ||
+        desc.includes(token) ||
+        loc.includes(token) ||
+        tags.some((t) => t.includes(token)),
+    );
+  });
+
+  // Sort by descending relevance score
+  return list.sort((a, b) => scoreMatch(b, tokens) - scoreMatch(a, tokens));
 });
 
 function reset() {
@@ -188,5 +253,13 @@ function reset() {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
