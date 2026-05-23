@@ -5,7 +5,7 @@
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
-        이웃주민의 작은 가게를,<br />
+        <span class="mb-5 inline-block">이웃주민의 작은 가게를,</span><br />
         <span class="text-amber-400">함께 응원해요.</span>
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
