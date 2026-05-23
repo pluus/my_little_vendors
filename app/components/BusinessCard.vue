@@ -84,17 +84,16 @@ function toggleFav() {
 }
 
 const categoryMap: Record<string, string> = {
-  "음식 & 베이커리": "🍞",
-  "수공예 & 공예": "🧵",
-  "뷰티 & 웰니스": "✨",
-  "식물 & 가드닝": "🌿",
-  "아트 & 디자인": "🎨",
-  "의류 & 패션": "👗",
-  "홈 & 인테리어": "🏡",
-  반려동물: "🐾",
+  "음식 & 베이커리": "",
+  "수공예 & 공예": "",
+  "뷰티 & 웰니스": "",
+  "식물 & 가드닝": "",
+  "아트 & 디자인": "",
+  "의류 & 패션": "",
+  "홈 & 인테리어": "",
 };
 
 function categoryEmoji(cat: string) {
-  return categoryMap[cat] ?? "🛍️";
+  return categoryMap[cat] ?? "️";
 }
 </script>

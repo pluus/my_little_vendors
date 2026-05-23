@@ -208,7 +208,9 @@ onMounted(() => {
   shuffledBusinesses.value = shuffle(businesses);
   const featuredList = businesses.filter((b) => b.featured);
   weeklyPick.value =
-    featuredList[Math.floor(Math.random() * featuredList.length)];
+    featuredList.length > 0
+      ? featuredList[Math.floor(Math.random() * featuredList.length)]
+      : businesses[0];
 });
 
 // Track visible column count to compute panel row position

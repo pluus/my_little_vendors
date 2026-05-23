@@ -9,10 +9,10 @@ export interface Business {
   images?: string[];
   gallery?: string[];
   hours?: string;
+  phone?: string;
   website?: string;
-  avatar: string;
   instagram?: string;
   kakao?: string;
   contact?: string;
-  featured?: boolean;
+  isPlaceholder: boolean;
 }
