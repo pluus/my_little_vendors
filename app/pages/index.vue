@@ -265,7 +265,10 @@ const filteredBusinesses = computed(() => {
   }
 
   const raw = debouncedSearch.value.trim();
-  if (!raw) return list;
+  if (!raw)
+    return list.sort(
+      (a, b) => Number(a.isPlaceholder) - Number(b.isPlaceholder),
+    );
 
   // Tokenize on whitespace — AND logic: every token must match somewhere
   const tokens = raw.toLowerCase().split(/\s+/).filter(Boolean);
@@ -284,8 +287,12 @@ const filteredBusinesses = computed(() => {
     );
   });
 
-  // Sort by descending relevance score
-  return list.sort((a, b) => scoreMatch(b, tokens) - scoreMatch(a, tokens));
+  // Sort by descending relevance score, non-placeholders always first
+  return list.sort((a, b) => {
+    const placeholderDiff = Number(a.isPlaceholder) - Number(b.isPlaceholder);
+    if (placeholderDiff !== 0) return placeholderDiff;
+    return scoreMatch(b, tokens) - scoreMatch(a, tokens);
+  });
 });
 
 function reset() {

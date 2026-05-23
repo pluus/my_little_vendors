@@ -6,7 +6,7 @@ export const businesses: Business[] = [
     name: "원 플러밍",
     description:
       "캐네디언 레드실 플러머자격증을 갖춘 플러밍 서비스, 하우스 누수, 키친싱크 막힘, 메인드인 막힘 등의 서비스 제공",
-    category: "홈 서비스",
+    category: "배관",
     location: "써리, 포트코퀴틀람, 코퀴틀람, 랭리, 포트무디",
     tags: ["플러밍", "누수 수리", "키친싱크 막힘", "메인드레인", "배관"],
     cover: "/images/1/cover.jpg",
@@ -16,7 +16,8 @@ export const businesses: Business[] = [
     phone: "604-475-4759",
     gallery: [],
     kakao: "plumbing",
-    contact: "/canada@plumber.co.kr",
+    email: "canada@plumber.co.kr",
+    featured: true,
     isPlaceholder: false,
   },
   {
@@ -25,14 +26,27 @@ export const businesses: Business[] = [
     description:
       "Athena Fencing Club은 2022년에 단순한 목표와 함께 설립되었습니다. 우리는 세계적인 수준의 코칭을 가족 같은 분위기의 클럽에 담아내고자 했습니다. 오늘날 우리의 코치들은 버나비 전역의 어린이, 청소년, 성인들을 지도하며, 모든 펜서들이 실력, 자신감, 그리고 인격 면에서 함께 성장할 수 있도록 돕고 있습니다.",
     category: "운동",
-    location: "Burnaby",
+    location: "버나비",
     tags: ["펜싱", "스포츠", "코칭", "클럽"],
     cover: "/images/2/cover.jpg",
-    images: ["/images/2/1.jpg", "/images/2/2.jpg"],
+    images: [
+      "/images/2/1.jpg",
+      "/images/2/2.jpg",
+      "/images/2/3.jpg",
+      "/images/2/4.jpg",
+      "/images/2/5.jpg",
+    ],
     website: "https://www.athenafencingclub.com/",
     phone: "604-200-7533",
-    gallery: ["/images/2/1.jpg", "/images/2/2.jpg", "/images/2/3.jpg"],
+    gallery: [
+      "/images/2/1.jpg",
+      "/images/2/2.jpg",
+      "/images/2/3.jpg",
+      "/images/2/4.jpg",
+      "/images/2/5.jpg",
+    ],
     kakao: "athenafencing",
+    featured: true,
     isPlaceholder: false,
   },
   {
@@ -41,7 +55,7 @@ export const businesses: Business[] = [
     description:
       "홈/스몰 비즈니스를 운영중이세요? 여기에 무료로 광고하세요! 저희가 도와드릴게요!",
     category: "미정",
-    location: "Vancouver",
+    location: "밴쿠버",
     tags: [],
     cover: "https://placehold.co/600x400",
     images: [],
@@ -50,7 +64,7 @@ export const businesses: Business[] = [
     gallery: [],
     instagram: "",
     kakao: "",
-    contact: "",
+    email: "",
     isPlaceholder: true,
   },
   {
@@ -68,7 +82,7 @@ export const businesses: Business[] = [
     gallery: [],
     instagram: "",
     kakao: "",
-    contact: "",
+    email: "",
     isPlaceholder: true,
   },
   {
@@ -86,7 +100,7 @@ export const businesses: Business[] = [
     gallery: [],
     instagram: "",
     kakao: "",
-    contact: "",
+    email: "",
     isPlaceholder: true,
   },
   {
@@ -104,7 +118,7 @@ export const businesses: Business[] = [
     gallery: [],
     instagram: "",
     kakao: "",
-    contact: "",
+    email: "",
     isPlaceholder: true,
   },
 ];

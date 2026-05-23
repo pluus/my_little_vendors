@@ -9,11 +9,11 @@ export interface Business {
   images?: string[];
   gallery?: string[];
   hours?: string;
-  phone?: string;
   website?: string;
   instagram?: string;
   kakao?: string;
-  contact?: string;
+  email?: string;
+  phone?: string;
   featured?: boolean;
   isPlaceholder: boolean;
 }
