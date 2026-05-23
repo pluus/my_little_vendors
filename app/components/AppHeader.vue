@@ -61,7 +61,7 @@
               d="M12 4v16m8-8H4"
             />
           </svg>
-          내 가게 등록
+          내 가게 "무료" 등록
         </a>
         <!-- Mobile search toggle -->
         <button

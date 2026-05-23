@@ -34,7 +34,7 @@
               to="https://forms.gle/5i7Bn9vaF8GYuLnu6"
               class="hover:text-amber-600 transition-colors"
               target="_blank"
-              >내 가게 등록하기</NuxtLink
+              >내 가게 무료 등록하기</NuxtLink
             >
           </li>
           <li>
