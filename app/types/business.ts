@@ -14,5 +14,6 @@ export interface Business {
   instagram?: string;
   kakao?: string;
   contact?: string;
+  featured?: boolean;
   isPlaceholder: boolean;
 }
