@@ -39,22 +39,26 @@
       class="max-w-6xl mx-auto px-4 sm:px-6 mb-10"
     >
       <div
-        class="rounded-3xl bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 border border-amber-100 px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-center gap-6"
+        class="rounded-3xl bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 border border-amber-100 px-8 sm:px-12 py-10 flex flex-col sm:flex-row items-center gap-8"
       >
         <div class="flex-1 text-center sm:text-left">
           <p
-            class="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-2"
+            class="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-3"
           >
             이번 주 추천
           </p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-stone-900 leading-tight tracking-tight mb-3"
+          >
             {{ weeklyPick.name }}
           </h2>
-          <p class="text-stone-500 text-sm mb-5 max-w-xs">
+          <p
+            class="text-stone-500 text-sm sm:text-base leading-relaxed mb-6 max-w-sm"
+          >
             {{ weeklyPick.description }}
           </p>
           <button
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-700 transition-colors"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white text-sm font-semibold hover:bg-stone-700 transition-colors shadow-sm"
             @click="selectVendor(weeklyPick)"
           >
             자세히 보기
@@ -74,7 +78,7 @@
           </button>
         </div>
         <div
-          class="w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden shrink-0 shadow-lg"
+          class="w-56 h-56 sm:w-72 sm:h-72 rounded-3xl overflow-hidden shrink-0 shadow-xl"
         >
           <img
             :src="weeklyPick.cover"
@@ -202,15 +206,14 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 const shuffledBusinesses = ref([...businesses]);
-const weeklyPick = ref(businesses.find((b) => b.featured) ?? businesses[0]);
+const realBusinesses = businesses.filter((b) => !b.isPlaceholder);
+const weeklyPick = ref(realBusinesses[0] ?? businesses[0]);
 
 onMounted(() => {
   shuffledBusinesses.value = shuffle(businesses);
-  const featuredList = businesses.filter((b) => b.featured);
+  const pool = businesses.filter((b) => !b.isPlaceholder);
   weeklyPick.value =
-    featuredList.length > 0
-      ? featuredList[Math.floor(Math.random() * featuredList.length)]
-      : businesses[0];
+    pool[Math.floor(Math.random() * pool.length)] ?? businesses[0];
 });
 
 // Track visible column count to compute panel row position
