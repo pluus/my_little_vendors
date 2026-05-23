@@ -6,9 +6,9 @@ export const businesses: Business[] = [
     name: "원 플러밍",
     description:
       "캐네디언 레드실 플러머자격증을 갖춘 플러밍 서비스, 하우스 누수, 키친싱크 막힘, 메인드인 막힘 등의 서비스 제공",
-    category: "배관",
+    category: "플러밍",
     location: "써리, 포트코퀴틀람, 코퀴틀람, 랭리, 포트무디",
-    tags: ["플러밍", "누수 수리", "키친싱크 막힘", "메인드레인", "배관"],
+    tags: ["플러밍", "누수 수리", "키친싱크 막힘", "메인드레인"],
     cover: "/images/1/cover.jpg",
     images: [],
     hours: "주 7일 8AM ~ 3PM, 이후시간은 이머젼시 콜만 운영",
@@ -123,14 +123,4 @@ export const businesses: Business[] = [
   },
 ];
 
-export const categories = [
-  "전체",
-  "음식 & 베이커리",
-  "수공예 & 공예",
-  "뷰티 & 웰니스",
-  "식물 & 가드닝",
-  "아트 & 디자인",
-  "의류 & 패션",
-  "홈 & 인테리어",
-  "반려동물",
-];
+export const categories = ["전체", "플러밍", "운동"];

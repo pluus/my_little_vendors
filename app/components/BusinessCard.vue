@@ -12,7 +12,7 @@
       />
       <!-- Category badge -->
       <span
-        class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-medium backdrop-blur-sm bg-white/80 text-stone-700 border border-white/60 z-10"
+        class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs text-stone-500 border border-stone-300 bg-white z-10"
       >
         {{ business.category }}
       </span>
@@ -36,6 +36,17 @@
       <p class="text-sm text-stone-500 leading-relaxed line-clamp-2 mb-3">
         {{ business.description }}
       </p>
+
+      <!-- Tags -->
+      <div v-if="business.tags?.length" class="flex flex-wrap gap-1.5">
+        <span
+          v-for="tag in business.tags.slice(0, 3)"
+          :key="tag"
+          class="px-2.5 py-1 rounded-full text-xs text-stone-500 border border-stone-300 bg-white"
+        >
+          {{ tag }}
+        </span>
+      </div>
     </div>
   </article>
 </template>

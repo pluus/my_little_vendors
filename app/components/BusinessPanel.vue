@@ -144,7 +144,10 @@
                   />
                 </svg>
               </div>
-              {{ business.phone }}
+              <span class="min-w-0">
+                <span class="block text-xs text-stone-400">전화번호</span>
+                <span class="block truncate">{{ business.phone }}</span>
+              </span>
             </a>
             <a
               v-if="business.email"
@@ -168,74 +171,91 @@
                   />
                 </svg>
               </div>
-              {{ business.email }}
+              <span class="min-w-0">
+                <span class="block text-xs text-stone-400">이메일</span>
+                <span class="block truncate">{{ business.email }}</span>
+              </span>
             </a>
-          </div>
-
-          <!-- Description -->
-          <p class="text-stone-600 text-sm leading-relaxed mb-6">
-            {{ business.description }}
-          </p>
-
-          <!-- Action buttons -->
-          <div class="flex flex-wrap gap-3">
             <a
               v-if="business.website"
               :href="business.website"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+              class="flex items-center gap-3 text-sm text-stone-600 hover:text-stone-900 transition-colors group"
             >
-              <svg
-                class="w-4 h-4 text-sky-400"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
+              <div
+                class="w-8 h-8 rounded-xl bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center shrink-0 transition-colors"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                />
-              </svg>
-              웹사이트
+                <svg
+                  class="w-4 h-4 text-stone-500"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+              </div>
+              <span class="min-w-0">
+                <span class="block text-xs text-stone-400">웹사이트</span>
+                <span class="block truncate">{{ business.website }}</span>
+              </span>
             </a>
             <a
               v-if="business.instagram"
               :href="`https://instagram.com/${business.instagram}`"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-stone-50 transition-colors"
+              class="flex items-center gap-3 text-sm text-stone-600 hover:text-stone-900 transition-colors group"
             >
-              <svg
-                class="w-4 h-4 text-rose-400"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+              <div
+                class="w-8 h-8 rounded-xl bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center shrink-0 transition-colors"
               >
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
-                />
-              </svg>
-              인스타그램
+                <svg
+                  class="w-4 h-4 text-stone-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                  />
+                </svg>
+              </div>
+              @{{ business.instagram }}
             </a>
             <button
               v-if="business.kakao"
               type="button"
-              class="flex-1 min-w-28 flex items-center justify-center gap-2 py-2.5 px-4 rounded-2xl border border-stone-200 text-sm font-medium text-stone-700 hover:bg-[#FEE500]/20 hover:border-[#FEE500] transition-colors"
+              class="flex items-center gap-3 text-sm text-stone-600 hover:text-stone-900 transition-colors group"
               @click="copyKakao(business.kakao)"
             >
-              <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="#3A1D1D">
-                <path
-                  d="M12 3C6.477 3 2 6.589 2 11c0 2.843 1.738 5.355 4.377 6.882-.193.702-.7 2.54-.8 2.937-.124.483.178.478.374.347.155-.103 2.456-1.664 3.449-2.34.517.072 1.05.11 1.6.11 5.523 0 10-3.589 10-8s-4.477-8-10-8z"
-                />
-              </svg>
-              <span class="truncate">{{
-                kakioCopied ? "복사됨!" : business.kakao
-              }}</span>
+              <div
+                class="w-8 h-8 rounded-xl bg-stone-100 group-hover:bg-stone-200 flex items-center justify-center shrink-0 transition-colors"
+              >
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 3C6.477 3 2 6.589 2 11c0 2.843 1.738 5.355 4.377 6.882-.193.702-.7 2.54-.8 2.937-.124.483.178.478.374.347.155-.103 2.456-1.664 3.449-2.34.517.072 1.05.11 1.6.11 5.523 0 10-3.589 10-8s-4.477-8-10-8z"
+                  />
+                </svg>
+              </div>
+              <span class="min-w-0 text-left">
+                <span class="block text-xs text-stone-400">카카오톡 ID</span>
+                <span class="block truncate">{{
+                  kakioCopied ? "복사됨!" : business.kakao
+                }}</span>
+              </span>
             </button>
           </div>
+
+          <!-- Description -->
+          <p class="text-stone-600 text-sm leading-relaxed">
+            {{ business.description }}
+          </p>
         </div>
       </div>
     </section>

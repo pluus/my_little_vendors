@@ -6,7 +6,7 @@
   >
     <!-- Slides strip -->
     <div
-      class="flex h-full transition-transform duration-300 ease-out will-change-transform"
+      class="flex w-full h-full transition-transform duration-300 ease-out will-change-transform"
       :style="{ transform: `translateX(-${current * 100}%)` }"
     >
       <div v-for="(src, i) in images" :key="i" class="w-full h-full shrink-0">
