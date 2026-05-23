@@ -14,6 +14,15 @@
       </p>
     </section>
 
+    <!-- Preview image -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
+      <img
+        src="/images/preview/thumbnail.png"
+        alt="My Little Vendors preview"
+        class="w-full rounded-3xl"
+      />
+    </section>
+
     <!-- Category filter -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
       <div class="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
@@ -30,62 +39,6 @@
         >
           {{ cat }}
         </button>
-      </div>
-    </section>
-
-    <!-- Featured banner (only when All selected) -->
-    <section
-      v-if="activeCategory === '전체' && !searchQuery"
-      class="max-w-6xl mx-auto px-4 sm:px-6 mb-10"
-    >
-      <div
-        class="rounded-3xl bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 border border-amber-100 px-8 sm:px-12 py-10 flex flex-col sm:flex-row items-center gap-8"
-      >
-        <div class="flex-1 text-center sm:text-left">
-          <p
-            class="text-xs font-semibold text-amber-600 uppercase tracking-widest mb-3"
-          >
-            이번 주 추천
-          </p>
-          <h2
-            class="text-3xl sm:text-4xl font-bold text-stone-900 leading-tight tracking-tight mb-3"
-          >
-            {{ weeklyPick.name }}
-          </h2>
-          <p
-            class="text-stone-500 text-sm sm:text-base leading-relaxed mb-6 max-w-sm"
-          >
-            {{ weeklyPick.description }}
-          </p>
-          <button
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white text-sm font-semibold hover:bg-stone-700 transition-colors shadow-sm"
-            @click="selectVendor(weeklyPick)"
-          >
-            자세히 보기
-            <svg
-              class="w-3.5 h-3.5"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="w-56 h-56 sm:w-72 sm:h-72 rounded-3xl overflow-hidden shrink-0 shadow-xl"
-        >
-          <img
-            :src="weeklyPick.cover"
-            :alt="weeklyPick.name"
-            class="w-full h-full object-cover"
-          />
-        </div>
       </div>
     </section>
 
