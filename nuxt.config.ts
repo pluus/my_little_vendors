@@ -23,6 +23,14 @@ export default defineNuxtConfig({
           content:
             "https://my-little-vendors.vercel.app/images/preview/thumbnail.png",
         },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:width", content: "1536" },
+        { property: "og:image:height", content: "1024" },
+        {
+          property: "og:image:secure_url",
+          content:
+            "https://my-little-vendors.vercel.app/images/preview/thumbnail.png",
+        },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "My Little Vendors" },
         {
