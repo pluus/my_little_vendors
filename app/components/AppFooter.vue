@@ -11,8 +11,16 @@
           >
           <span class="font-semibold text-stone-800">My Little Vendors</span>
         </div>
-        <p class="text-stone-500 text-sm leading-relaxed">
+        <p class="text-stone-500 text-sm leading-relaxed mb-3">
           우리 동네 소상공인과 홈비즈니스를 발견하고 응원하세요.
+        </p>
+        <p class="text-stone-500 text-sm leading-relaxed">
+          문의:
+          <a
+            href="mailto:mylittlevendors@gmail.com"
+            class="text-amber-600 hover:underline"
+            >mylittlevendors@gmail.com</a
+          >
         </p>
       </div>
       <div>
