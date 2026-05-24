@@ -9,8 +9,7 @@
         <span class="text-amber-400">함께 응원해요.</span>
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
-        직접 발굴한 소상공인과 홈비즈니스<br />— 진짜 사람들이 만들는 진짜
-        물건들.
+        우리 이웃이 제공하는 특별한 서비스!
       </p>
     </section>
 
