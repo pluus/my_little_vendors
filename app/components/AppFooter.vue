@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-24 border-t border-stone-100 bg-white">
     <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-3 gap-8"
+      class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-2 gap-8"
     >
       <div>
         <div class="flex items-center gap-2 mb-3">
@@ -22,9 +22,6 @@
             >mylittlevendors@gmail.com</a
           >
         </p>
-      </div>
-      <div>
-        <h4 class="font-medium text-stone-700 mb-3 text-sm"></h4>
       </div>
       <div>
         <h4 class="font-medium text-stone-700 mb-3 text-sm">입점 안내</h4>

@@ -11,6 +11,35 @@
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
         우리 이웃이 제공하는 특별한 서비스!
       </p>
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <a
+          href="#listings"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-stone-900 hover:bg-stone-700 text-white text-sm font-medium transition-colors"
+        >
+          가게 둘러보기
+          <svg
+            class="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://forms.gle/5i7Bn9vaF8GYuLnu6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-200 hover:border-amber-400 text-stone-600 hover:text-amber-600 text-sm font-medium transition-colors"
+        >
+          무료로 내 가게 등록
+        </a>
+      </div>
     </section>
 
     <!-- Preview image -->
@@ -42,7 +71,7 @@
     </section>
 
     <!-- Grid -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+    <section id="listings" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
       <!-- Result count / active query badge -->
       <Transition name="fade">
         <div
