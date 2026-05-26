@@ -3,7 +3,7 @@
     class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-100"
   >
     <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4"
+      class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4"
     >
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2 shrink-0">

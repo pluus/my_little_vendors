@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
@@ -43,7 +43,7 @@
     </section>
 
     <!-- Preview image -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
       <img
         src="/images/preview/thumbnail.png"
         alt="My Little Vendors preview"
@@ -52,7 +52,7 @@
     </section>
 
     <!-- Category filter -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
       <div class="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
         <button
           v-for="cat in categories"
@@ -71,7 +71,7 @@
     </section>
 
     <!-- Grid -->
-    <section id="listings" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+    <section id="listings" class="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
       <!-- Result count / active query badge -->
       <Transition name="fade">
         <div
@@ -110,7 +110,7 @@
       </Transition>
       <div
         v-if="filteredBusinesses.length"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
       >
         <template v-for="(biz, i) in filteredBusinesses" :key="biz.id">
           <div
@@ -201,7 +201,8 @@ onMounted(() => {
 const gridCols = ref(1);
 if (import.meta.client) {
   const updateCols = () => {
-    if (window.innerWidth >= 1024) gridCols.value = 3;
+    if (window.innerWidth >= 1280) gridCols.value = 4;
+    else if (window.innerWidth >= 1024) gridCols.value = 3;
     else if (window.innerWidth >= 640) gridCols.value = 2;
     else gridCols.value = 1;
   };

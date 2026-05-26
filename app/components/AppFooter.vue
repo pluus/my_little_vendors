@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-24 border-t border-stone-100 bg-white">
     <div
-      class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-2 gap-8"
+      class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 sm:grid-cols-2 gap-8"
     >
       <div>
         <div class="flex items-center gap-2 mb-3">
