@@ -133,4 +133,4 @@ export const businesses: Business[] = [
   },
 ];
 
-export const categories = ["전체", "플러밍", "운동"];
+export const categories = ["전체", "플러밍", "운동", "미용"];
