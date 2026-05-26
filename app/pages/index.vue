@@ -156,12 +156,88 @@ import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
 useHead({
-  title: "My Little Vendors — 우리들의 소상공인",
+  title: "Vancouver Local & Home Business Directory — 밴쿠버 소상공인",
   meta: [
     {
       name: "description",
       content:
-        "직접 발굴한 소상공인과 홈비즈니스를 둘러보세요. 작은 가게를 응원해주세요.",
+        "Find and support local small businesses and home vendors in Vancouver, BC. Plumbing, sports, tutoring, and more — all from your Korean-Canadian community. 밴쿠버 한인 소상공인과 홈비즈니스를 발견하고 응원하세요.",
+    },
+    {
+      property: "og:title",
+      content: "My Little Vendors — Vancouver Local & Home Business Directory",
+    },
+    {
+      property: "og:description",
+      content:
+        "Find and support local small businesses and home vendors in Vancouver, BC. 밴쿠버 한인 소상공인과 홈비즈니스를 발견하고 응원하세요.",
+    },
+    {
+      property: "og:url",
+      content: "https://my-little-vendors.vercel.app/",
+    },
+  ],
+  link: [{ rel: "canonical", href: "https://my-little-vendors.vercel.app/" }],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://my-little-vendors.vercel.app/#website",
+            url: "https://my-little-vendors.vercel.app/",
+            name: "My Little Vendors",
+            description:
+              "Vancouver local small business and home vendor directory for the Korean-Canadian community.",
+            inLanguage: ["ko-KR", "en-CA"],
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate:
+                  "https://my-little-vendors.vercel.app/?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://my-little-vendors.vercel.app/#organization",
+            name: "My Little Vendors",
+            url: "https://my-little-vendors.vercel.app/",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://my-little-vendors.vercel.app/images/preview/thumbnail.png",
+              width: 1536,
+              height: 1024,
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              email: "mylittlevendors@gmail.com",
+              contactType: "customer support",
+            },
+            areaServed: {
+              "@type": "City",
+              name: "Vancouver",
+              containedInPlace: {
+                "@type": "AdministrativeArea",
+                name: "British Columbia, Canada",
+              },
+            },
+            sameAs: [],
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://my-little-vendors.vercel.app/#listings",
+            name: "Vancouver Local Business Directory",
+            description:
+              "A curated list of local small businesses and home vendors in Vancouver, BC.",
+            url: "https://my-little-vendors.vercel.app/",
+          },
+        ],
+      }),
     },
   ],
 });

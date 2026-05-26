@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://my-little-vendors.vercel.app/sitemap.xml
