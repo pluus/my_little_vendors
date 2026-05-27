@@ -1,42 +1,33 @@
 <template>
   <!-- Placeholder card -->
-  <article
+  <a
     v-if="business.isPlaceholder"
-    class="group bg-stone-50 rounded-3xl overflow-hidden border-2 border-dashed border-stone-200 cursor-pointer hover:border-amber-300 hover:bg-amber-50/40 transition-colors"
-    @click="$emit('open', business)"
+    href="https://forms.gle/RhBXka3hHt31qg5c9"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group rounded-3xl overflow-hidden border-2 border-dashed border-stone-200 cursor-pointer hover:border-amber-300 transition-colors block no-underline"
+    style="text-decoration: none"
   >
-    <div class="aspect-[4/3] flex items-center justify-center bg-stone-100/60">
-      <div class="text-center px-6">
-        <div
-          class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center mx-auto mb-3"
-        >
-          <svg
-            class="w-6 h-6 text-amber-400"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4v16m8-8H4"
-            />
-          </svg>
-        </div>
-        <p class="text-sm font-medium text-stone-500">내 가게를 등록하세요</p>
-        <p class="text-xs text-stone-400 mt-1">무료로 홍보하세요</p>
+    <div class="aspect-[4/3] flex items-center justify-center">
+      <div class="text-center p-6">
+        <ImageCarousel
+          ref="carouselRef"
+          :images="['./images/preview/placeholder-1.png']"
+          :alt="business.name"
+          class="w-full h-full mb-4"
+        />
+        <p class="text-sm font-medium text-stone-500">
+          추천하고 싶은 스몰 비즈니스가 있나요?
+        </p>
+        <p class="text-xs text-stone-400 mt-1">저희에게 알려주세요!</p>
       </div>
     </div>
-    <div class="p-4">
-      <a
-        href="https://forms.gle/5i7Bn9vaF8GYuLnu6"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div class="px-4 pb-4">
+      <span
         class="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-xs font-medium transition-colors"
-        @click.stop
+        style="pointer-events: none"
       >
-        무료 등록 신청하기
+        가게 추천하기
         <svg
           class="w-3 h-3"
           fill="none"
@@ -50,9 +41,9 @@
             d="M17 8l4 4m0 0l-4 4m4-4H3"
           />
         </svg>
-      </a>
+      </span>
     </div>
-  </article>
+  </a>
 
   <!-- Real business card -->
   <article

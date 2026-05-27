@@ -43,7 +43,7 @@
       <!-- Nav actions -->
       <nav class="flex items-center gap-2">
         <a
-          href="https://forms.gle/5i7Bn9vaF8GYuLnu6"
+          href="https://forms.gle/AsR5kSVsZrvmFRwq7"
           target="_blank"
           rel="noopener noreferrer"
           class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors"
@@ -61,7 +61,7 @@
               d="M12 4v16m8-8H4"
             />
           </svg>
-          <span class="flex-1 text-center sm:text-left">가게 무료 등록</span>
+          <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
         </a>
         <!-- Mobile search toggle -->
         <button
