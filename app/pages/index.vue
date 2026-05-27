@@ -13,13 +13,45 @@
       </p>
     </section>
 
-    <!-- Preview image -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
-      <img
-        src="/images/web/thumbnail.png"
-        alt="My Little Vendors preview"
-        class="w-full rounded-3xl"
-      />
+    <!-- Did You Know section -->
+    <section
+      class="max-w-7xl mx-auto sm:px-6 pb-8 border-2 border-amber-400 rounded-3xl p-6 mb-6"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Left: 알고 계셨나요? -->
+        <div class="rounded-3xl p-8 h-full flex flex-col justify-top">
+          <h2
+            class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-2"
+          >
+            <svg
+              class="w-6 h-6 text-amber-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
+              />
+            </svg>
+            알고 계셨나요?
+          </h2>
+          <p
+            class="text-sm text-stone-500 leading-relaxed line-clamp-2 mb-3"
+            v-text="randomDidYouKnow"
+          />
+        </div>
+        <!-- Right: Image -->
+        <div>
+          <img
+            src="/images/web/did_you_know.png"
+            alt="My Little Vendors preview"
+            class="w-full rounded-3xl"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Category filter -->
@@ -123,6 +155,21 @@
 </template>
 
 <script setup lang="ts">
+// Did You Know random content
+const didYouKnowList = [
+  "밴쿠버에는 1,000개 이상의 한인 소상공인과 홈비즈니스가 있습니다.",
+  "소상공인을 응원하는 것은 지역 경제를 살리는 일입니다.",
+  "이웃의 작은 가게에서 구매하면 더 따뜻한 커뮤니티가 만들어집니다.",
+  "많은 한인 비즈니스가 가족 단위로 운영되고 있습니다.",
+  "홈비즈니스는 창의적인 아이디어와 열정으로 시작되는 경우가 많아요.",
+  "작은 가게의 추천은 큰 힘이 됩니다. 주변에 좋은 가게가 있다면 알려주세요!",
+  "이 사이트에 등록된 비즈니스는 모두 실제 이웃이 운영하는 곳입니다.",
+  "여러분의 응원이 한인 소상공인에게 큰 힘이 됩니다.",
+  "밴쿠버 한인 커뮤니티는 다양한 업종의 비즈니스로 가득합니다.",
+  "작은 가게의 성공이 지역사회의 활력으로 이어집니다.",
+];
+const randomDidYouKnow =
+  didYouKnowList[Math.floor(Math.random() * didYouKnowList.length)];
 import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
