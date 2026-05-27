@@ -4,7 +4,9 @@
     @click="$emit('open', business)"
   >
     <img
-      :src="business.cover || '/images/web/placeholder-1.png'"
+      :src="
+        business.cover || '/images/web/placeholder-transparent-background.png'
+      "
       :alt="business.name"
       class="w-full h-36 object-cover rounded-xl border border-stone-200 mb-3"
     />

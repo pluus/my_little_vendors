@@ -2,12 +2,12 @@
   <div
     v-if="showDidYouKnow"
     class="fixed z-50 bottom-6 right-6 flex flex-col items-end"
-    style="max-width: 340px"
+    style="max-width: 510px"
   >
     <!-- Chat balloon -->
     <div class="relative mb-2">
       <div
-        class="bg-white border-2 border-amber-400 rounded-2xl shadow-lg px-5 py-4 text-stone-800 text-sm leading-relaxed max-w-xs"
+        class="bg-white border-2 border-amber-400 rounded-2xl shadow-lg px-8 py-6 text-stone-800 text-base leading-relaxed max-w-lg"
         style="word-break: break-word"
       >
         <div class="flex items-center gap-2 mb-1">
@@ -49,13 +49,13 @@
         <span v-text="randomDidYouKnow" />
       </div>
       <!-- Balloon tail -->
-      <div class="absolute right-10 bottom-[-22px] w-6 h-6 overflow-hidden">
-        <svg width="24" height="24" viewBox="0 0 24 24">
+      <div class="absolute right-16 bottom-[-33px] w-9 h-9 overflow-hidden">
+        <svg width="36" height="36" viewBox="0 0 36 36">
           <path
-            d="M0 0 Q12 24 24 0 Z"
+            d="M0 0 Q18 36 36 0 Z"
             fill="#fff"
             stroke="#fbbf24"
-            stroke-width="2"
+            stroke-width="3"
           />
         </svg>
       </div>
@@ -64,7 +64,7 @@
     <img
       src="/images/web/did_you_know.png"
       alt="My Little Vendors 캐릭터"
-      class="w-48 h-48 rounded-full border-2 border-amber-300 bg-white shadow"
+      class="w-72 h-72 rounded-full border-2 border-amber-300 bg-white shadow"
       style="object-fit: cover"
     />
   </div>
@@ -74,16 +74,9 @@
 import { ref } from "vue";
 const showDidYouKnow = ref(true);
 const didYouKnowList = [
-  "리틀브루 카페의 사장님은 매일 새벽 5시에 직접 원두를 로스팅하며 하루를 시작합니다.",
-  "노스하우스 베이커리는 같은 자리에서 15년째 한결같은 레시피로 빵을 구워오고 있습니다.",
-  "플로라가든의 대표는 원래 그래픽 디자이너였지만, 식물을 사랑하게 되어 가드닝 사업을 시작했습니다.",
-  "오션타이드 스시바의 셰프는 일본에서 10년간 수련한 뒤 밴쿠버로 돌아와 가게를 열었습니다.",
-  "코지니트 스튜디오는 모든 니트 제품을 사장님이 직접 디자인하고 샘플링합니다.",
-  "브라이트픽스 수리점은 ‘당일 수리 완료’를 원칙으로 8년째 운영 중입니다.",
-  "헤이븐 서점은 동네 주민들이 추천한 책으로만 한 코너를 채워 운영하고 있습니다.",
-  "스톤앤우드 인테리어는 목재 하나하나를 직접 골라 프로젝트를 진행하는 것으로 유명합니다.",
-  "루나플로리스 꽃집은 매주 다른 테마로 매장을 완전히 새롭게 연출합니다.",
-  "마운틴로스트 커피는 비 오는 날마다 ‘레인 블렌드’를 한정 출시합니다.",
+  "아테나 펜싱클럽의 줄리 선생님에 대해 아시나요? 캐나다에서 코치를 하기 전, 한국의 엘리트 펜싱 육성 체계를 거치며 훈련하고 대회에 참가했으며, 한국 국가대표 엘리트 팀 시스템에 선발된 경험이 있답니다. 정말 굉장하지 않나요?",
+  "엘린 라인의 대표 엘리자베스 선생님은 SMP, PMU, PLASMA 분야 자격을 보유하고 있으며 국제 뷰티 마스터 대회에서 여러 부문 수상 경력이 있는 전문가예요. PCL 아카데미 수료 및 본사 공식 멤버로 활동하고 있으며, KSRS 학회 회원으로 전문성을 인정받았답니다. 정말 화려한 경력이죠?",
+  "원플러밍은 Certified Red Seal(레드실 인증)을 가지고 다양한 도시에서 활약하고 있는 업체예요. 레드실이 뭐냐구요? 캐나다의 기술직(전문 직종) 종사자가 전국 어디서나 동일하게 인정받는 최고 수준의 국가 공인 기술 자격이랍니다!",
 ];
 const randomDidYouKnow =
   didYouKnowList[Math.floor(Math.random() * didYouKnowList.length)];
