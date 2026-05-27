@@ -13,18 +13,21 @@
       </p>
     </section>
 
-    <!-- Did You Know section -->
-    <section
-      class="max-w-7xl mx-auto sm:px-6 pb-8 border-2 border-amber-400 rounded-3xl p-6 mb-6"
+    <!-- Did You Know Floating Widget -->
+    <div
+      v-if="showDidYouKnow"
+      class="fixed z-50 bottom-6 right-6 flex flex-col items-end"
+      style="max-width: 340px"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Left: 알고 계셨나요? -->
-        <div class="rounded-3xl p-8 h-full flex flex-col justify-top">
-          <h2
-            class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-2"
-          >
+      <!-- Chat balloon -->
+      <div class="relative mb-2">
+        <div
+          class="bg-white border-2 border-amber-400 rounded-2xl shadow-lg px-5 py-4 text-stone-800 text-sm leading-relaxed max-w-xs"
+          style="word-break: break-word"
+        >
+          <div class="flex items-center gap-2 mb-1">
             <svg
-              class="w-6 h-6 text-amber-400"
+              class="w-5 h-5 text-amber-400"
               fill="none"
               stroke="currentColor"
               stroke-width="2.5"
@@ -36,23 +39,50 @@
                 d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"
               />
             </svg>
-            알고 계셨나요?
-          </h2>
-          <p
-            class="text-sm text-stone-500 leading-relaxed line-clamp-2 mb-3"
-            v-text="randomDidYouKnow"
-          />
+            <span class="font-bold text-amber-500">알고 계셨나요?</span>
+            <!-- Close button -->
+            <button
+              @click="showDidYouKnow = false"
+              aria-label="닫기"
+              class="ml-auto p-1 rounded-full hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-amber-300"
+            >
+              <svg
+                class="w-4 h-4 text-stone-400 hover:text-stone-700"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <span v-text="randomDidYouKnow" />
         </div>
-        <!-- Right: Image -->
-        <div>
-          <img
-            src="/images/web/did_you_know.png"
-            alt="My Little Vendors preview"
-            class="w-full rounded-3xl"
-          />
+        <!-- Balloon tail -->
+        <div class="absolute right-10 bottom-[-22px] w-6 h-6 overflow-hidden">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M0 0 Q12 24 24 0 Z"
+              fill="#fff"
+              stroke="#fbbf24"
+              stroke-width="2"
+            />
+          </svg>
         </div>
       </div>
-    </section>
+      <!-- Character image -->
+      <img
+        src="/images/web/did_you_know.png"
+        alt="My Little Vendors 캐릭터"
+        class="w-48 h-48 rounded-full border-2 border-amber-300 bg-white shadow"
+        style="object-fit: cover"
+      />
+    </div>
 
     <!-- Category filter -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
@@ -156,17 +186,19 @@
 
 <script setup lang="ts">
 // Did You Know random content
+import { ref as vueRef } from "vue";
+const showDidYouKnow = vueRef(true);
 const didYouKnowList = [
-  "밴쿠버에는 1,000개 이상의 한인 소상공인과 홈비즈니스가 있습니다.",
-  "소상공인을 응원하는 것은 지역 경제를 살리는 일입니다.",
-  "이웃의 작은 가게에서 구매하면 더 따뜻한 커뮤니티가 만들어집니다.",
-  "많은 한인 비즈니스가 가족 단위로 운영되고 있습니다.",
-  "홈비즈니스는 창의적인 아이디어와 열정으로 시작되는 경우가 많아요.",
-  "작은 가게의 추천은 큰 힘이 됩니다. 주변에 좋은 가게가 있다면 알려주세요!",
-  "이 사이트에 등록된 비즈니스는 모두 실제 이웃이 운영하는 곳입니다.",
-  "여러분의 응원이 한인 소상공인에게 큰 힘이 됩니다.",
-  "밴쿠버 한인 커뮤니티는 다양한 업종의 비즈니스로 가득합니다.",
-  "작은 가게의 성공이 지역사회의 활력으로 이어집니다.",
+  "리틀브루 카페의 사장님은 매일 새벽 5시에 직접 원두를 로스팅하며 하루를 시작합니다.",
+  "노스하우스 베이커리는 같은 자리에서 15년째 한결같은 레시피로 빵을 구워오고 있습니다.",
+  "플로라가든의 대표는 원래 그래픽 디자이너였지만, 식물을 사랑하게 되어 가드닝 사업을 시작했습니다.",
+  "오션타이드 스시바의 셰프는 일본에서 10년간 수련한 뒤 밴쿠버로 돌아와 가게를 열었습니다.",
+  "코지니트 스튜디오는 모든 니트 제품을 사장님이 직접 디자인하고 샘플링합니다.",
+  "브라이트픽스 수리점은 ‘당일 수리 완료’를 원칙으로 8년째 운영 중입니다.",
+  "헤이븐 서점은 동네 주민들이 추천한 책으로만 한 코너를 채워 운영하고 있습니다.",
+  "스톤앤우드 인테리어는 목재 하나하나를 직접 골라 프로젝트를 진행하는 것으로 유명합니다.",
+  "루나플로리스 꽃집은 매주 다른 테마로 매장을 완전히 새롭게 연출합니다.",
+  "마운틴로스트 커피는 비 오는 날마다 ‘레인 블렌드’를 한정 출시합니다.",
 ];
 const randomDidYouKnow =
   didYouKnowList[Math.floor(Math.random() * didYouKnowList.length)];
