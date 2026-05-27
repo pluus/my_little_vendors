@@ -73,6 +73,28 @@
       >
         {{ business.category }}
       </span>
+      <!-- Favorite button -->
+      <button
+        class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full flex items-center justify-center transition"
+        :class="isFav ? 'bg-white shadow' : 'bg-white/70 hover:bg-white shadow'"
+        :title="isFav ? '저장 취소' : '저장하기'"
+        @click.stop="toggleFavorite(business.id)"
+      >
+        <svg
+          class="w-4 h-4 transition-colors"
+          :class="isFav ? 'text-rose-500' : 'text-stone-400'"
+          :fill="isFav ? 'currentColor' : 'none'"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+      </button>
     </div>
 
     <!-- Card body -->
@@ -127,9 +149,6 @@ import type { Business } from "~/types/business";
 const props = defineProps<{ business: Business }>();
 defineEmits<{ open: [business: Business] }>();
 
-const isFav = ref(false);
-
-function toggleFav() {
-  isFav.value = !isFav.value;
-}
+const { isFavorite, toggleFavorite } = useFavorites();
+const isFav = computed(() => isFavorite(props.business.id));
 </script>

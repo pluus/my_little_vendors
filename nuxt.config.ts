@@ -82,7 +82,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-auth-utils"],
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
