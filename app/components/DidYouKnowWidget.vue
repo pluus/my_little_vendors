@@ -10,7 +10,7 @@
         class="bg-white border-2 border-amber-400 rounded-2xl shadow-lg px-4 py-3 text-stone-800 text-base leading-relaxed max-w-sm"
         style="word-break: break-word"
       >
-        <div class="flex items-center gap-2 mb-1">
+        <div class="flex items-center gap-2 mb-1 mb-4">
           <svg
             class="w-5 h-5 text-amber-400"
             fill="none"
@@ -46,7 +46,10 @@
             </svg>
           </button>
         </div>
-        <span class="did-you-know-content" v-html="randomDidYouKnow" />
+        <p
+          class="did-you-know-content text-sm leading-5"
+          v-html="randomDidYouKnow"
+        />
       </div>
       <!-- Balloon tail -->
       <div class="absolute right-8 bottom-[-19px] w-5 h-5 overflow-hidden">
