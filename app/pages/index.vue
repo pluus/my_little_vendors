@@ -16,7 +16,7 @@
     <!-- Preview image -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
       <img
-        src="/images/preview/thumbnail.png"
+        src="/images/web/thumbnail.png"
         alt="My Little Vendors preview"
         class="w-full rounded-3xl"
       />
@@ -180,7 +180,7 @@ useHead({
             url: "https://my-little-vendors.vercel.app/",
             logo: {
               "@type": "ImageObject",
-              url: "https://my-little-vendors.vercel.app/images/preview/thumbnail.png",
+              url: "https://my-little-vendors.vercel.app/images/web/thumbnail.png",
               width: 1536,
               height: 1024,
             },

@@ -12,7 +12,7 @@
       <div class="text-center p-6">
         <ImageCarousel
           ref="carouselRef"
-          :images="['./images/preview/placeholder-1.png']"
+          :images="['./images/web/placeholder-1.png']"
           :alt="business.name"
           class="w-full h-full mb-4"
         />
