@@ -80,6 +80,7 @@ const didYouKnowList = [
   "아테나 펜싱클럽의 줄리 선생님은 정말 굉장하세요. 캐나다에서 코치를 하기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 훈련하고 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>이 있답니다!",
   "엘린 라인의 대표 엘리자베스 선생님은 <strong>SMP, PMU, PLASMA 분야 자격을 보유하고 있으며 국제 뷰티 마스터 대회에서 여러 부문 수상</strong> 경력이 있는 전문가예요. PCL 아카데미 수료 및 본사 공식 멤버로 활동하고 있으며, KSRS 학회 회원으로 전문성을 인정받았답니다. 정말 화려한 경력이죠?",
   "원 플러밍은 <strong>Certified Red Seal(레드실 인증)</strong>을 가지고 다양한 도시에서 활약하고 있는 업체예요. 레드실이 뭐냐구요? 캐나다의 기술직(전문 직종) 종사자가 전국 어디서나 동일하게 인정받는 <strong>최고 권위의 국가 공인 기술 자격</strong>이랍니다!",
+  "LS Cleaning Corp은 <strong>순수하게 15명 이상의 고객 추천을 통해 최초로 등록된 업체</strong>예요. 현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있습니다. 자택 및 오피스의 위생 상태를 점검 받아보시는건 어떨까요?",
 ];
 const randomDidYouKnow =
   didYouKnowList[Math.floor(Math.random() * didYouKnowList.length)];

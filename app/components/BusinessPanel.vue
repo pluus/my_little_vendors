@@ -226,7 +226,10 @@
                   />
                 </svg>
               </div>
-              @{{ business.instagram }}
+              <span class="min-w-0">
+                <span class="block text-xs text-stone-400">인스타그램</span>
+                <span class="block truncate">{{ business.instagram }}</span>
+              </span>
             </a>
             <button
               v-if="business.kakao"
