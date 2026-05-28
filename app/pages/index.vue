@@ -14,7 +14,7 @@
     </section>
 
     <!-- Did You Know Floating Widget -->
-    <DidYouKnowWidget />
+    <DidYouKnowWidget :fun-fact="funFact" />
 
     <!-- Category filter -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
@@ -232,9 +232,13 @@ function shuffle<T>(arr: T[]): T[] {
 const shuffledBusinesses = ref([...businesses]);
 const realBusinesses = businesses.filter((b) => !b.isPlaceholder);
 const weeklyPick = ref(realBusinesses[0] ?? businesses[0]);
+const funFact = ref("");
 
 onMounted(() => {
   shuffledBusinesses.value = shuffle(businesses);
+  funFact.value =
+    shuffledBusinesses.value.find((b) => b.funFact)?.funFact || "";
+
   const pool = businesses.filter((b) => !b.isPlaceholder);
   weeklyPick.value =
     pool[Math.floor(Math.random() * pool.length)] ?? businesses[0];

@@ -46,10 +46,7 @@
             </svg>
           </button>
         </div>
-        <p
-          class="did-you-know-content text-sm leading-5"
-          v-html="randomDidYouKnow"
-        />
+        <p class="did-you-know-content text-sm leading-5" v-html="funFact" />
       </div>
       <!-- Balloon tail -->
       <div class="absolute right-8 bottom-[-19px] w-5 h-5 overflow-hidden">
@@ -74,17 +71,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { businesses } from "../data/businesses";
+import { ref, computed, onMounted } from "vue";
 
+const props = defineProps<{ funFact?: string }>();
 const showDidYouKnow = ref(true);
-const funFactBusinesses = businesses.filter(
-  (b) => b.funFact && !b.isPlaceholder,
-);
-const randomDidYouKnow = funFactBusinesses.length
-  ? funFactBusinesses[Math.floor(Math.random() * funFactBusinesses.length)]
-      .funFact
-  : "";
+onMounted(() => {
+  console.log("DidYouKnowWidget mounted with funFact:", props.funFact);
+});
 </script>
 <style scoped>
 ::v-deep(.did-you-know-content strong) {
