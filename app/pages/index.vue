@@ -96,6 +96,19 @@
             />
           </div>
         </template>
+        <template v-for="(placeholder, idx) in 3" :key="'placeholder-' + idx">
+          <div class="rounded-3xl transition-all duration-200 opacity-80">
+            <BusinessCard
+              :business="{
+                ...(businesses.find((b) => b.isPlaceholder) || {}),
+                id: 'placeholder-' + idx,
+                name: '나만 알고 싶은 작은 가게를 추천 해주세요!',
+                description: '이웃주민의 작은 가게를 함께 응원해요!',
+                isPlaceholder: true,
+              }"
+            />
+          </div>
+        </template>
       </div>
 
       <!-- Empty state -->
