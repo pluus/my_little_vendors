@@ -234,6 +234,27 @@ export const businesses: Business[] = [
     funFact:
       "일본 드라마 고독한 미식가의 주인공으로 유명한 <strong>마츠시게 유타카는 한국을 방문했을 때 참기름을 선물받았는데 고소한 맛을 보고 극찬</strong>했다는 사실 알고 계셨나요? <br><br>저는 밴쿠버에서 직접 참기름을 제작하는 업체가 있는지 상상도 못했어요. 하지만 <strong>Charm Oil</strong>이 최상의 신선도가 담긴 참기름을 만들고 있었답니다! <br><br>신선한 한 방울의 참기름이 음식의 맛을 어떻게 완전히 바꿔놓는지, 여러분도 경험 해보시는건 어때요? 음~ 갑자기 배고파지네요!",
   },
+  {
+    id: 9,
+    name: "My Little Miracle",
+    description:
+      "당신의 특별한 순간을 더욱 완벽하게 만들어 드리는 이벤트 플래닝 서비스입니다. 컨셉 기획부터 공간 연출, 데코레이션까지 세심하게 준비하여 잊지 못할 하루를 선사합니다. 밴쿠버 지역 이벤트 전문. 다음 이벤트 예약은 DM으로 문의해주세요. 당신의 소중한 순간, 지금 바로 함께 만들어보세요",
+    category: "이벤트",
+    location: "밴쿠버",
+    tags: ["이벤트", "플래닝", "공간 연출", "데코레이션", "웨딩", "파티"],
+    cover: "/images/9/cover.jpg",
+    images: ["/images/9/1.jpg", "/images/9/2.jpg", "/images/9/3.jpg"],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: ["/images/9/1.jpg", "/images/9/2.jpg", "/images/9/3.jpg"],
+    instagram: "https://www.instagram.com/littlemiracle.party/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "젠더리빌은 2008년 미국의 인플루언서 제나 카르부니디스가 자신의 아이의 건강과 성별을 블로그에 공개한 것이 유행의 시초가 되었답니다. 그 이후로 젠더리빌은 전 세계적으로 유행하며, 많은 부모들이 아이의 성별을 공개하는 이벤트를 열고 있어요.<br><br><strong>My Little Miracle</strong>는 이런 특별한 순간을 더욱 완벽하게 만들어 드리는 이벤트 플래닝 서비스를 제공하고 있답니다! 소중한 누군가의 순간을 의미있게 만들어 주세요.",
+  },
   // {
   //   id: 9,
   //   name: "기업명",
