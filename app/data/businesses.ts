@@ -20,7 +20,7 @@ export const businesses: Business[] = [
     featured: true,
     isPlaceholder: false,
     funFact:
-      "원 플러밍은 <strong>Certified Red Seal(레드실 인증)</strong>을 가지고 다양한 도시에서 활약하고 있는 업체예요. 레드실이 뭐냐구요? 캐나다의 기술직(전문 직종) 종사자가 전국 어디서나 동일하게 인정받는 <strong>최고 권위의 국가 공인 기술 자격</strong>이랍니다!",
+      "오랜 경험을 가진 <strong>원 플러밍</strong>은 <strong>Certified Red Seal(레드실 인증)</strong>을 가지고 다양한 도시에서 활약하고 있는 업체예요.<br><br>레드실이 뭐냐구요? 캐나다의 기술직(전문 직종) 종사자가 전국 어디서나 동일하게 인정받는 <strong>최고 권위의 국가 공인 기술 자격</strong>이랍니다!",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ export const businesses: Business[] = [
     featured: true,
     isPlaceholder: false,
     funFact:
-      "아테나 펜싱클럽의 줄리 선생님은 정말 굉장하세요. 캐나다에서 코치를 하기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 훈련하고 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>이 있답니다!",
+      "찰나의 순간에 승패가 갈리는 진검 승부의 세계! <strong>아테나 펜싱 클럽</strong>의 줄리 선생님의 화려한 펜싱 경력. 알고 계셨나요? <br><br>캐나다에서 코치를 하시기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 혹독한 훈련을 통해 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>까지 있답니다!",
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ export const businesses: Business[] = [
     email: "theelinline@gmail.com",
     isPlaceholder: false,
     funFact:
-      "엘린 라인의 대표 엘리자베스 선생님은 <strong>SMP, PMU, PLASMA 분야 자격을 보유하고 있으며 국제 뷰티 마스터 대회에서 여러 부문 수상</strong> 경력이 있는 전문가예요. PCL 아카데미 수료 및 본사 공식 멤버로 활동하고 있으며, KSRS 학회 회원으로 전문성을 인정받았답니다. 정말 화려한 경력이죠?",
+      "<strong>엘린 라인</strong>의 대표 엘리자베스 선생님은 <strong>SMP, PMU, PLASMA 분야 자격을 보유하고 있으며 국제 뷰티 마스터 대회에서 여러 부문 수상</strong> 경력이 있는 전문가예요. <br><br>PCL 아카데미 수료 및 본사 공식 멤버로 활동하고 있으며, KSRS 학회 회원으로 전문성을 인정받았답니다. 정말 화려한 경력이죠?",
   },
   {
     id: 4,
@@ -112,24 +112,44 @@ export const businesses: Business[] = [
     email: "",
     isPlaceholder: false,
     funFact:
-      "LS Cleaning Corp은 <strong>순수하게 15명 이상의 고객 추천을 통해 최초로 등록된 청소 업체</strong>예요. 현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있습니다. 빠른 시일 내에 자택 및 오피스의 위생 상태를 점검 받아보시는건 어떠세요?",
+      "<strong>LS Cleaning Corp</strong>은 <strong>순수하게 15명 이상의 고객 추천</strong>을 통해 <strong>최초</strong>로 등록된 청소 업체예요.<br><br>현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있답니다! 정말 대단하죠?",
   },
   {
     id: 5,
-    name: "나만 알고 싶은 작은 가게를 추천 해주세요!",
-    description: "이웃주민의 작은 가게를 함께 응원해요!",
-    category: "미정",
-    location: "Vancouver",
-    tags: [],
-    cover: "",
-    images: [],
-    hours: "",
-    website: "#",
-    gallery: [],
-    instagram: "",
+    name: "MOI-HWA",
+    description:
+      "MOI-HWA는 밴쿠버를 기반으로 활동하는 플로럴 스타일링 스튜디오입니다. 일상의 작은 순간부터 웨딩, 브랜드 프로젝트, 공간 스타일링까지 꽃이 가장 아름답게 어우러질 수 있는 방식으로 섬세한 플로럴 작업을 선보입니다.",
+    category: "디자인, 인테리어",
+    location: "밴쿠버",
+    tags: [
+      "플로럴 디자인",
+      "꽃집",
+      "웨딩 플로럴",
+      "공간 스타일링",
+      "인테리어",
+      "이벤트",
+    ],
+    cover: "/images/5/cover.jpg",
+    images: [
+      "/images/5/1.jpg",
+      "/images/5/2.jpg",
+      "/images/5/3.jpg",
+      "/images/5/4.jpg",
+    ],
+    hours: "Mon to Sat 11am-6pm / Sunday closed",
+    website: "https://www.moihwa.com/",
+    gallery: [
+      "/images/5/1.jpg",
+      "/images/5/2.jpg",
+      "/images/5/3.jpg",
+      "/images/5/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/moi_hwa/",
     kakao: "",
     email: "",
-    isPlaceholder: true,
+    isPlaceholder: false,
+    funFact:
+      "꽃내음 가득한 가 <strong>MOI-WHA</strong>에 따르면 새벽 꽃시장에서 직접 꽃을 고르고, 무거운 물통과 박스를 나르는 일상 덕분에 <strong>“꽃집 일은 생각보다 훨씬 체력전”</strong>이라고 합니다.<br><br>하지만 <strong>꽃은 단순한 장식이 아니라 사람의 감정을 전하는 언어</strong>라고 믿으며, 꽃을 고를 때도 ‘누구의 마음이 담길 꽃인가’를 먼저 떠올린다고 합니다. 정말 멋진 마음가짐이죠?",
   },
   {
     id: 6,
