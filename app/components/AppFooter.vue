@@ -31,7 +31,7 @@
               to="https://forms.gle/5i7Bn9vaF8GYuLnu6"
               class="hover:text-amber-600 transition-colors"
               target="_blank"
-              >비즈니스 등록 요청하기</NuxtLink
+              >가게 추천하기</NuxtLink
             >
           </li>
           <li>
