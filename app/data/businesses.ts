@@ -231,4 +231,12 @@ export const businesses: Business[] = [
   },
 ];
 
-export const categories = ["전체", "플러밍", "운동", "미용", "꽃", "청소"];
+export const categories = [
+  "전체",
+  "플러밍",
+  "운동",
+  "미용",
+  "꽃",
+  "청소",
+  "도서",
+];
