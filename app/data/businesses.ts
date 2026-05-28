@@ -218,7 +218,7 @@ export const businesses: Business[] = [
     name: "Charm Oil",
     description:
       "Charm Oil은 BC 주정부의 정식 허가를 받은 오일 전문 생산 업체로 라이센스 받은 커머셜 키친에서 내 가족 내 아이에게 주고 싶은 마음을 담아 청결과 신선도를 최우선으로 주문 즉시 정성을 다하여 0% 첨가물 100% 통참깨 프리미엄 참기름을 생산하고 있습니다.",
-    category: "음식, 푸드, 요리",
+    category: "음식",
     location: "밴쿠버, 써리, 랭리 등",
     tags: ["음식", "푸드", "요리", "참기름", "오일", "조미료"],
     cover: "/images/8/cover.jpg",
