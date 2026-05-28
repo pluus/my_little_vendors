@@ -119,7 +119,7 @@ export const businesses: Business[] = [
     name: "MOI-HWA",
     description:
       "MOI-HWA는 밴쿠버를 기반으로 활동하는 플로럴 스타일링 스튜디오입니다. 일상의 작은 순간부터 웨딩, 브랜드 프로젝트, 공간 스타일링까지 꽃이 가장 아름답게 어우러질 수 있는 방식으로 섬세한 플로럴 작업을 선보입니다.",
-    category: "디자인, 인테리어",
+    category: "꽃",
     location: "밴쿠버",
     tags: [
       "플로럴 디자인",
@@ -153,21 +153,23 @@ export const businesses: Business[] = [
   },
   {
     id: 6,
-    name: "나만 알고 싶은 작은 가게를 추천 해주세요!",
-    description: "이웃주민의 작은 가게를 함께 응원해요!",
-    category: "미정",
-    location: "Vancouver",
+    name: "기업명",
+    description: "설명",
+    category: "카테고리1, 카테고리 2, ...",
+    location: "밴쿠버, 써리, 랭리, 버나비, 코퀴틀람",
     tags: [],
     cover: "",
     images: [],
     hours: "",
     website: "#",
+    phone: "",
     gallery: [],
     instagram: "",
     kakao: "",
     email: "",
     isPlaceholder: true,
+    funFact: "",
   },
 ];
 
-export const categories = ["전체", "플러밍", "운동", "미용"];
+export const categories = ["전체", "플러밍", "운동", "미용", "꽃", "청소"];
