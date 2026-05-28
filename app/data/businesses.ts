@@ -51,7 +51,7 @@ export const businesses: Business[] = [
     featured: true,
     isPlaceholder: false,
     funFact:
-      "찰나의 순간에 승패가 갈리는 진검 승부의 세계! <strong>아테나 펜싱 클럽</strong>의 줄리 선생님의 화려한 펜싱 경력. 알고 계셨나요? <br><br>캐나다에서 코치를 하시기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 혹독한 훈련을 통해 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>까지 있답니다!",
+      "찰나의 순간에 승패가 갈리는 진검 승부의 세계! <strong>아테나 펜싱 클럽</strong>의 줄리 선생님의 화려한 펜싱 경력. 알고 계셨나요? <br><br>캐나다에서 코치를 하시기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 혹독한 훈련을 통해 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>까지 있답니다! 너무 멋져요!",
   },
   {
     id: 3,
