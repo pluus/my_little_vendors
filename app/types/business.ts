@@ -16,4 +16,5 @@ export interface Business {
   phone?: string;
   featured?: boolean;
   isPlaceholder: boolean;
+  funFact?: string;
 }
