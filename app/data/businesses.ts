@@ -112,7 +112,7 @@ export const businesses: Business[] = [
     email: "",
     isPlaceholder: false,
     funFact:
-      "LS Cleaning Corp은 <strong>순수하게 15명 이상의 고객 추천을 통해 최초로 등록된 청소 업체</strong>예요. 현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있습니다. 자택 및 오피스의 위생 상태를 점검 받아보시는건 어떨까요?",
+      "LS Cleaning Corp은 <strong>순수하게 15명 이상의 고객 추천을 통해 최초로 등록된 청소 업체</strong>예요. 현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있습니다. 빠른 시일 내에 자택 및 오피스의 위생 상태를 점검 받아보시는건 어떠세요?",
   },
   {
     id: 5,
