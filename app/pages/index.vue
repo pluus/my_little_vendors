@@ -15,6 +15,8 @@
 
     <!-- Did You Know Floating Widget -->
     <DidYouKnowWidget :fun-fact="funFact" />
+    <!-- Chatbot Floating Widget -->
+    <!-- <ChatWidget /> -->
 
     <!-- Category filter -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
@@ -132,6 +134,7 @@
 <script setup lang="ts">
 // ...existing code...
 import DidYouKnowWidget from "~/components/DidYouKnowWidget.vue";
+import ChatWidget from "~/components/ChatWidget.vue";
 import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
