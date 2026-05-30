@@ -120,6 +120,20 @@
           class="sm:hidden absolute top-16 left-0 w-full bg-white border-b border-stone-100 shadow z-40 animate-fade-in"
         >
           <div class="flex flex-col gap-2 px-4 py-4">
+            <NuxtLink
+              to="/about"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              웹사이트 소개
+            </NuxtLink>
+            <NuxtLink
+              to="/updates"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-200 hover:bg-stone-300 text-stone-700 text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              최근 소식
+            </NuxtLink>
             <a
               href="https://forms.gle/AsR5kSVsZrvmFRwq7"
               target="_blank"
@@ -141,20 +155,6 @@
               </svg>
               가게 추천하기
             </a>
-            <NuxtLink
-              to="/updates"
-              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-200 hover:bg-stone-300 text-stone-700 text-base font-medium transition-colors"
-              @click="mobileMenu = false"
-            >
-              최근 소식
-            </NuxtLink>
-            <NuxtLink
-              to="/about"
-              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-base font-medium transition-colors"
-              @click="mobileMenu = false"
-            >
-              About Us
-            </NuxtLink>
           </div>
         </div>
       </Transition>
