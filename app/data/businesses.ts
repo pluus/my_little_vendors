@@ -378,7 +378,8 @@ export const businesses: Business[] = [
     kakao: "https://open.kakao.com/o/sINcwBNf",
     email: "",
     isPlaceholder: false,
-    funFact: "",
+    funFact:
+      "피아노는 단순한 악기가 아니라 뇌를 동시에 훈련시키는 도구입니다. 양손을 따로 움직이고 악보를 읽는 과정이 좌우 뇌를 연결하고, 기억력·집중력·언어 처리 능력까지 함께 자극한다고 알려져 있어요.<br><br><strong>Aria Piano</strong>의 레슨을 통해 여러분도 음악을 통해 뇌와 감성을 함께 자극해보시는건 어떨까요?",
   },
 ];
 
