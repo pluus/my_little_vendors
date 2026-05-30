@@ -381,6 +381,27 @@ export const businesses: Business[] = [
     funFact:
       "피아노는 단순한 악기가 아니라 뇌를 동시에 훈련시키는 도구입니다. 양손을 따로 움직이고 악보를 읽는 과정이 좌우 뇌를 연결하고, 기억력·집중력·언어 처리 능력까지 함께 자극한다고 알려져 있어요.<br><br><strong>Aria Piano</strong>의 레슨을 통해 여러분도 음악을 통해 뇌와 감성을 함께 자극해보시는건 어떨까요?",
   },
+  {
+    id: 14,
+    name: "Flora Piano",
+    description:
+      "RCM 8급, 음악영어전문가·영어로 배우는 피아노·아동/기초 피아노 지도법, Piano Adventures 전문교사, 문화예술교육사 2급 보유. 초등학교 방과후 출강 경력 있으며, 100대 피아노 연주 및 다수의 연주회·콩쿠르 수상 및 참가 이력 보유. 대구가톨릭대학교 피아노과 졸업 및 다양한 공연 활동 경험을 바탕으로 전문적인 피아노 교육을 제공합니다.",
+    category: "음악",
+    location: "버나비",
+    tags: ["음악", "피아노", "레슨", "개인 레슨", "그룹 레슨"],
+    cover: "/images/14/cover.jpg",
+    images: [],
+    hours: "",
+    website: "",
+    phone: "672-833-2281",
+    gallery: [],
+    instagram: "https://www.instagram.com/pf_yeun/",
+    kakao: "https://open.kakao.com/o/sFkB2kuh",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "피아노는 단순한 악기가 아니라 뇌를 동시에 훈련시키는 도구입니다. 양손을 따로 움직이고 악보를 읽는 과정이 좌우 뇌를 연결하고, 기억력·집중력·언어 처리 능력까지 함께 자극한다고 알려져 있어요.<br><br><strong>Flora Piano</strong>의 레슨을 통해 여러분도 음악을 통해 뇌와 감성을 함께 자극해보시는건 어떨까요?",
+  },
 ];
 
 export const categories = [
