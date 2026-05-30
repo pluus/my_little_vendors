@@ -49,7 +49,6 @@
   <article
     v-else
     class="group bg-white rounded-3xl overflow-hidden border border-stone-100 card-hover cursor-pointer"
-    @click="$emit('open', business)"
   >
     <!-- Cover carousel -->
     <div class="relative overflow-hidden aspect-[4/3] bg-stone-100">
@@ -72,11 +71,12 @@
       <div class="flex items-start justify-between gap-3 mb-2">
         <div class="min-w-0 pt-0.5">
           <h3
-            class="font-semibold text-stone-900 text-sm leading-tight truncate"
+            class="font-semibold text-stone-900 text-sm leading-tight truncate hover:text-amber-400 transition-colors"
+            @click="$emit('open', business)"
           >
             {{ business.name }}
           </h3>
-          <p class="text-xs text-stone-400 mt-0.5">{{ business.location }}</p>
+          <p class="text-xs text-stone-400 mt-1.5">{{ business.location }}</p>
         </div>
         <svg
           class="w-4 h-4 text-stone-300 group-hover:text-amber-400 transition-colors shrink-0 mt-1"
