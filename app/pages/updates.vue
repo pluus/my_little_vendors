@@ -22,7 +22,7 @@
         >
           <!-- Placeholder image (left column) -->
           <div
-            class="hidden sm:block w-32 rounded-2xl bg-stone-100 flex-shrink-0 overflow-hidden flex items-center justify-center"
+            class="w-32 rounded-2xl bg-stone-100 flex-shrink-0 overflow-hidden flex items-center justify-center"
           >
             <img
               :src="getChibiByIndex(i)"
