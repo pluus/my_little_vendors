@@ -208,7 +208,7 @@
             </a>
             <a
               v-if="business.instagram"
-              :href="`https://instagram.com/${business.instagram}`"
+              :href="business.instagram"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-3 text-sm text-stone-600 hover:text-stone-900 transition-colors group"
