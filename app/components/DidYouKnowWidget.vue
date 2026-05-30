@@ -64,14 +64,14 @@
     <img
       src="/images/web/did_you_know.png"
       alt="My Little Vendors 캐릭터"
-      class="w-40 h-40 rounded-full border-2 border-amber-300 bg-white shadow"
+      class="w-20 h-20 rounded-full border-2 border-amber-300 bg-white shadow "
       style="object-fit: cover"
     />
-  </div>
-</template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+      <img
+        src="/images/web/did_you_know.png"
+        alt="Did You Know?"
+        class="w-24 h-24 sm:w-40 sm:h-40 rounded-full border-4 border-amber-200 bg-white object-cover shadow-lg mb-2"
+      />
 
 const props = defineProps<{ funFact?: string }>();
 const showDidYouKnow = ref(true);
