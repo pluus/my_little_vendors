@@ -27,7 +27,7 @@
             <img
               :src="getChibiByIndex(i)"
               alt="업데이트 캐릭터"
-              class="object-cover w-full h-full"
+              class="object-cover w-full h-full scale-x-[-1]"
             />
           </div>
           <!-- Content (right column) -->
