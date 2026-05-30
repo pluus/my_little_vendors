@@ -1,5 +1,6 @@
 export interface Business {
   id: number;
+  like: number;
   name: string;
   description: string;
   category: string;

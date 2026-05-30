@@ -2,6 +2,7 @@ import type { Business } from "~/types/business";
 
 export const businesses: Business[] = [
   {
+    like: Math.floor(Math.random() * 1000),
     id: 1,
     name: "원 플러밍",
     description:
@@ -23,6 +24,7 @@ export const businesses: Business[] = [
       "오랜 경험을 가진 <strong>원 플러밍</strong>은 <strong>Certified Red Seal(레드실 인증)</strong>을 가지고 다양한 도시에서 활약하고 있는 업체예요.<br><br>레드실이 뭐냐구요? 캐나다의 기술직(전문 직종) 종사자가 전국 어디서나 동일하게 인정받는 <strong>최고 권위의 국가 공인 기술 자격</strong>이랍니다!",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 2,
     name: "Athena Fencing Club",
     description:
@@ -54,6 +56,7 @@ export const businesses: Business[] = [
       "찰나의 순간에 승패가 갈리는 진검 승부의 세계! <strong>아테나 펜싱 클럽</strong>의 줄리 선생님의 화려한 펜싱 경력. 알고 계셨나요? <br><br>캐나다에서 코치를 하시기 전, <strong>한국의 엘리트 펜싱 육성 체계</strong>를 거치며 혹독한 훈련을 통해 대회에 참가 했으며, 한국 국가대표 <strong>엘리트 팀 시스템에 선발된 경험</strong>까지 있답니다! 너무 멋져요!",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 3,
     name: "Elin Line",
     description:
@@ -84,6 +87,7 @@ export const businesses: Business[] = [
       "<strong>엘린 라인</strong>의 대표 엘리자베스 선생님은 <strong>SMP, PMU, PLASMA 분야 자격을 보유하고 있으며 국제 뷰티 마스터 대회에서 여러 부문 수상</strong> 경력이 있는 전문가예요. <br><br>PCL 아카데미 수료 및 본사 공식 멤버로 활동하고 있으며, KSRS 학회 회원으로 전문성을 인정받았답니다. 정말 화려한 경력이죠?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 4,
     name: "LS Cleaning",
     description:
@@ -115,6 +119,7 @@ export const businesses: Business[] = [
       "<strong>LS Cleaning Corp</strong>은 <strong>순수하게 15명 이상의 고객 추천</strong>을 통해 <strong>최초</strong>로 등록된 청소 업체예요.<br><br>현재 밴쿠버 전역에서 맹활약 중이며, <strong>Pro House Care Team</strong>의 일원으로 주택과 상업 공간을 아우르는 전문 관리 서비스까지 함께 제공하고 있답니다! 정말 대단하죠?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 5,
     name: "MOI-HWA",
     description:
@@ -152,6 +157,7 @@ export const businesses: Business[] = [
       "꽃내음 가득한 <strong>MOI-WHA</strong>에 따르면 새벽 꽃시장에서 직접 꽃을 고르고, 무거운 물통과 박스를 나르는 일상 덕분에 <strong>“꽃집 일은 생각보다 훨씬 체력전”</strong>이라고 합니다.<br><br>하지만 <strong>꽃은 단순한 장식이 아니라 사람의 감정을 전하는 언어</strong>라고 믿으며, 꽃을 고를 때도 ‘누구의 마음이 담길 꽃인가’를 먼저 떠올린다고 합니다. 정말 멋진 마음가짐이죠?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 6,
     name: "책놀이터",
     description:
@@ -173,6 +179,7 @@ export const businesses: Business[] = [
       "요즘 어린이들의 문해력과 독해력이 현저히 낮아지고 있다는 사실, 알고 계셨나요? 기우가 아니라 현실이랍니다.<br><br><strong>책놀이터</strong>는 광역 밴쿠버에서 쉽게 만나보기 힘든 <strong>어린이 전집 대여 서비스</strong>를 통해, 아이들이 자연스럽게 <strong>책과 가까워질 수 있는 환경</strong>을 만들어가고 있어요. 오늘 밤은 스크린 말고 책과 함께하는 건 어떨까요? <br><br>저는 요즘 헨리 데이비드 소로의 월든을 즐겨 읽는답니다. 여러분은 무엇을 읽고 계세요?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 7,
     name: "Butter Yellow Club",
     description:
@@ -214,6 +221,7 @@ export const businesses: Business[] = [
       "<strong>버터 옐로우 클럽</strong>의 케이크는 제겐 정말 특별해요!<br><br>케이크를 정말 싫어하는 사람을 한 명 알고 있어요. 생일에도 케이크는 거들떠보지 않고 빵만 조금 먹던 사람이었는데, <strong>버터 옐로우 클럽 케이크는 ”괜찮네?” 하더니 포크로 푹푹 잘라 먹더라고요.</strong> 접시가 깔끔하게 비워진 모습은 난생 처음 봤답니다. 모두가 놀라워 했어요. <br><br>비결이 뭐였을까요?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 8,
     name: "Charm Oil",
     description:
@@ -235,6 +243,7 @@ export const businesses: Business[] = [
       "일본 드라마 고독한 미식가의 주인공으로 유명한 <strong>마츠시게 유타카는 한국을 방문했을 때 참기름을 선물받았는데 고소한 맛을 보고 극찬</strong>했다는 사실 알고 계셨나요? <br><br>저는 밴쿠버에서 직접 참기름을 제작하는 업체가 있는지 상상도 못했어요. 하지만 <strong>Charm Oil</strong>이 최상의 신선도가 담긴 참기름을 만들고 있었답니다! <br><br>신선한 한 방울의 참기름이 음식의 맛을 어떻게 완전히 바꿔놓는지, 여러분도 경험 해보시는건 어때요? 음~ 갑자기 배고파지네요!",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 9,
     name: "My Little Miracle",
     description:
@@ -256,6 +265,7 @@ export const businesses: Business[] = [
       "젠더리빌은 2008년 미국의 인플루언서 제나 카르부니디스가 자신의 아이의 건강과 성별을 블로그에 공개한 것이 유행의 시초가 되었답니다. 그 이후로 젠더리빌은 전 세계적으로 유행하며, 많은 부모들이 아이의 성별을 공개하는 이벤트를 열고 있어요.<br><br><strong>My Little Miracle</strong>는 이런 특별한 순간을 더욱 완벽하게 만들어 드리는 <strong>이벤트 플래닝 서비스</strong>를 제공하고 있답니다! 소중한 누군가의 순간을 의미있게 만들어 주세요.",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 10,
     name: "The Party Ave",
     description:
@@ -289,6 +299,7 @@ export const businesses: Business[] = [
       "백일잔치의 흰색 백설기는 순수함과 건강을 상징해요. 예로부터 백설기를 이웃과 나누며 아기의 복과 건강을 함께 기원했다고 해요. <br><br><strong>The Party Ave</strong>을 통해 가족의 특별한 날을 더욱 의미있게 만드세요.",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 11,
     name: "Flodeer",
     description:
@@ -320,6 +331,7 @@ export const businesses: Business[] = [
       "풍선아트는 생각보다 고도의 기술이 필요해요. 꽃, 동물, 캐릭터, 대형 장식까지 만들기 위해서는 색 조합, 구조 설계, 공간 디자인 능력이 모두 필요하답니다. <br><br><strong>Flodeer</strong>의 작품들은 미술 전공자의 감각과 섬세한 손길이 더해져 특별한 순간을 더욱 아름답게 꾸며준답니다! 여러분도 특별한 날에 풍선아트로 감성을 더해보시는건 어떨까요?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 12,
     name: "Jade Made",
     description:
@@ -351,6 +363,7 @@ export const businesses: Business[] = [
       "뜨개 수세미는 같은 모양이라도 뜨는 사람의 손압(장력)에 따라 완성 크기와 촉감이 완전히 달라져서 “완전히 동일한 제품이 거의 없는 생활 공예품”이에요. <br><br><strong>Jade Made</strong>의 수세미는 한 땀 한 땀 정성으로 만들어져서 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력적이랍니다! 여러분도 주방에 따뜻한 감성을 더해보시는건 어떨까요?",
   },
   {
+    like: Math.floor(Math.random() * 1000),
     id: 13,
     name: "Aria Piano",
     description:
