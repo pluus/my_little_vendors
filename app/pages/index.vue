@@ -160,7 +160,7 @@ import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 
 useHead({
-  title: "Vancouver Local & Home Business Directory — 밴쿠버 소상공인",
+  title: "My Little Vendors - 이웃주민의 작은 가게를 함께 응원해요.",
   meta: [
     {
       name: "description",
@@ -169,7 +169,7 @@ useHead({
     },
     {
       property: "og:title",
-      content: "My Little Vendors — Vancouver Local & Home Business Directory",
+      content: "My Little Vendors - 이웃주민의 작은 가게를 함께 응원해요.",
     },
     {
       property: "og:description",
@@ -194,7 +194,7 @@ useHead({
             url: "https://my-little-vendors.vercel.app/",
             name: "My Little Vendors",
             description:
-              "Vancouver local small business and home vendor directory for the Korean-Canadian community.",
+              "이웃주민의 작은 가게를 함께 응원하는 밴쿠버 한인 소상공인 및 홈비즈니스 디렉토리입니다.",
             inLanguage: ["ko-KR", "en-CA"],
             potentialAction: {
               "@type": "SearchAction",
@@ -235,9 +235,9 @@ useHead({
           {
             "@type": "ItemList",
             "@id": "https://my-little-vendors.vercel.app/#listings",
-            name: "Vancouver Local Business Directory",
+            name: "My Little Vendors - 이웃주민의 작은 가게를 함께 응원해요.",
             description:
-              "A curated list of local small businesses and home vendors in Vancouver, BC.",
+              "이웃주민의 작은 가게를 함께 응원하는 밴쿠버 한인 소상공인 및 홈비즈니스 디렉토리입니다.",
             url: "https://my-little-vendors.vercel.app/",
           },
         ],
