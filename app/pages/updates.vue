@@ -5,19 +5,6 @@
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4 flex items-center justify-center gap-2"
       >
-        <svg
-          class="w-8 h-8 text-amber-400"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19 11H5m14 0a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2m14 0V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"
-          />
-        </svg>
         최근 소식
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
@@ -26,11 +13,9 @@
     </section>
 
     <!-- Updates list -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5"
-      >
-        <div
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+      <ul class="space-y-5">
+        <li
           v-for="(update, i) in updates"
           :key="i"
           class="bg-white border border-stone-100 rounded-3xl p-6 shadow-sm flex flex-col"
@@ -39,18 +24,18 @@
             <span class="text-xs text-stone-400">{{ update.date }}</span>
             <span
               v-if="update.tag"
-              class="px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700 ml-2"
+              class="py-1 px-4 rounded-full text-xs font-medium bg-amber-100 text-amber-700 ml-2"
               >{{ update.tag }}</span
             >
           </div>
-          <div class="text-stone-800 font-semibold mb-1 text-lg">
+          <div class="text-stone-800 font-semibold mb-4 text-lg">
             {{ update.title }}
           </div>
           <div class="text-stone-500 text-sm whitespace-pre-line flex-1">
-            {{ update.body }}
+            <span v-html="update.body" />
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
@@ -60,26 +45,14 @@ const updates = [
   {
     date: "2026-05-30",
     tag: "신규",
-    title: "채팅 챗봇 위젯 추가",
-    body: "좌측 하단에 챗봇 위젯이 추가되어 궁금한 점을 간단히 문의할 수 있습니다.",
-  },
-  {
-    date: "2026-05-29",
-    tag: "개선",
-    title: "비즈니스 카드에 좋아요 수 표시",
-    body: "각 비즈니스 카드에 임의의 좋아요 수가 표시됩니다.",
+    title: "5개의 새로운 소상공인 추가",
+    body: "🎉 새로운 소식이에요! 커뮤니티가 직접 추천한 따끈따끈한 소상공인 5곳이 새롭게 합류했습니다.<br><br>하나하나 정성 가득한 곳들이니 천천히 둘러보며 발견하는 재미를 느껴보세요 🤍",
   },
   {
     date: "2026-05-28",
     tag: "신규",
-    title: "Did You Know? 위젯 개선",
-    body: "각 비즈니스별로 재미있는 사실이 개별적으로 관리됩니다.",
-  },
-  {
-    date: "2026-05-27",
-    tag: "신규",
-    title: "최근 소식 페이지 오픈",
-    body: "업데이트 내역을 한눈에 볼 수 있는 최근 소식 페이지가 추가되었습니다.",
+    title: "4개의 새로운 소상공인 추가",
+    body: "✨ 더 풍성해진 업데이트! 커뮤니티 추천을 통해 매력 가득한 소상공인 4곳이 새롭게 추가되었어요.<br><br>이번에도 숨은 보석 같은 곳들이 가득하니 놓치지 마세요 💛",
   },
 ];
 </script>

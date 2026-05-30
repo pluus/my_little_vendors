@@ -67,19 +67,6 @@
           to="/updates"
           class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium transition-colors"
         >
-          <svg
-            class="w-3.5 h-3.5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 11H5m14 0a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2m14 0V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"
-            />
-          </svg>
           <span class="flex-1 text-center sm:text-left">최근 소식</span>
         </NuxtLink>
         <!-- Mobile search toggle -->
