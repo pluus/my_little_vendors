@@ -11,6 +11,27 @@
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
         우리 이웃이 제공하는 특별한 서비스!
       </p>
+      <a
+        href="https://forms.gle/AsR5kSVsZrvmFRwq7"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors"
+      >
+        <svg
+          class="w-3.5 h-3.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 4v16m8-8H4"
+          />
+        </svg>
+        <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
+      </a>
     </section>
 
     <!-- Did You Know Floating Widget -->

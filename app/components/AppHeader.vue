@@ -40,8 +40,8 @@
         </div>
       </div>
 
-      <!-- Nav actions -->
-      <nav class="flex items-center gap-2">
+      <!-- Nav actions (desktop) -->
+      <nav class="hidden sm:flex items-center gap-2">
         <a
           href="https://forms.gle/AsR5kSVsZrvmFRwq7"
           target="_blank"
@@ -69,9 +69,20 @@
         >
           <span class="flex-1 text-center sm:text-left">최근 소식</span>
         </NuxtLink>
+      </nav>
+      <!-- Hamburger menu (mobile) -->
+      <div class="sm:hidden flex items-center gap-2">
+        <button
+          class="p-2 rounded-full hover:bg-stone-100 transition"
+          @click="mobileMenu = !mobileMenu"
+        >
+          <svg class="w-6 h-6 text-stone-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
         <!-- Mobile search toggle -->
         <button
-          class="sm:hidden p-2 rounded-full hover:bg-stone-100 transition"
+          class="p-2 rounded-full hover:bg-stone-100 transition"
           @click="mobileSearch = !mobileSearch"
         >
           <svg
@@ -85,7 +96,35 @@
             <path d="m21 21-4.35-4.35" />
           </svg>
         </button>
-      </nav>
+      </div>
+      <!-- Mobile menu dropdown -->
+      <Transition name="fade">
+        <div
+          v-if="mobileMenu"
+          class="sm:hidden absolute top-16 left-0 w-full bg-white border-b border-stone-100 shadow z-40 animate-fade-in"
+        >
+          <div class="flex flex-col gap-2 px-4 py-4">
+            <a
+              href="https://forms.gle/AsR5kSVsZrvmFRwq7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-amber-400 hover:bg-amber-500 text-white text-base font-medium transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+              </svg>
+              가게 추천하기
+            </a>
+            <NuxtLink
+              to="/updates"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-200 hover:bg-stone-300 text-stone-700 text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              최근 소식
+            </NuxtLink>
+          </div>
+        </div>
+      </Transition>
     </div>
 
     <!-- Mobile search bar -->
@@ -122,6 +161,7 @@
 <script setup lang="ts">
 const search = useSearch();
 const mobileSearch = ref(false);
+const mobileMenu = ref(false);
 </script>
 
 <style scoped>
