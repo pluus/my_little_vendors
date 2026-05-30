@@ -46,7 +46,7 @@
           to="/about"
           class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition-colors"
         >
-          <span class="flex-1 text-center sm:text-left">소개</span>
+          <span class="flex-1 text-center sm:text-left">웹사이트 소개</span>
         </NuxtLink>
         <NuxtLink
           to="/updates"
