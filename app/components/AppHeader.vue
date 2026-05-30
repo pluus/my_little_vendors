@@ -76,8 +76,18 @@
           class="p-2 rounded-full hover:bg-stone-100 transition"
           @click="mobileMenu = !mobileMenu"
         >
-          <svg class="w-6 h-6 text-stone-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            class="w-6 h-6 text-stone-700"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
         <!-- Mobile search toggle -->
@@ -110,8 +120,18 @@
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-4 py-3 rounded-xl bg-amber-400 hover:bg-amber-500 text-white text-base font-medium transition-colors"
             >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
               </svg>
               가게 추천하기
             </a>
