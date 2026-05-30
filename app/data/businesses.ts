@@ -296,7 +296,7 @@ export const businesses: Business[] = [
     email: "",
     isPlaceholder: false,
     funFact:
-      "백일잔치의 흰색 백설기는 순수함과 건강을 상징해요. 예로부터 백설기를 이웃과 나누며 아기의 복과 건강을 함께 기원했다고 해요. <br><br><strong>The Party Ave</strong>을 통해 가족의 특별한 날을 더욱 의미있게 만드세요.",
+      "예전에는 영아 사망률이 높았기 때문에, 아기가 100일을 무사히 넘긴 것을 큰 “생존의 이정표”로 여겼습니다. 그래서 단순한 축하를 넘어서 가족뿐 아니라 이웃과 음식을 나누는 ‘공동 축하’ 문화가 발달했어요.<br><br><strong>The Party Ave</strong>을 통해 소중한 순간을 함께 축하하는 건 어떨까요? 예쁜 백일상과 돌상으로 아이의 건강을 축하해 주세요!",
   },
   {
     like: Math.floor(Math.random() * 1000),
