@@ -42,6 +42,18 @@
 
       <!-- Nav actions (desktop) -->
       <nav class="hidden sm:flex items-center gap-2">
+        <NuxtLink
+          to="/about"
+          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition-colors"
+        >
+          <span class="flex-1 text-center sm:text-left">소개</span>
+        </NuxtLink>
+        <NuxtLink
+          to="/updates"
+          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium transition-colors"
+        >
+          <span class="flex-1 text-center sm:text-left">최근 소식</span>
+        </NuxtLink>
         <a
           href="https://forms.gle/AsR5kSVsZrvmFRwq7"
           target="_blank"
@@ -63,18 +75,6 @@
           </svg>
           <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
         </a>
-        <NuxtLink
-          to="/updates"
-          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium transition-colors"
-        >
-          <span class="flex-1 text-center sm:text-left">최근 소식</span>
-        </NuxtLink>
-        <NuxtLink
-          to="/about"
-          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition-colors"
-        >
-          <span class="flex-1 text-center sm:text-left">About Us</span>
-        </NuxtLink>
       </nav>
       <!-- Hamburger menu (mobile) -->
       <div class="sm:hidden flex items-center gap-2">

@@ -1,21 +1,21 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center my-8">
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
         <span class="mb-5 inline-block">이웃주민의 작은 가게를,</span><br />
         <span class="text-amber-400">함께 응원해요.</span>
       </h1>
-      <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed">
+      <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed mt-8">
         우리 이웃이 제공하는 특별한 서비스!
       </p>
       <a
         href="https://forms.gle/AsR5kSVsZrvmFRwq7"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-6 w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors"
+        class="mt-6 w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors block lg:hidden"
       >
         <svg
           class="w-3.5 h-3.5"
