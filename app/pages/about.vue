@@ -1,8 +1,6 @@
 <template>
   <div class="max-w-2xl mx-auto px-4 py-16 text-center">
-    <h1
-      class="text-4xl sm:text-5xl font-bold text-stone-900 mb-16 flex items-center justify-center gap-2"
-    >
+    <h1 class="text-3xl sm:text-5xl font-bold text-stone-900 mb-16 text-center">
       <span style="color: rgb(251, 191, 36)">My Little Vendors</span> 소개
     </h1>
     <img
