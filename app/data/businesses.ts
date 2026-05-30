@@ -293,7 +293,7 @@ export const businesses: Business[] = [
     name: "Flodeer",
     description:
       "🌷 미술 전공자의 감각으로 완성하는 특별한 꽃풍선 아트. 생일, 기념일, 베이비샤워 등 소중한 순간을 더욱 아름답게 꾸며드립니다. 맞춤 제작부터 클래스, 문화센터 출강까지 진행하며, 감성을 담은 풍선 디자인을 선보입니다. ✨ 주문 및 클래스 문의 환영합니다. 🎈🌸",
-    category: "풍선아",
+    category: "풍선아트",
     location: "밴쿠버",
     tags: ["풍선아트", "꽃풍선", "이벤트 데코", "생일", "기념일"],
     cover: "/images/11/cover.jpg",
@@ -319,6 +319,67 @@ export const businesses: Business[] = [
     funFact:
       "풍선아트는 생각보다 고도의 기술이 필요해요. 꽃, 동물, 캐릭터, 대형 장식까지 만들기 위해서는 색 조합, 구조 설계, 공간 디자인 능력이 모두 필요하답니다. <br><br><strong>Flodeer</strong>의 작품들은 미술 전공자의 감각과 섬세한 손길이 더해져 특별한 순간을 더욱 아름답게 꾸며준답니다! 여러분도 특별한 날에 풍선아트로 감성을 더해보시는건 어떨까요?",
   },
+  {
+    id: 12,
+    name: "Jade Made",
+    description:
+      "🧶💛 한 땀 한 땀 정성으로 만든 수제 뜨개 수세미는 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력입니다 ✨ 알록달록한 색상으로 주방을 화사하게 밝혀주고 🧼 뛰어난 세척력과 실용성까지 갖춰 매일 쓰기 좋으며, 인테리어 소품으로도 손색없어요 🌈 정성 가득한 핸드메이드 제품이라 선물용으로도 인기 많은 감성 아이템입니다 🎁",
+    category: "수제",
+    location: "밴쿠버",
+    tags: ["수제", "뜨개질", "수세미", "핸드메이드", "선물용"],
+    cover: "/images/12/cover.jpg",
+    images: [
+      "/images/12/1.jpg",
+      "/images/12/2.jpg",
+      "/images/12/3.jpg",
+      "/images/12/4.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: [
+      "/images/12/1.jpg",
+      "/images/12/2.jpg",
+      "/images/12/3.jpg",
+      "/images/12/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/jademade_v",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "뜨개 수세미는 같은 모양이라도 뜨는 사람의 손압(장력)에 따라 완성 크기와 촉감이 완전히 달라져서 “완전히 동일한 제품이 거의 없는 생활 공예품”이에요. <br><br><strong>Jade Made</strong>의 수세미는 한 땀 한 땀 정성으로 만들어져서 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력적이랍니다! 여러분도 주방에 따뜻한 감성을 더해보시는건 어떨까요?",
+  },
+  {
+    id: 13,
+    name: "Aria Piano",
+    description:
+      "재즈피아니스트이자 작·편곡가로 동덕여대 실용음악과 재즈피아노를 전공하고 김광민·곽윤찬에게 사사했으며, 성시경·양희은·윤종신 등 다양한 아티스트 라이브 세션과 드라마 OST 작업, 재즈 클럽 공연을 통해 폭넓은 활동을 이어왔습니다. 15년 이상의 레슨 경력을 바탕으로 국내외 상위 음악대학 합격생을 다수 배출했으며, 현재는 피아노 싱글 앨범을 준비 중입니다 ✨",
+    category: "음악",
+    location: "랭리",
+    tags: ["음악", "피아노", "레슨", "개인 레슨", "그룹 레슨"],
+    cover: "/images/13/cover.jpg",
+    images: [
+      "/images/13/1.jpg",
+      "/images/13/2.jpg",
+      "/images/13/3.jpg",
+      "/images/13/4.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: [
+      "/images/13/1.jpg",
+      "/images/13/2.jpg",
+      "/images/13/3.jpg",
+      "/images/13/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/ariapiano.studio/",
+    kakao: "https://open.kakao.com/o/sINcwBNf",
+    email: "",
+    isPlaceholder: false,
+    funFact: "",
+  },
 ];
 
 export const categories = [
@@ -333,5 +394,6 @@ export const categories = [
   "베이커리",
   "음식",
   "풍선아트",
+  "수제",
   "기타",
 ];
