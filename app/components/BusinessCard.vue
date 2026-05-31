@@ -66,13 +66,12 @@
     </div>
 
     <!-- Card body -->
-    <div class="p-4 relative z-10 bg-white">
+    <div class="p-4 relative z-10 bg-white" @click="$emit('open', business)">
       <!-- Name row -->
       <div class="flex items-start justify-between gap-3 mb-2">
         <div class="min-w-0 pt-0.5">
           <h3
             class="font-semibold text-stone-900 text-sm leading-tight truncate hover:text-amber-400 transition-colors"
-            @click="$emit('open', business)"
           >
             {{ business.name }}
           </h3>
