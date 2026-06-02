@@ -296,7 +296,7 @@ export const businesses: Business[] = [
     email: "",
     isPlaceholder: false,
     funFact:
-      "예전에는 영아 사망률이 높았기 때문에, 아기가 100일을 무사히 넘긴 것을 큰 “생존의 이정표”로 여겼습니다. 그래서 단순한 축하를 넘어서 가족뿐 아니라 이웃과 음식을 나누는 ‘공동 축하’ 문화가 발달했어요.<br><br><strong>The Party Ave</strong>을 통해 소중한 순간을 함께 축하하는 건 어떨까요? 예쁜 백일상과 돌상으로 아이의 건강을 축하해 주세요!",
+      "옛날부터 아기가 100일을 무사히 넘긴 것은 큰 축복으로 여겼습니다. 그래서 단순한 축하를 넘어서 가족뿐 아니라 이웃과 음식을 나누는 ‘공동 축하’ 문화가 발달했어요. <strong>The Party Ave</strong>는 백일상, 돌상, 패밀리 이벤트 전문 업체로 밴쿠버 지역에서 특별한 날을 더욱 빛나게 만들어 드리고 있답니다! 여러분도 소중한 순간을 의미있게 만들어 보세요.",
   },
   {
     like: Math.floor(Math.random() * 1000),
@@ -396,6 +396,7 @@ export const businesses: Business[] = [
   },
   {
     id: 14,
+    like: Math.floor(Math.random() * 1000),
     name: "Flora Piano",
     description:
       "RCM 8급, 음악영어전문가·영어로 배우는 피아노·아동/기초 피아노 지도법, Piano Adventures 전문교사, 문화예술교육사 2급 보유. 초등학교 방과후 출강 경력 있으며, 100대 피아노 연주 및 다수의 연주회·콩쿠르 수상 및 참가 이력 보유. 대구가톨릭대학교 피아노과 졸업 및 다양한 공연 활동 경험을 바탕으로 전문적인 피아노 교육을 제공합니다.",
@@ -414,6 +415,70 @@ export const businesses: Business[] = [
     isPlaceholder: false,
     funFact:
       "피아노는 단순한 악기가 아니라 뇌를 동시에 훈련시키는 도구입니다. 양손을 따로 움직이고 악보를 읽는 과정이 좌우 뇌를 연결하고, 기억력·집중력·언어 처리 능력까지 함께 자극한다고 알려져 있어요.<br><br><strong>Flora Piano</strong>의 레슨을 통해 여러분도 음악을 통해 뇌와 감성을 함께 자극해보시는건 어떨까요?",
+  },
+  {
+    id: 15,
+    like: Math.floor(Math.random() * 1000),
+    name: "돌상",
+    description:
+      "아기의 첫 번째 생일과 백일을 더욱 특별하게 만들어주는 돌상·한복 렌탈 전문 업체입니다 🎂👶 전통의 아름다움을 담은 돌상 세팅부터 고급스러운 백일한복, 돌한복까지 한 번에 준비할 수 있어 번거로운 준비 없이도 완성도 높은 기념 촬영과 행사를 연출할 수 있습니다. 💛 소중한 순간이 더욱 빛날 수 있도록 감각적인 스타일링과 다양한 구성 옵션을 제공하여, 가족에게 오래 기억될 따뜻한 추억을 만들어드립니다 ✨",
+    category: "이벤트",
+    location: "버나비",
+    tags: ["이벤트", "돌상", "한복", "렌탈", "기념 촬영"],
+    cover: "/images/15/cover.jpg",
+    images: [
+      "/images/15/1.jpg",
+      "/images/15/2.jpg",
+      "/images/15/3.jpg",
+      "/images/15/4.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "672-833-2281",
+    gallery: [
+      "/images/15/1.jpg",
+      "/images/15/2.jpg",
+      "/images/15/3.jpg",
+      "/images/15/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/partytable_van/",
+    kakao: "https://open.kakao.com/o/saHXv91e",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "옛날부터 아기가 100일을 무사히 넘긴 것은 큰 축복으로 여겼습니다. 그래서 단순한 축하를 넘어서 가족뿐 아니라 이웃과 음식을 나누는 ‘공동 축하’ 문화가 발달했어요.<br><br><strong>돌상</strong>을 통해 소중한 순간을 함께 축하하는 건 어떨까요? 백일상, 돌상을 대여하는 이벤트 전문 업체로 밴쿠버 지역에서 특별한 날을 더욱 빛나게 만들어 드리고 있답니다! 여러분도 아이의 소중한 100일을 의미있게 만들어 보세요.",
+  },
+  {
+    id: 16,
+    like: Math.floor(Math.random() * 1000),
+    name: "클레이튼",
+    description:
+      "클레이튼 Roof & Gutter는 주거 및 상업용 외부 청소를 전문으로 하는 업체로, 지붕과 거터 청소, 고압 세척 등 다양한 서비스를 통해 고객의 건물과 자산을 깨끗하고 안전하게 유지하는 데 도움을 드립니다. 숙련된 팀이 효율적이면서도 세심하게 작업하여 최상의 결과를 제공하며, 지붕과 거터 청소를 통해 누수 및 물 피해를 예방하고, 해충 발생과 이끼 성장을 억제하며, 건물의 기초 균열 위험을 줄이는 동시에 장기적인 유지보수 비용 절감에도 기여합니다.",
+    category: "청소",
+    location: "버나비",
+    tags: ["청소", "지붕 청소", "거터 청소", "고압 세척", "외부 청소"],
+    cover: "/images/16/cover.jpg",
+    images: [
+      "/images/16/1.jpg",
+      "/images/16/2.jpg",
+      "/images/16/3.jpg",
+      "/images/16/4.jpg",
+    ],
+    hours: "",
+    website: "https://www.claytonhomepros.ca",
+    phone: "778-317-7458",
+    gallery: [
+      "/images/16/1.jpg",
+      "/images/16/2.jpg",
+      "/images/16/3.jpg",
+      "/images/16/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/claytonhomepros/",
+    kakao: "https://open.kakao.com/o/saHXv91e",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "하우스 지붕 청소는 이끼와 이물질로 인한 누수와 부식을 예방해 집의 수명을 늘리고 큰 수리비를 줄여주는 중요한 유지관리 작업입니다. 또한 배수 문제와 곰팡이 발생을 막고, 집의 외관과 자산 가치를 유지하는 데에도 도움이 되죠.<br><br>지붕 청소는 높은 곳에서 진행되기 때문에 안전 사고 위험이 있어 전문가의 관리가 권장됩니다.<br><br><strong>클레이</strong>는 전문적인 하우스 지붕 청소 서비스를 제공하여 집을 안전하고 깨끗하게 유지할 수 있도록 도와드립니다. 정기적인 관리로 집의 건강과 가치를 지켜보시는 건 어떨까요?",
   },
 ];
 
