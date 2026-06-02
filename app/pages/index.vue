@@ -34,8 +34,12 @@
       </a>
     </section>
 
-    <!-- Did You Know Floating Widget -->
-    <DidYouKnowWidget :fun-fact="funFact" />
+    <!-- Did You Know detail widget -->
+    <DidYouKnowWidget
+      v-if="selectedBusiness?.funFact"
+      :key="selectedBusiness.id"
+      :fun-fact="selectedBusiness.funFact"
+    />
     <!-- Chatbot Floating Widget -->
     <!-- <ChatWidget /> -->
 
@@ -283,12 +287,9 @@ function shuffle<T>(arr: T[]): T[] {
 const shuffledBusinesses = ref([...businesses]);
 const realBusinesses = businesses.filter((b) => !b.isPlaceholder);
 const weeklyPick = ref(realBusinesses[0] ?? businesses[0]);
-const funFact = ref("");
 
 onMounted(() => {
   shuffledBusinesses.value = shuffle(businesses);
-  funFact.value =
-    shuffledBusinesses.value.find((b) => b.funFact)?.funFact || "";
 
   const pool = businesses.filter((b) => !b.isPlaceholder);
   weeklyPick.value =
