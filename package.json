@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.107.0",
     "analytics": "github:vercel/analytics",
     "nuxt": "^4.4.6",
     "vue": "^3.5.34",

@@ -54,6 +54,12 @@
         >
           <span class="flex-1 text-center sm:text-left">최근 소식</span>
         </NuxtLink>
+        <!-- <NuxtLink
+          to="/signup"
+          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-stone-300 hover:border-stone-400 text-stone-700 text-sm font-medium transition-colors"
+        >
+          <span class="flex-1 text-center sm:text-left">회원가입</span>
+        </NuxtLink> -->
         <a
           href="https://forms.gle/AsR5kSVsZrvmFRwq7"
           target="_blank"
@@ -133,6 +139,13 @@
               @click="mobileMenu = false"
             >
               최근 소식
+            </NuxtLink>
+            <NuxtLink
+              to="/signup"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-white border border-stone-300 hover:bg-stone-100 text-stone-700 text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              회원가입
             </NuxtLink>
             <a
               href="https://forms.gle/AsR5kSVsZrvmFRwq7"

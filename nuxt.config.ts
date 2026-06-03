@@ -84,6 +84,14 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss"],
 
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || "",
+      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY || "",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || SITE_URL,
+    },
+  },
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",
