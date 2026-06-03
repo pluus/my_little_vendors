@@ -1,6 +1,7 @@
 const SITE_URL = "https://my-little-vendors.vercel.app";
 const SITE_NAME = "My Little Vendors";
 const OG_IMAGE = `${SITE_URL}/images/preview/thumbnail.png`;
+const env = import.meta.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -85,10 +86,11 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
 
   runtimeConfig: {
+    supabaseServiceRoleKey: env.SUPABASE_SERVICE_ROLE_KEY || "",
     public: {
-      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || "",
-      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY || "",
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || SITE_URL,
+      supabaseUrl: env.NUXT_PUBLIC_SUPABASE_URL || "",
+      supabaseAnonKey: env.NUXT_PUBLIC_SUPABASE_ANON_KEY || "",
+      siteUrl: env.NUXT_PUBLIC_SITE_URL || SITE_URL,
     },
   },
 
