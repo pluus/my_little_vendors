@@ -146,7 +146,7 @@
             >
               최근 소식
             </NuxtLink>
-            <NuxtLink
+            <!-- <NuxtLink
               to="/signin"
               class="flex items-center gap-2 px-4 py-3 rounded-xl bg-white border border-stone-300 hover:bg-stone-100 text-stone-700 text-base font-medium transition-colors"
               @click="mobileMenu = false"
@@ -159,7 +159,7 @@
               @click="mobileMenu = false"
             >
               회원가입
-            </NuxtLink>
+            </NuxtLink> -->
             <a
               href="https://forms.gle/AsR5kSVsZrvmFRwq7"
               target="_blank"
