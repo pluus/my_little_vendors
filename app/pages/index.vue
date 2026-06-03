@@ -11,6 +11,9 @@
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed mt-8">
         우리 이웃이 제공하는 특별한 서비스!
       </p>
+
+      <Banner />
+
       <a
         href="https://forms.gle/AsR5kSVsZrvmFRwq7"
         target="_blank"
@@ -176,6 +179,7 @@ import DidYouKnowWidget from "~/components/DidYouKnowWidget.vue";
 import ChatWidget from "~/components/ChatWidget.vue";
 import { businesses, categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
+import Banner from "~/components/Banner.vue";
 
 useHead({
   title: "My Little Vendors - 이웃주민의 작은 가게를 함께 응원해요.",
