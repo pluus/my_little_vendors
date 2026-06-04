@@ -5,11 +5,14 @@
       <h1
         class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-4"
       >
-        <span class="mb-5 inline-block">이웃주민의 작은 가게를,</span><br />
-        <span class="text-amber-400">함께 응원해요.</span>
+        <span class="mb-5 inline-block"
+          >밴쿠버의 <span class="text-amber-400">스몰 비즈니스</span>를
+          만나보세요</span
+        >
+        ✨
       </h1>
       <p class="text-stone-500 text-lg max-w-md mx-auto leading-relaxed mt-8">
-        우리 이웃이 제공하는 특별한 서비스!
+        우리 이웃의 손길이 담긴 특별한 서비스!
       </p>
 
       <a
@@ -124,7 +127,7 @@
             />
           </div>
         </template>
-        <template v-for="(placeholder, idx) in 3" :key="'placeholder-' + idx">
+        <template v-for="(placeholder, idx) in 2" :key="'placeholder-' + idx">
           <div class="rounded-3xl transition-all duration-200 opacity-80">
             <BusinessCard
               :business="{
