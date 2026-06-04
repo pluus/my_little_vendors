@@ -12,8 +12,6 @@
         우리 이웃이 제공하는 특별한 서비스!
       </p>
 
-      <Banner />
-
       <a
         href="https://forms.gle/AsR5kSVsZrvmFRwq7"
         target="_blank"
