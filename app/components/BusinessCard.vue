@@ -49,6 +49,7 @@
   <article
     v-else
     class="group bg-white rounded-3xl overflow-hidden border border-stone-100 card-hover cursor-pointer"
+    @click="$emit('open', business)"
   >
     <!-- Cover carousel -->
     <div class="relative overflow-hidden aspect-[4/3] bg-stone-100">
@@ -66,7 +67,7 @@
     </div>
 
     <!-- Card body -->
-    <div class="p-4 relative z-10 bg-white" @click="$emit('open', business)">
+    <div class="p-4 relative z-10 bg-white">
       <!-- Name row -->
       <div class="flex items-start justify-between gap-3 mb-2">
         <div class="min-w-0 pt-0.5">
