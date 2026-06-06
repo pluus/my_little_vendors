@@ -94,8 +94,8 @@
       </div>
 
       <!-- Description -->
-      <p class="text-sm text-stone-500 leading-relaxed line-clamp-2 mb-3">
-        {{ business.description }}
+      <p class="text-sm text-stone-500 leading-relaxed line-clamp-5 mb-3">
+        <span v-html="business.description"></span>
       </p>
 
       <!-- Tags -->

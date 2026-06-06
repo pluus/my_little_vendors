@@ -257,7 +257,7 @@
 
           <!-- Description -->
           <p class="text-stone-600 text-sm leading-relaxed">
-            {{ business.description }}
+            <span v-html="business.description"></span>
           </p>
         </div>
       </div>
