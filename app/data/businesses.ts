@@ -521,7 +521,7 @@ export const businesses: Business[] = [
 ];
 
 export const categories = [
-  "전체(16)",
+  "전체(17)",
   "플러밍",
   "운동",
   "미용",
