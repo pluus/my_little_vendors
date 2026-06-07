@@ -518,6 +518,50 @@ export const businesses: Business[] = [
     funFact:
       "망가진 전자기기를 보며 눈물 흘린 날들이여 이제는 안녕! <br><br><strong>Total Cell Phone Clinic</strong>은 첨단 장비를 활용하여 아주 세밀한 부품까지 꼼꼼하게 점검하여 최적의 수리 솔루션을 제공하는 전문 수리 업체랍니다. <br><br><strong>67개의 구글리뷰를 통해 만점</strong>을 받으며 <strong>디지털 기기의 명의로 소문난 곳</strong>이니 소중한 기계가 망가졌다면 주저없이 연락해보세요!",
   },
+  {
+    id: 18,
+    like: Math.floor(Math.random() * 1000),
+    name: "Cake Leon",
+    description:
+      "Cake Leon은 써리에 위치한 케이크를 전문으로 하는 홈 베이커리 입니다.<br><br>케이크 위에 수놓이는 환상적인 장식. 입안에서 녹아내리는 환상적인 맛. 특별한 날을 기념하는 케이크부터 커스텀 주문까지!<br><br>인스타그램을 통해 다양한 제품을 구경해보세요!",
+    category: "베이커리",
+    location: "써리",
+    tags: [
+      "베이커리",
+      "제빵",
+      "디저트",
+      "케이크",
+      "커스텀",
+      "생일",
+      "주문제작",
+    ],
+    cover: "/images/18/cover.jpg",
+    images: [
+      "/images/18/1.jpg",
+      "/images/18/2.jpg",
+      "/images/18/3.jpg",
+      "/images/18/4.jpg",
+      "/images/18/5.jpg",
+      "/images/18/6.jpg",
+    ],
+    hours: "Closed on Sun and Mon",
+    website: "",
+    phone: "",
+    gallery: [
+      "/images/18/1.jpg",
+      "/images/18/2.jpg",
+      "/images/18/3.jpg",
+      "/images/18/4.jpg",
+      "/images/18/5.jpg",
+      "/images/18/6.jpg",
+    ],
+    instagram: "https://www.instagram.com/cake__leon/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "<strong>Cake Leon</strong>의 케이크는 제겐 정말 특별해요!<br><br>케이크를 정말 싫어하는 사람을 한 명 알고 있어요. 생일에도 케이크는 거들떠보지 않고 빵만 조금 먹던 사람이었는데, <strong>Cake Leon 케이크는 ”괜찮네?” 하더니 포크로 푹푹 잘라 먹더라고요.</strong> 접시가 깔끔하게 비워진 모습은 난생 처음 봤답니다. 모두가 놀라워 했어요.<br><br>재료의 비결이 뭐였을까요?",
+  },
 ];
 
 export const categories = [
