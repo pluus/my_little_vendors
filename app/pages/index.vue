@@ -38,6 +38,9 @@
       </a>
     </section>
 
+    <!-- Vendor of the Week Banner -->
+    <!-- <VendorOfTheWeek /> -->
+
     <!-- Did You Know detail widget -->
     <DidYouKnowWidget
       v-if="selectedBusiness?.funFact"

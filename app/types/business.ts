@@ -18,4 +18,14 @@ export interface Business {
   featured?: boolean;
   isPlaceholder: boolean;
   funFact?: string;
+  slug?: string;
+  vendorOfWeek?: boolean; // Mark this vendor as vendor of the week
+  vendor?: {
+    name: string;
+    story: string;
+    quote?: string;
+    journey?: string;
+    passion?: string;
+    image?: string;
+  };
 }
