@@ -562,6 +562,38 @@ export const businesses: Business[] = [
     funFact:
       "<strong>Cake Leon</strong>의 케이크를 보셨나요? 조그만 10인치 남짓한 공간에서 벌어지는 아름다운 디자인과 환상적인 맛. 단호박, 인절미, 흑임자 같은 다소 낯선 재료가 케이크와 절묘하게 어울릴 줄이야! 정말 깜짝 놀랐어요!<br><br>다이어트 중인데 정말 참기가 어렵네요 😭. 딱 한입은 괜찮겠죠?",
   },
+  {
+    id: 19,
+    like: Math.floor(Math.random() * 1000),
+    name: "Dooyoo",
+    description:
+      "인산 죽염의 깊은 전통을 만나보세요.<br><br>세계에서 가장 알칼리성이 높은 소금으로 알려진 인산 죽염은 대나무 속에서 9번 정성껏 구워내어 완성됩니다. 건강과 미식의 가치를 동시에 담은 특별한 조미료로, 일상 속 식탁을 한층 더 풍요롭게 만들어보세요.<br><br>요리의 풍미를 더하고 건강한 라이프스타일을 추구하는 분들에게 사랑받는 인산 죽염. 지금 그 특별한 차이를 경험해보세요!",
+    category: "식품",
+    location: "밴쿠버",
+    tags: ["식품", "조미료", "건강", "미식", "죽염"],
+    cover: "/images/19/cover.jpg",
+    images: [
+      "/images/19/1.jpg",
+      "/images/19/2.jpg",
+      "/images/19/3.jpg",
+      "/images/19/4.jpg",
+    ],
+    hours: "10am - 6pm",
+    website: "https://k-lavasalt.ca/",
+    phone: "",
+    gallery: [
+      "/images/19/1.jpg",
+      "/images/19/2.jpg",
+      "/images/19/3.jpg",
+      "/images/19/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/dooyoo_ca/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "<strong>죽염</strong>이라고 하면 저는 솔직히 죽염 치약부터 떠올랐어요 😅 어릴 때부터 익숙하게 보던 제품이라 '죽염은 치약에 들어가는 건가 보다' 하고 생각했거든요.<br><br>그런데 알고 보니 죽염은 대나무 속에서 여러 번 구워 만드는 전통 식품인데다 특유의 맛으로 많은 사랑을 받고있었더라고요! <br><br><strong>Dooyoo</strong>에는 <strong>죽염으로 만든 간장, 고추장, 된장에 차까지</strong> 있다고 하니 정말 놀랍지 않나요? 죽염의 세계는 정말 넓고도 깊네요 🧂🎍",
+  },
 ];
 
 export const categories = [
