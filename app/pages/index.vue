@@ -296,8 +296,8 @@ const getInitialCategory = () => {
   if (selectedCategories.value.length > 0) {
     return selectedCategories.value[0];
   }
-  // Otherwise, show all
-  return "전체";
+  // Otherwise, show all - use the first category which is "전체(19)"
+  return categories[0];
 };
 
 const activeCategory = ref(getInitialCategory());
@@ -373,13 +373,13 @@ function scoreMatch(b: Business, tokens: string[]): number {
 const filteredBusinesses = computed(() => {
   let list = [...shuffledBusinesses.value];
 
-  // Apply category filter
-  if (activeCategory.value !== "전체") {
+  // Apply category filter - check if it's "전체" with or without count
+  const isAllCategory = activeCategory.value.startsWith("전체");
+
+  if (!isAllCategory) {
     list = list.filter((b) => b.category === activeCategory.value);
-  } else if (selectedCategories.value.length > 0) {
-    // If on "전체" but user has onboarding selections, show only those categories
-    list = list.filter((b) => selectedCategories.value.includes(b.category));
   }
+  // When "전체" is selected, show all vendors
 
   const raw = debouncedSearch.value.trim();
   if (!raw)
@@ -413,7 +413,7 @@ const filteredBusinesses = computed(() => {
 });
 
 function reset() {
-  activeCategory.value = "전체";
+  activeCategory.value = categories[0]; // "전체(19)"
   searchQuery.value = "";
 }
 
