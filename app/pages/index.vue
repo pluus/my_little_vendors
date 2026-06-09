@@ -273,13 +273,34 @@ useHead({
 });
 
 const route = useRoute();
+const router = useRouter();
+const { hasCompletedOnboarding, selectedCategories } = useOnboarding();
+
+// Redirect to onboarding if not completed
+onMounted(() => {
+  // if (!hasCompletedOnboarding.value) {
+  //   router.push("/onboarding");
+  // }
+});
+
 const searchQuery = useSearch();
 const debouncedSearch = useDebouncedSearch(150);
-const activeCategory = ref(
-  categories.includes(route.query.category as string)
-    ? (route.query.category as string)
-    : "전체",
-);
+
+// Determine initial category based on route query, or use onboarding selections
+const getInitialCategory = () => {
+  // If there's a category in the URL, use that
+  if (categories.includes(route.query.category as string)) {
+    return route.query.category as string;
+  }
+  // If user selected categories during onboarding, use the first one
+  if (selectedCategories.value.length > 0) {
+    return selectedCategories.value[0];
+  }
+  // Otherwise, show all
+  return "전체";
+};
+
+const activeCategory = ref(getInitialCategory());
 const selectedBusiness = ref<Business | null>(null);
 
 // Shuffle (Fisher-Yates) — runs only on mount to avoid SSR hydration mismatch
@@ -352,8 +373,12 @@ function scoreMatch(b: Business, tokens: string[]): number {
 const filteredBusinesses = computed(() => {
   let list = [...shuffledBusinesses.value];
 
+  // Apply category filter
   if (activeCategory.value !== "전체") {
     list = list.filter((b) => b.category === activeCategory.value);
+  } else if (selectedCategories.value.length > 0) {
+    // If on "전체" but user has onboarding selections, show only those categories
+    list = list.filter((b) => selectedCategories.value.includes(b.category));
   }
 
   const raw = debouncedSearch.value.trim();
