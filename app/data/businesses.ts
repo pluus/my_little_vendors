@@ -537,8 +537,8 @@ export const businesses: Business[] = [
       "/images/17/3.jpg",
       "/images/17/4.jpg",
     ],
-    hours: "10am-5pm Mon-Sat / Closed Sun",
-    website: "https://totalcellphoneclinic.cellstore.co/",
+    hours: "10:30am-6:30pm Mon-Sat / Closed Sun ",
+    website: "https://maps.app.goo.gl/f1SpKfEFYBTDd9sVA",
     phone: "672-991-2946",
     gallery: [
       "/images/17/1.jpg",
