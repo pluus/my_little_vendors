@@ -396,10 +396,13 @@ const filteredBusinesses = computed(() => {
   let list = [...shuffledBusinesses.value];
 
   // Apply category filter - check if it's "전체" with or without count
-  const isAllCategory = activeCategory.value.startsWith("전체");
+  const isAllCategory = activeCategory.value?.startsWith("전체") ?? true;
 
-  if (!isAllCategory) {
-    list = list.filter((b) => b.category === activeCategory.value);
+  if (!isAllCategory && activeCategory.value) {
+    // Filter businesses that have the selected category in their categories array
+    list = list.filter(
+      (b) => b.categories && b.categories.includes(activeCategory.value!),
+    );
   }
   // When "전체" is selected, show all vendors
 

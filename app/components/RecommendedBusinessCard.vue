@@ -13,7 +13,12 @@
     <div class="font-semibold text-stone-900 truncate mb-1">
       {{ business.name }}
     </div>
-    <div class="text-xs text-stone-500 mb-2">{{ business.category }}</div>
+    <div class="flex flex-wrap gap-1 text-xs text-stone-500 mb-2">
+      <span v-for="(category, idx) in business.categories" :key="category">
+        {{ category
+        }}<span v-if="idx < business.categories.length - 1">, </span>
+      </span>
+    </div>
     <div class="text-sm text-stone-600 line-clamp-2 mb-2">
       {{ business.description }}
     </div>

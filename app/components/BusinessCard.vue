@@ -58,12 +58,18 @@
         :alt="business.name"
         class="w-full h-full"
       />
-      <!-- Category badge -->
-      <span
-        class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs text-stone-500 border border-stone-300 bg-white z-10"
+      <!-- Category badges -->
+      <div
+        class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10 max-w-[calc(100%-1.5rem)]"
       >
-        {{ business.category }}
-      </span>
+        <span
+          v-for="category in business.categories"
+          :key="category"
+          class="px-2.5 py-1 rounded-full text-xs text-stone-500 border border-stone-300 bg-white"
+        >
+          {{ category }}
+        </span>
+      </div>
     </div>
 
     <!-- Card body -->

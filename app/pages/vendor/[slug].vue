@@ -85,11 +85,15 @@
           <!-- Vendor intro -->
           <div class="p-8 sm:p-12 flex flex-col justify-center">
             <div class="mb-4">
-              <span
-                class="inline-block px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-100 mb-3"
-              >
-                {{ business.category }}
-              </span>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span
+                  v-for="category in business.categories"
+                  :key="category"
+                  class="inline-block px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-100"
+                >
+                  {{ category }}
+                </span>
+              </div>
               <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-2">
                 {{ business.vendor?.name || business.name }}
               </h1>
@@ -232,9 +236,15 @@
             >
               카테고리
             </h3>
-            <p class="text-lg font-medium text-stone-900">
-              {{ business.category }}
-            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="category in business.categories"
+                :key="category"
+                class="text-lg font-medium text-stone-900"
+              >
+                {{ category }}
+              </span>
+            </div>
           </div>
         </div>
 

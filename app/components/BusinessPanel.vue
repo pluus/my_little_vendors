@@ -89,12 +89,16 @@
             </button>
           </div>
 
-          <!-- Category badge -->
-          <span
-            class="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold border border-amber-100 mb-5"
-          >
-            {{ business.category }}
-          </span>
+          <!-- Category badges -->
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span
+              v-for="category in business.categories"
+              :key="category"
+              class="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold border border-amber-100"
+            >
+              {{ category }}
+            </span>
+          </div>
 
           <!-- Info list -->
           <div class="flex flex-col gap-2.5 mb-5">

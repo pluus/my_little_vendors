@@ -3,7 +3,7 @@ export interface Business {
   like: number;
   name: string;
   description: string;
-  category: string;
+  categories: string[];
   location: string;
   tags: string[];
   cover: string;
