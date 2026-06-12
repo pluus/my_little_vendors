@@ -279,8 +279,9 @@ const { hasCompletedOnboarding, selectedCategories } = useOnboarding();
 // Redirect to onboarding if not completed
 onMounted(() => {
   // if (!hasCompletedOnboarding.value) {
-  //   router.push("/onboarding");
-  // }
+  if (Math.random() <= 0.25) {
+    router.push("/onboarding");
+  }
 });
 
 const searchQuery = useSearch();

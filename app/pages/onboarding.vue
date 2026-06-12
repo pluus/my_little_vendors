@@ -11,7 +11,7 @@
           class="mx-auto mb-4 rounded-full"
         />
         <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-3">
-          어떤 일을 도와드릴까요?
+          <span class="text-amber-400">안녕하세요!</span> 무엇을 도와드릴까요?
         </h1>
         <p class="text-stone-600 text-lg">상황에 맞는 서비스를 찾아드려요</p>
       </div>
@@ -111,38 +111,23 @@ interface ScenarioOption {
 
 const scenarioOptions: ScenarioOption[] = [
   {
-    label: "우리 아이 이벤트에 필요한 물건을 찾고 있어요",
-    value: ["이벤트", "풍선아트", "식품", "베이커리"],
+    label: "이벤트에 필요한 물건을 찾고 있어요.",
+    value: ["이벤트"],
     icon: "🎈",
   },
   {
-    label: "웨딩 준비를 하고 있어요",
-    value: ["이벤트", "꽃", "미용", "식품", "베이커리"],
-    icon: "💐",
-  },
-  {
-    label: "집 청소가 필요해요",
-    value: ["청소"],
+    label: "생활 관련 서비스가 필요해요.",
+    value: ["홈 & 리빙"],
     icon: "🧹",
   },
   {
-    label: "이사를 계획하고 있어요",
-    value: ["청소", "수리", "플러밍"],
-    icon: "📦",
-  },
-  {
-    label: "집 수리나 관리가 필요해요",
-    value: ["수리", "플러밍"],
-    icon: "🔧",
-  },
-  {
-    label: "건강하게 운동하고 싶어요",
-    value: ["운동"],
+    label: "무언가를 배우고싶어요.",
+    value: ["교육"],
     icon: "🏃",
   },
   {
-    label: "특별한 음식이나 베이커리를 찾고 있어요",
-    value: ["식품", "베이커리", "식품"],
+    label: "특별한 음식을 찾고 있어요.",
+    value: ["식품"],
     icon: "🍰",
   },
   {
@@ -160,8 +145,8 @@ const selectScenario = (option: ScenarioOption) => {
   selectedCategories.value = option.value;
 };
 
-const handleContinue = () => {
-  completeOnboarding(selectedCategories.value);
+const handleContinue = (value) => {
+  completeOnboarding(value);
   router.push("/");
 };
 
