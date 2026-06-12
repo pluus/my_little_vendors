@@ -49,6 +49,12 @@
           <span class="flex-1 text-center sm:text-left">웹사이트 소개</span>
         </NuxtLink>
         <NuxtLink
+          to="/group-buying"
+          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition-colors"
+        >
+          <span class="flex-1 text-center sm:text-left">공동구매</span>
+        </NuxtLink>
+        <NuxtLink
           to="/updates"
           class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-200 hover:bg-stone-300 text-stone-700 text-sm font-medium transition-colors"
         >
@@ -138,6 +144,13 @@
               @click="mobileMenu = false"
             >
               웹사이트 소개
+            </NuxtLink>
+            <NuxtLink
+              to="/group-buying"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              공동구매 📦
             </NuxtLink>
             <NuxtLink
               to="/updates"
