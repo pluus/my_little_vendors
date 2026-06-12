@@ -642,7 +642,7 @@ export const businesses: Business[] = [
     images: ["/images/20/1.jpg", "/images/20/2.jpg"],
     hours: "",
     website: "",
-    phone: "778-956-7531",
+    phone: "",
     gallery: ["/images/20/1.jpg", "/images/20/2.jpg"],
     instagram: "https://www.instagram.com/footcare_by_debbie/",
     kakao: "",
