@@ -7,7 +7,7 @@ export const businesses: Business[] = [
     name: "원 플러밍",
     description:
       "캐네디언 레드실 플러머자격증을 갖춘 플러밍 서비스, 하우스 누수, 키친싱크 막힘, 메인드인 막힘 등의 서비스 제공",
-    category: "플러밍",
+    category: "홈 서비스",
     location: "써리, 포트코퀴틀람, 코퀴틀람, 랭리, 포트무디",
     tags: ["플러밍", "누수 수리", "키친싱크 막힘", "메인드레인"],
     cover: "/images/1/cover.jpg",
@@ -41,7 +41,7 @@ export const businesses: Business[] = [
     name: "Athena Fencing Club",
     description:
       "Athena Fencing Club은 우리는 세계적인 수준의 펜싱 코칭을 가족 같은 분위기의 클럽에 담아내고자 했습니다.<br><br>오늘날 우리의 코치들은 버나비 전역의 어린이, 청소년, 성인들을 지도하며, 모든 펜서들이 실력, 자신감, 그리고 인격 면에서 함께 성장할 수 있도록 돕고 있습니다.",
-    category: "운동",
+    category: "교육",
     location: "버나비",
     tags: ["펜싱", "스포츠", "코칭", "클럽"],
     cover: "/images/2/cover.jpg",
@@ -85,7 +85,7 @@ export const businesses: Business[] = [
     name: "Elin Line",
     description:
       "ELIN LINE | Vancouver Premium PMU Studio는 정교한 기술과 예술적 감각으로 본연의 아름다움을 더욱 돋보이게 합니다.<br><br>자연스러운 결과와 맞춤 디자인으로 당신만의 아름다움과 자신감을 선사합니다.",
-    category: "미용",
+    category: "미용 & 건강",
     location: "포트코퀴틀람, 코퀴틀람",
     tags: [
       "미용",
@@ -127,7 +127,7 @@ export const businesses: Business[] = [
     name: "LS Cleaning",
     description:
       "LS Cleaning은 깨끗함과 완성도를 함께 추구하며 코퀴틀람, 써리, 랭리, 버나비, 밴쿠버 지역 고객분들의 다양한 니즈에 맞춘 전문 청소 서비스를 제공합니다.",
-    category: "청소",
+    category: "홈 & 리빙",
     location: "밴쿠버, 코퀴틀람, 써리, 랭리, 버나비",
     tags: ["청소", "하우스 클리닝", "상업 청소", "카펫 청소"],
     cover: "/images/4/cover.jpg",
@@ -159,7 +159,7 @@ export const businesses: Business[] = [
     name: "MOI-HWA",
     description:
       "MOI-HWA는 밴쿠버를 기반으로 활동하는 플로럴 스타일링 스튜디오입니다.<br><br>일상의 작은 순간부터 웨딩, 브랜드 프로젝트, 공간 스타일링까지 꽃이 가장 아름답게 어우러질 수 있는 방식으로 섬세한 플로럴 작업을 선보입니다.",
-    category: "꽃",
+    category: "이벤트",
     location: "밴쿠버",
     tags: [
       "플로럴 디자인",
@@ -197,7 +197,7 @@ export const businesses: Business[] = [
     name: "책놀이터",
     description:
       "아이의 독서, 더 쉽고 즐겁게!  무거운 전집 구매 대신, 우리 아이 성장에 맞춰 집에서 편하게 받아보세요.<br><br>연령별 추천 도서부터 인기 한글 전집까지 정성껏 배송해드립니다.",
-    category: "도서",
+    category: "교육",
     location: "밴쿠버",
     tags: ["도서", "독서", "전집", "유아 도서", "어린이 도서"],
     cover: "/images/6/cover.jpg",
@@ -219,7 +219,7 @@ export const businesses: Business[] = [
     name: "Butter Yellow Club",
     description:
       "버터 옐로우 클럽은 버나비에 위치한 베이커리로, 케이크, 디저트, 커스텀 주문제작을 전문으로 하는 곳입니다.<br><br>생일 케이크부터 특별한 날을 위한 맞춤형 디저트까지 다양한 제품을 제공합니다. <br><br>인스타그램을 통해 다양한 제품을 구경해보세요!",
-    category: "베이커리",
+    category: "식품",
     location: "버나비",
     tags: [
       "베이커리",
@@ -261,9 +261,9 @@ export const businesses: Business[] = [
     name: "Charm Oil",
     description:
       "Charm Oil은 BC 주정부의 정식 허가를 받은 오일 전문 생산 업체입니다.<br><br>라이센스 받은 커머셜 키친에서 내 가족 내 아이에게 주고 싶은 마음을 담아 청결과 신선도를 최우선으로<br><br> 주문 즉시 정성을 다하여 0% 첨가물 100% 통참깨 프리미엄 참기름을 생산하고 있습니다.",
-    category: "음식",
+    category: "식품",
     location: "밴쿠버, 써리, 랭리 등",
-    tags: ["음식", "푸드", "요리", "참기름", "오일", "조미료"],
+    tags: ["식품", "푸드", "요리", "참기름", "오일", "조미료"],
     cover: "/images/8/cover.jpg",
     images: ["/images/8/1.jpg", "/images/8/2.jpg", "/images/8/3.jpg"],
     hours: "",
@@ -339,7 +339,7 @@ export const businesses: Business[] = [
     name: "Flodeer",
     description:
       "🌷 미술 전공자의 감각으로 완성하는 특별한 꽃풍선 아트. 생일, 기념일, 베이비샤워 등 소중한 순간을 더욱 아름답게 꾸며드립니다.<br><br>맞춤 제작부터 클래스, 문화센터 출강까지 진행하며, 감성을 담은 풍선 디자인을 선보입니다. <br><br>✨ 주문 및 클래스 문의 환영합니다. 🎈🌸",
-    category: "풍선아트",
+    category: "이벤트",
     location: "밴쿠버",
     tags: ["풍선아트", "꽃풍선", "이벤트 데코", "생일", "기념일"],
     cover: "/images/11/cover.jpg",
@@ -371,7 +371,7 @@ export const businesses: Business[] = [
     name: "Jade Made",
     description:
       "🧶💛 한 땀 한 땀 정성으로 만든 수제 뜨개 수세미는 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력입니다 ✨ <br><br>알록달록한 색상으로 주방을 화사하게 밝혀주고 🧼 뛰어난 세척력과 실용성까지 갖춰 매일 쓰기 좋으며, 인테리어 소품으로도 손색없어요 🌈 <br><br>정성 가득한 핸드메이드 제품이라 선물용으로도 인기 많은 감성 아이템입니다 🎁",
-    category: "수제",
+    category: "주문제작",
     location: "밴쿠버",
     tags: ["수제", "뜨개질", "수세미", "핸드메이드", "선물용"],
     cover: "/images/12/cover.jpg",
@@ -403,7 +403,7 @@ export const businesses: Business[] = [
     name: "Aria Piano",
     description:
       "재즈피아니스트이자 15년 이상의 레슨 경력을 바탕으로 국내외 상위 음악대학 합격생을 다수 배출했으며, 현재는 피아노 싱글 앨범을 준비 중입니다.<br><br>작·편곡가로 동덕여대 실용음악과 재즈피아노를 전공하고 김광민·곽윤찬에게 사사했으며, 성시경·양희은·윤종신 등 다양한 아티스트 라이브 세션과 드라마 OST 작업, 재즈 클럽 공연을 통해 폭넓은 활동을 이어왔습니다. ✨",
-    category: "음악",
+    category: "교육",
     location: "랭리",
     tags: ["음악", "피아노", "레슨", "개인 레슨", "그룹 레슨"],
     cover: "/images/13/cover.jpg",
@@ -434,8 +434,8 @@ export const businesses: Business[] = [
     like: Math.floor(Math.random() * 1000),
     name: "Flora Piano",
     description:
-      "RCM Certified Teacher, 음악영어전문가·영어로 배우는 피아노·아동/기초 피아노 지도법, Piano Adventures 전문교사, 문화예술교육사 2급 보유.<br><br>초등학교 방과후 출강 경력 있으며, 100대 피아노 연주 및 다수의 연주회·콩쿠르 수상 및 참가 이력 보유. <br><br>대구가톨릭대학교 피아노과 졸업 및 다양한 공연 활동 경험을 바탕으로 전문적인 피아노 교육을 제공합니다.",
-    category: "음악",
+      "RCM Certified Teacher, 음악 영어 전문가 · 영어로 배우는 피아노·아동/기초 피아노 지도법, Piano Adventures 전문교사, 문화예술교육사 2급 보유.<br><br>초등학교 방과후 출강 경력 있으며, 100대 피아노 연주 및 다수의 연주회·콩쿠르 수상 및 참가 이력 보유. <br><br>대구가톨릭대학교 피아노과 졸업 및 다양한 공연 활동 경험을 바탕으로 전문적인 피아노 교육을 제공합니다.",
+    category: "교육",
     location: "버나비",
     tags: ["음악", "피아노", "레슨", "개인 레슨", "그룹 레슨"],
     cover: "/images/14/cover.jpg",
@@ -489,7 +489,7 @@ export const businesses: Business[] = [
     name: "클레이튼",
     description:
       "클레이튼 Roof & Gutter는 주거 및 상업용 외부 청소를 전문으로 하는 업체입니다.<br><br>지붕과 거터 청소, 고압 세척 등 다양한 서비스를 통해 고객의 건물과 자산을 깨끗하고 안전하게 유지하는 데 도움을 드립니다.<br><br>숙련된 팀이 효율적이면서도 세심하게 작업하여 최상의 결과를 제공하며, 지붕과 거터 청소를 통해 누수 및 물 피해를 예방하고, 해충 발생과 이끼 성장을 억제하며, 건물의 기초 균열 위험을 줄이는 동시에 장기적인 유지보수 비용 절감에도 기여합니다.",
-    category: "청소",
+    category: "홈 & 리빙",
     location: "버나비",
     tags: ["청소", "지붕 청소", "거터 청소", "고압 세척", "외부 청소"],
     cover: "/images/16/cover.jpg",
@@ -635,9 +635,9 @@ export const businesses: Business[] = [
     name: "Footcare By Debbie",
     description:
       "건강한 발은 건강한 삶의 시작입니다. 전문 풋케어 서비스를 고객님의 집으로 직접 찾아가 제공해 드리며, 🇨🇦 영어와 🇰🇷 한국어 모두 편하게 상담하실 수 있습니다.<br><br>🏠 이동이 불편하시거나 바쁜 일정 때문에 방문이 어려우신 분들도 집에서 편안하게 케어를 받아보세요.",
-    category: "건강",
+    category: "미용 & 건강",
     location: "밴쿠버",
-    tags: ["건강", "발관리", "풋케어"],
+    tags: ["미용", "건강", "발관리", "풋케어"],
     cover: "/images/20/cover.jpg",
     images: ["/images/20/1.jpg", "/images/20/2.jpg"],
     hours: "",
@@ -657,7 +657,7 @@ export const businesses: Business[] = [
     name: "Starry Planet",
     description:
       "Starry Planet의 핸드메이드 카드는 그 자체로 특별한 이야기를 담고 있어요. 소중한 사람에게 마음을 전하세요. 💝",
-    category: "카드",
+    category: "이벤트",
     location: "밴쿠버",
     tags: ["카드", "핸드메이드", "선물", "감성", "디자인"],
     cover: "/images/21/cover.jpg",
@@ -691,7 +691,7 @@ export const businesses: Business[] = [
     name: "Pawfect Custom",
     description:
       "단체의 개성과 브랜드 이미지를 살린 맞춤 티셔츠를 제작해 드립니다. <br><br>로고부터 색상, 문구까지 원하는 스타일로 디자인하여 단체의 소속감은 물론 전문적인 이미지까지 한 번에! 👕✨ 행사 때 더욱 돋보이고, 함께할 때 더 특별해지는 단체복! 지금 문의하시고 우리만의 멋진 티셔츠를 만들어보세요 😊💙",
-    category: "주문제작",
+    category: "이벤트",
     location: "밴쿠버",
     tags: ["주문제작", "티셔츠", "단체복", "맞춤", "디자인"],
     cover: "/images/22/cover.jpg",
@@ -711,22 +711,11 @@ export const businesses: Business[] = [
 
 export const categories = [
   "전체(22)",
-  "플러밍",
-  "운동",
-  "미용",
-  "꽃",
-  "청소",
-  "도서",
+  "홈 & 리빙",
+  "미용 & 건강",
   "이벤트",
-  "베이커리",
-  "음식",
-  "풍선아트",
-  "수제",
-  "음악",
-  "수리",
   "식품",
-  "건강",
-  "카드",
+  "교육",
   "주문제작",
   "기타",
 ];

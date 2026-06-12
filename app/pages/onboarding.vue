@@ -112,12 +112,12 @@ interface ScenarioOption {
 const scenarioOptions: ScenarioOption[] = [
   {
     label: "우리 아이 이벤트에 필요한 물건을 찾고 있어요",
-    value: ["이벤트", "풍선아트", "음식", "베이커리"],
+    value: ["이벤트", "풍선아트", "식품", "베이커리"],
     icon: "🎈",
   },
   {
     label: "웨딩 준비를 하고 있어요",
-    value: ["이벤트", "꽃", "미용", "음식", "베이커리"],
+    value: ["이벤트", "꽃", "미용", "식품", "베이커리"],
     icon: "💐",
   },
   {
@@ -142,7 +142,7 @@ const scenarioOptions: ScenarioOption[] = [
   },
   {
     label: "특별한 음식이나 베이커리를 찾고 있어요",
-    value: ["음식", "베이커리", "식품"],
+    value: ["식품", "베이커리", "식품"],
     icon: "🍰",
   },
   {
