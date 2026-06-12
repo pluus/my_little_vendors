@@ -685,10 +685,32 @@ export const businesses: Business[] = [
     funFact:
       "심리학 연구에 따르면 사람들은 돈이나 물건보다도 누군가가 자신을 위해 <strong>직접 시간을 들여 만든 선물에 더 큰 감동과 의미</strong>를 느끼는 경향이 있다고 해요. ✨<br><br>핸드메이드 카드는 디자인부터 글씨 한 자 한 자까지 정성이 담기기 때문에, 받는 사람은 '나를 위해 특별히 준비한 선물'이라고 인식하게 됩니다. 그래서 작은 카드 한 장이 때로는 값비싼 선물보다 더 오래 기억된다고 해요. 💝",
   },
+  {
+    id: 22,
+    like: Math.floor(Math.random() * 1000),
+    name: "Pawfect Custom",
+    description:
+      "단체의 개성과 브랜드 이미지를 살린 맞춤 티셔츠를 제작해 드립니다. 로고부터 색상, 문구까지 원하는 스타일로 디자인하여 단체의 소속감은 물론 전문적인 이미지까지 한 번에! 👕✨<br><br>행사 때 더욱 돋보이고, 함께할 때 더 특별해지는 단체복! 지금 문의하시고 우리만의 멋진 티셔츠를 만들어보세요 😊💙",
+    category: "주문제작",
+    location: "밴쿠버",
+    tags: ["주문제작", "티셔츠", "단체복", "맞춤", "디자인"],
+    cover: "/images/22/cover.jpg",
+    images: ["/images/22/1.jpg", "/images/22/2.jpg"],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: ["/images/22/1.jpg", "/images/22/2.jpg"],
+    instagram: "https://www.instagram.com/pawfectcustom",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "사람들은 자신이 디자인 과정에 직접 참여한 옷일수록 더 오래, 더 자주 입는 경향이 있습니다.<br><br>🎨 색상, 원단, 핏 등을 직접 선택하는 과정에서 그 옷은 단순한 구매품이 아니라 ‘내가 만들어낸 결과물’처럼 인식되며, 자연스럽게 애착이 형성되죠. 💫<br><br>제게도 그런 옷이 한벌 있는데 아주 소중하게 보관하고 있답니다!",
+  },
 ];
 
 export const categories = [
-  "전체(21)",
+  "전체(22)",
   "플러밍",
   "운동",
   "미용",
@@ -705,5 +727,6 @@ export const categories = [
   "식품",
   "건강",
   "카드",
+  "주문제작",
   "기타",
 ];
