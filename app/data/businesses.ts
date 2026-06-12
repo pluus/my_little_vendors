@@ -707,6 +707,40 @@ export const businesses: Business[] = [
     funFact:
       "사람들은 자신이 디자인 과정에 직접 참여한 옷일수록 더 오래, 더 자주 입는 경향이 있습니다.<br><br>🎨 색상, 원단, 핏 등을 직접 선택하는 과정에서 그 옷은 단순한 구매품이 아니라 ‘<strong>내가 만들어낸 결과물</strong>’처럼 인식되며, 자연스럽게 애착이 형성되죠. 💫<br><br>제게도 그런 옷이 한벌 있는데 오랜 시간이 지난 지금도 아주 소중하게 보관하고 있답니다!",
   },
+  {
+    id: 23,
+    like: Math.floor(Math.random() * 1000),
+    name: "The Cozy Knit",
+    description:
+      "감성 가득한 일상을 좋아하는 아티스트와 함께, 따뜻하고 예쁜 뜨개질의 세계를 만나보세요.<br><br>모든 작품은 프리오더로 제작 가능하며, 나만의 감성 아이템도 특별하게 만나보실 수 있어요. ✨ 초보자도 쉽게 따라올 수 있는 친절한 강좌도 제공합니다! 💛",
+    category: "주문제작",
+    location: "밴쿠버",
+    tags: ["주문제작", "티셔츠", "단체복", "맞춤", "디자인"],
+    cover: "/images/23/cover.jpg",
+    images: [
+      "/images/23/1.jpg",
+      "/images/23/2.jpg",
+      "/images/23/3.jpg",
+      "/images/23/4.jpg",
+      "/images/23/5.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: [
+      "/images/23/1.jpg",
+      "/images/23/2.jpg",
+      "/images/23/3.jpg",
+      "/images/23/4.jpg",
+      "/images/23/5.jpg",
+    ],
+    instagram: "https://www.instagram.com/thecozy.knit/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "뜨개질은 단순한 취미를 넘어 <strong>‘움직이는 명상’</strong>이라고 불리기도 합니다.<br><br>반복적으로 바늘을 움직이고 실을 엮는 과정이 뇌를 안정시키는 리듬을 만들어 스트레스를 줄이고 집중력을 높이는 데 도움을 주기 때문이에요 🧶✨ <br><br>실제로 규칙적인 <strong>뜨개질은 심박수를 안정시키고 마음을 차분하게</strong> 만드는 효과가 있어, 많은 사람들이 “생각 정리”나 “마음 회복”을 위해 뜨개질을 선택하기도 합니다 💛🌿",
+  },
 ];
 
 export const categories = [
