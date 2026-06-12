@@ -629,10 +629,66 @@ export const businesses: Business[] = [
     funFact:
       "<strong>죽염</strong>이라고 하면 저는 솔직히 죽염 치약부터 떠올랐어요 😅 어릴 때부터 익숙하게 보던 제품이라 '죽염은 치약에 들어가는 건가 보다' 하고 생각했거든요.<br><br>그런데 알고 보니 죽염은 대나무 속에서 여러 번 구워 만드는 전통 식품인데다 특유의 맛으로 많은 사랑을 받고있었더라고요! <br><br><strong>Dooyoo</strong>에는 <strong>죽염으로 만든 간장, 고추장, 된장에 차까지</strong> 있다고 하니 정말 놀랍지 않나요? 죽염의 세계는 정말 넓고도 깊네요 🧂🎍",
   },
+  {
+    id: 20,
+    like: Math.floor(Math.random() * 1000),
+    name: "Footcare By Debbie",
+    description:
+      "건강한 발은 건강한 삶의 시작입니다. 전문 풋케어 서비스를 고객님의 집으로 직접 찾아가 제공해 드리며, 🇨🇦 영어와 🇰🇷 한국어 모두 편하게 상담하실 수 있습니다.<br><br>🏠 이동이 불편하시거나 바쁜 일정 때문에 방문이 어려우신 분들도 집에서 편안하게 케어를 받아보세요.",
+    category: "건강",
+    location: "밴쿠버",
+    tags: ["건강", "발관리", "풋케어"],
+    cover: "/images/20/cover.jpg",
+    images: ["/images/20/1.jpg", "/images/20/2.jpg"],
+    hours: "",
+    website: "",
+    phone: "778-956-7531",
+    gallery: ["/images/20/1.jpg", "/images/20/2.jpg"],
+    instagram: "https://www.instagram.com/footcare_by_debbie/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "평균적인 사람은 <strong>평생 약 12만~15만 km를 걷는다</strong>고 알려져 있습니다. 이는 지구를 3번 가까이 도는 거리죠. 그만큼 발은 우리 몸에서 가장 많이 사용되는 부위 중 하나지만, 의외로 관리에는 소홀한 경우가 많답니다.<br><br>굳은살 및 내성발톱은 특정 부위에 과도한 압력이 가해지고 있다는 신호예요. 방치하면 통증이나 보행 습관 변화로 이어질 수 있으니 꼭 진단 받아보세요 👣✨",
+  },
+  {
+    id: 21,
+    like: Math.floor(Math.random() * 1000),
+    name: "Starry Planet",
+    description:
+      "Starry Planet의 핸드메이드 카드는 그 자체로 특별한 이야기를 담고 있어요. 소중한 사람에게 마음을 전하세요. 💝",
+    category: "카드",
+    location: "밴쿠버",
+    tags: ["카드", "핸드메이드", "선물", "감성", "디자인"],
+    cover: "/images/21/cover.jpg",
+    images: [
+      "/images/21/1.jpg",
+      "/images/21/2.jpg",
+      "/images/21/3.jpg",
+      "/images/21/4.jpg",
+      "/images/21/5.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "",
+    gallery: [
+      "/images/21/1.jpg",
+      "/images/21/2.jpg",
+      "/images/21/3.jpg",
+      "/images/21/4.jpg",
+      "/images/21/5.jpg",
+    ],
+    instagram: "https://www.instagram.com/starryplanet_handmadecards/",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "심리학 연구에 따르면 사람들은 돈이나 물건보다도 누군가가 자신을 위해 <strong>직접 시간을 들여 만든 선물에 더 큰 감동과 의미</strong>를 느끼는 경향이 있다고 해요. ✨<br><br>핸드메이드 카드는 디자인부터 글씨 한 자 한 자까지 정성이 담기기 때문에, 받는 사람은 '나를 위해 특별히 준비한 선물'이라고 인식하게 됩니다. 그래서 작은 카드 한 장이 때로는 값비싼 선물보다 더 오래 기억된다고 해요. 💝",
+  },
 ];
 
 export const categories = [
-  "전체(19)",
+  "전체(21)",
   "플러밍",
   "운동",
   "미용",
@@ -647,5 +703,7 @@ export const categories = [
   "음악",
   "수리",
   "식품",
+  "건강",
+  "카드",
   "기타",
 ];
