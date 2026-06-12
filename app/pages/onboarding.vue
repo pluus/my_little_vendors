@@ -132,7 +132,7 @@ const scenarioOptions: ScenarioOption[] = [
   },
   {
     label: "아름다움을 가꾸고 싶어요",
-    value: ["미용"],
+    value: ["미용 & 건강"],
     icon: "💅",
   },
 ];
@@ -145,8 +145,8 @@ const selectScenario = (option: ScenarioOption) => {
   selectedCategories.value = option.value;
 };
 
-const handleContinue = (value) => {
-  completeOnboarding(value);
+const handleContinue = () => {
+  completeOnboarding(selectedCategories.value);
   router.push("/");
 };
 

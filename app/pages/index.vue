@@ -274,12 +274,17 @@ useHead({
 
 const route = useRoute();
 const router = useRouter();
-const { hasCompletedOnboarding, selectedCategories } = useOnboarding();
+const {
+  hasCompletedOnboarding,
+  selectedCategories,
+  shouldShowOnboarding,
+  markOnboardingShown,
+} = useOnboarding();
 
-// Redirect to onboarding if not completed
+// Redirect to onboarding if should be shown
 onMounted(() => {
-  // if (!hasCompletedOnboarding.value) {
-  if (Math.random() <= 0.25) {
+  if (shouldShowOnboarding()) {
+    markOnboardingShown();
     router.push("/onboarding");
   }
 });
@@ -289,6 +294,10 @@ const debouncedSearch = useDebouncedSearch(150);
 
 // Determine initial category based on route query, or use onboarding selections
 const getInitialCategory = () => {
+  // If there's a reset parameter in the URL, show all
+  if (route.query.reset === "true") {
+    return categories[0]; // "전체(22)"
+  }
   // If there's a category in the URL, use that
   if (categories.includes(route.query.category as string)) {
     return route.query.category as string;
@@ -297,12 +306,24 @@ const getInitialCategory = () => {
   if (selectedCategories.value.length > 0) {
     return selectedCategories.value[0];
   }
-  // Otherwise, show all - use the first category which is "전체(19)"
+  // Otherwise, show all - use the first category which is "전체(22)"
   return categories[0];
 };
 
 const activeCategory = ref(getInitialCategory());
 const selectedBusiness = ref<Business | null>(null);
+
+// Watch for route changes to reset category if needed
+watch(
+  () => route.query.reset,
+  (reset) => {
+    if (reset === "true") {
+      activeCategory.value = categories[0];
+      // Clean up the URL by removing the reset param
+      router.replace({ query: {} });
+    }
+  },
+);
 
 // Shuffle (Fisher-Yates) — runs only on mount to avoid SSR hydration mismatch
 function shuffle<T>(arr: T[]): T[] {

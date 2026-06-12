@@ -6,7 +6,7 @@
       class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4"
     >
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2 shrink-0">
+      <NuxtLink to="/?reset=true" class="flex items-center gap-2 shrink-0">
         <span
           class="w-8 h-8 rounded-xl bg-amber-400 flex items-center justify-center text-white font-bold text-sm"
           >m</span

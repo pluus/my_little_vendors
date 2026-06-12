@@ -24,6 +24,8 @@ export const useOnboarding = () => {
     if (import.meta.client) {
       localStorage.setItem("onboarding-completed", "true");
       localStorage.setItem("onboarding-categories", JSON.stringify(categories));
+      // Store timestamp when onboarding was shown
+      localStorage.setItem("onboarding-last-shown", Date.now().toString());
     }
   };
 
@@ -34,6 +36,30 @@ export const useOnboarding = () => {
     if (import.meta.client) {
       localStorage.setItem("onboarding-completed", "true");
       localStorage.setItem("onboarding-categories", JSON.stringify([]));
+      // Store timestamp when onboarding was shown
+      localStorage.setItem("onboarding-last-shown", Date.now().toString());
+    }
+  };
+
+  const shouldShowOnboarding = (): boolean => {
+    if (!import.meta.client) return false;
+
+    const lastShown = localStorage.getItem("onboarding-last-shown");
+    const now = Date.now();
+    const oneDayInMs = 24 * 60 * 60 * 1000;
+
+    // If never shown, or more than 24 hours have passed
+    if (!lastShown || now - parseInt(lastShown) > oneDayInMs) {
+      // 25% chance
+      return Math.random() <= 0.25;
+    }
+
+    return false;
+  };
+
+  const markOnboardingShown = () => {
+    if (import.meta.client) {
+      localStorage.setItem("onboarding-last-shown", Date.now().toString());
     }
   };
 
@@ -42,5 +68,7 @@ export const useOnboarding = () => {
     selectedCategories,
     completeOnboarding,
     skipOnboarding,
+    shouldShowOnboarding,
+    markOnboardingShown,
   };
 };
