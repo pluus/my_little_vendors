@@ -10,10 +10,12 @@
           alt="Mascot"
           class="mx-auto mb-4 rounded-full"
         />
-        <h1 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-3">
+        <h1 class="text-3xl sm:text-3xl font-bold text-stone-900 mb-3">
           <span class="text-amber-400">안녕하세요!</span> 무엇을 도와드릴까요?
         </h1>
-        <p class="text-stone-600 text-lg">상황에 맞는 서비스를 찾아드려요</p>
+        <p class="text-stone-600 text-lg">
+          믿을 수 있는 우리 이웃의 서비스를 찾아드릴게요.
+        </p>
       </div>
 
       <!-- Scenario Selection List -->
