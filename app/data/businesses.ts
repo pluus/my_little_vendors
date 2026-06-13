@@ -785,6 +785,64 @@ export const businesses: Business[] = [
     funFact:
       " 🧰 핸디맨의 도구 가방에는 수많은 도구가 들어 있지만 가장 중요한게 무엇인지 아시나요?<br><br>경험 많은 핸디맨일수록 ‘비싼 장비’보다 <strong>문제를 빠르게 파악하는 눈</strong>과 <strong>손에 익은 기본 도구</strong>를 더 중요하게 여긴다고 합니다.<br><br>수년에 걸쳐 쌓아온 노하우는 절대 무시할 수 없죠!",
   },
+  {
+    id: 26,
+    like: Math.floor(Math.random() * 1000),
+    name: "Bright On Electric",
+    description:
+      "⚡ Bright On Electric은 주거 및 상업용 전기 레노베이션과 업그레이드, 전기차 충전기(EV Charger) 설치, 태양광 패널 및 배터리 저장 시스템 설치를 전문으로 하는 전기 시공 회사입니다.<br><br>주택과 비즈니스 환경 모두를 대상으로 안정적이고 효율적인 전력 인프라를 구축하며, 각 도시 규정에 맞춘 Permit Work와 Fully Licensed 시공을 통해 안전성과 신뢰성을 보장합니다. 🔧☀️🚗",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "유지보수", "수리", "서비스"],
+    cover: "/images/26/cover.jpg",
+    images: [],
+    hours: "",
+    website: "",
+    phone: "778-858-7694",
+    gallery: [],
+    instagram: "",
+    kakao: "",
+    email: "brightonelectric56@gmail.com",
+    isPlaceholder: false,
+    funFact:
+      "🚗 전기차량이 일상에 들어오면서 EV 충전기는 가정에서도 흔히 볼 수 있는 설비가 되었습니다.<br><br>EV 충전기는 높은 전력 사용량 때문에 대부분의 경우 안전한 사용을 위해 <strong>전용 회로(Dedicated Circuit)</strong>를 통해 설치 된답니다. 🏠",
+  },
+  {
+    id: 27,
+    like: Math.floor(Math.random() * 1000),
+    name: "홈 앤 톤즈 페인트",
+    description:
+      "🎨 홈 앤 톤즈 페인트는 메트로 밴쿠버 지역을 중심으로 주거 및 상업 공간을 위한 전문 페인팅 서비스 및 파워워싱 서비스를 제공합니다.<br><br>인테리어부터 익스테리어까지 다양한 페인팅 작업을 통해 공간의 분위기와 가치를 높이는 고품질 시공을 제공합니다.<br><br>고객의 비전을 현실로 구현하는 것을 목표로, 세심한 작업과 안정적인 마감 품질을 통해 신뢰할 수 있는 결과물을 제공합니다 🏠✨",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "유지보수", "수리", "서비스"],
+    cover: "/images/27/cover.jpg",
+    images: [
+      "/images/27/1.jpg",
+      "/images/27/2.jpg",
+      "/images/27/3.jpg",
+      "/images/27/4.jpg",
+      "/images/27/5.jpg",
+      "/images/27/6.jpg",
+    ],
+    hours: "",
+    website: "https://homenpaint.ca/",
+    phone: "778-873-1238",
+    gallery: [
+      "/images/27/1.jpg",
+      "/images/27/2.jpg",
+      "/images/27/3.jpg",
+      "/images/27/4.jpg",
+      "/images/27/5.jpg",
+      "/images/27/6.jpg",
+    ],
+    instagram: "https://www.instagram.com/homentones_bc/",
+    kakao: "",
+    email: "info@homentones.ca",
+    isPlaceholder: false,
+    funFact:
+      "🎨 페인트 색상은 단순한 인테리어 요소가 아니라 <strong>공간의 ‘느낌’</strong>을 크게 바꾸는 심리적 효과를 가지고 있습니다.<br><br>밝은 색은 공간을 더 넓어 보이게 하고, 따뜻한 색은 아늑함을, 차가운 색은 집중감을 높이는 데 도움이 된다고 알려져 있죠 🏠✨<br><br>그래서 같은 공간이라도 <strong>어떤 색을 선택하느냐에 따라 전혀 다른 분위기</strong>로 바뀔 수 있답니다. 여러분은 어떤 색을 좋아하시나요?",
+  },
 ];
 
 export const categories = [
