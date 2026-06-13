@@ -843,6 +843,40 @@ export const businesses: Business[] = [
     funFact:
       "🎨 페인트 색상은 단순한 인테리어 요소가 아니라 <strong>공간의 ‘느낌’</strong>을 크게 바꾸는 심리적 효과를 가지고 있습니다.<br><br>밝은 색은 공간을 더 넓어 보이게 하고, 따뜻한 색은 아늑함을, 차가운 색은 집중감을 높이는 데 도움이 된다고 알려져 있죠 🏠✨<br><br>그래서 같은 공간이라도 <strong>어떤 색을 선택하느냐에 따라 전혀 다른 분위기</strong>로 바뀔 수 있답니다. 여러분은 어떤 색을 좋아하시나요?",
   },
+  {
+    id: 28,
+    like: Math.floor(Math.random() * 1000),
+    name: "Namu Landscape",
+    description:
+      "🌳 Namu Landscape 🌲는 2011년부터 파트너십 기반으로 운영되어 온 건설 및 프로젝트 관리 전문 기업입니다. 전문적인 지식을 기반으로 메트로 밴쿠버(Greater Vancouver) 전역에서 주거, 상업, 고층 건물 프로젝트를 성공적으로 수행해 왔습니다.<br><br>체계적인 프로젝트 관리와 시공 역량을 바탕으로 높은 완성도의 결과물을 제공하며, 혁신적인 솔루션과 세밀한 디테일을 통해 고객 기대를 지속적으로 뛰어넘는 서비스를 제공합니다 🌳 🏗️✨",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "유지보수", "수리", "서비스", "정원", "조경 설계", "시공"],
+    cover: "/images/28/cover.jpg",
+    images: [
+      "/images/28/1.jpg",
+      "/images/28/2.jpg",
+      "/images/28/3.jpg",
+      "/images/28/4.jpg",
+      "/images/28/5.jpg",
+    ],
+    hours: "",
+    website: "https://namulandscape.com/",
+    phone: "778-318-0853",
+    gallery: [
+      "/images/28/1.jpg",
+      "/images/28/2.jpg",
+      "/images/28/3.jpg",
+      "/images/28/4.jpg",
+      "/images/28/5.jpg",
+    ],
+    instagram: "https://www.instagram.com/namulandscape/",
+    kakao: "",
+    email: "yvnt77@hotmail.com",
+    isPlaceholder: false,
+    funFact:
+      "🌿 조경에서 흥미로운 사실은, 나무나 식물을 ‘어디에 심느냐’에 따라 체감 온도가 달라질 수 있다는 점입니다.<br><br>그늘을 만드는 위치에 따라 여름철 표면 온도가 크게 낮아지고, 바람의 흐름까지 바뀌어 공간 전체가 더 시원하게 느껴질 수 있대요!<br><br>그래서 좋은 조경 설계는 단순히 예쁜 공간을 만드는 것이 아니라 <strong>사람이 체감하는 환경 자체를 바꾸는 작업</strong>이라고 할 수 있답니다. 🌳",
+  },
 ];
 
 export const categories = [
