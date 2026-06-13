@@ -741,6 +741,50 @@ export const businesses: Business[] = [
     funFact:
       "뜨개질은 단순한 취미를 넘어 <strong>‘움직이는 명상’</strong>이라고 불리기도 합니다.<br><br>반복적으로 바늘을 움직이고 실을 엮는 과정이 뇌를 안정시키는 리듬을 만들어 스트레스를 줄이고 집중력을 높이는 데 도움을 주기 때문이에요 🧶✨ <br><br>실제로 규칙적인 <strong>뜨개질은 심박수를 안정시키고 마음을 차분하게</strong> 만드는 효과가 있어, 많은 사람들이 “생각 정리”나 “마음 회복”을 위해 뜨개질을 선택하기도 합니다 💛🌿",
   },
+  {
+    id: 24,
+    like: Math.floor(Math.random() * 1000),
+    name: "UbiTechNet Ltd.",
+    description:
+      "🏢 UbiTechNet Ltd.는 메트로 밴쿠버 지역 기업을 위한 IT 인프라 전문 기업입니다. 구조화 케이블링, CCTV 보안 시스템, 광섬유 네트워크, 무선 네트워크 구축 및 IT 컨설팅 서비스를 제공하며, 20년 이상의 현장 경험을 바탕으로 신뢰할 수 있는 솔루션을 제공합니다. <br><br>🔧 설계부터 시공, 테스트, 사후 지원까지 전 과정을 책임지며, 국제 표준에 기반한 정밀한 시공과 전문적인 서비스를 통해 고객의 비즈니스 운영을 안정적으로 지원합니다.",
+    categories: ["IT"],
+    location: "밴쿠버",
+    tags: ["IT", "네트워크", "보안", "컨설팅"],
+    cover: "/images/24/cover.jpg",
+    images: [],
+    hours: "",
+    website: "https://ubitechnet.com/",
+    phone: "",
+    gallery: [],
+    instagram: "",
+    kakao: "",
+    email: "info@ubitechnet.com",
+    isPlaceholder: false,
+    funFact:
+      "📹 많은 사람들이 CCTV의 역할을 '사고 후 확인'이라고 생각하지만, 실제로는 <strong>범죄 예방 효과</strong>가 더 큰 것으로 알려져 있습니다.<br><br>눈에 잘 보이는 카메라와 적절한 안내 표지만으로도 무단 출입, 절도, 기물 파손 시도가 크게 줄어드는 경우가 많대요. 🚨<br><br>즉, 좋은 보안 시스템은 사건을 기록하는 장비가 아니라 <strong>사건 자체를 예방하는 인프라</strong>라고 할 수 있겠네요!",
+  },
+  {
+    id: 25,
+    like: Math.floor(Math.random() * 1000),
+    name: "Blue Check Construction",
+    description:
+      "🔧 Blue Check Handyman Services는 주택의 크고 작은 유지보수 및 수리 문제를 전문적으로 해결하는 홈 서비스 업체입니다. 사소해 보이지만 큰 문제로 이어질 수 있는 주택 이슈들을 빠르고 정확하게 진단하고, 고객의 스트레스를 줄이는 실질적인 해결을 제공합니다. 오랜 현장 경험과 전문 기술을 바탕으로 안정적이고 신뢰할 수 있는 서비스를 제공합니다.<br><br>🏠 저희는 Repairs, Drywall Installation, Flooring, Painting, Plumbing Services, Appliances Repair 등 다양한 주택 관리 서비스를 제공합니다. Vancouver, Burnaby, Surrey, Langley, Coquitlam을 포함한 Metro Vancouver 전역에서 신속하게 대응하며, 고객의 생활 공간을 항상 안전하고 편안하게 유지하는 것을 목표로 합니다.",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "유지보수", "수리", "서비스"],
+    cover: "/images/25/cover.jpg",
+    images: [],
+    hours: "",
+    website: "",
+    phone: "604-365-8737",
+    gallery: [],
+    instagram: "",
+    kakao: "byeongjuncha",
+    email: "bmjm1329@gmail.com",
+    isPlaceholder: false,
+    funFact:
+      " 🧰 핸디맨의 도구 가방에는 수많은 도구가 들어 있지만 가장 중요한게 무엇인지 아시나요?<br><br>경험 많은 핸디맨일수록 ‘비싼 장비’보다 <strong>문제를 빠르게 파악하는 눈</strong>과 <strong>손에 익은 기본 도구</strong>를 더 중요하게 여긴다고 합니다.<br><br>수년에 걸쳐 쌓아온 노하우는 절대 무시할 수 없죠!",
+  },
 ];
 
 export const categories = [
@@ -751,5 +795,6 @@ export const categories = [
   "식품",
   "교육",
   "주문제작",
+  "IT",
   "기타",
 ];
