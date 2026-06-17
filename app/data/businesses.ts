@@ -877,6 +877,72 @@ export const businesses: Business[] = [
     funFact:
       "🌿 조경에서 흥미로운 사실은, 나무나 식물을 ‘어디에 심느냐’에 따라 체감 온도가 달라질 수 있다는 점입니다.<br><br>그늘을 만드는 위치에 따라 여름철 표면 온도가 크게 낮아지고, 바람의 흐름까지 바뀌어 공간 전체가 더 시원하게 느껴질 수 있대요!<br><br>그래서 좋은 조경 설계는 단순히 예쁜 공간을 만드는 것이 아니라 <strong>사람이 체감하는 환경 자체를 바꾸는 작업</strong>이라고 할 수 있답니다. 🌳",
   },
+  {
+    id: 29,
+    like: Math.floor(Math.random() * 1000),
+    name: "Ireh Construction",
+    description:
+      "🏠 이레건설 (Ireh Construction)은 주택 리모델링 전문 업체로, 고객의 공간을 더욱 아름답고 편리하게 변화시키는 맞춤형 시공 서비스를 제공합니다. 바닥공사(Flooring), 욕실 리모델링, 주방 리모델링, 페인팅, 지하실 공사(Basement), 창호 시공(Window) 및 각종 핸디맨 서비스까지 다양한 분야에서 높은 품질의 시공을 제공합니다. <br><br>🔨 뛰어난 시공 품질과 합리적인 비용을 바탕으로, 작은 보수 작업부터 전체 리모델링까지 고객의 요구에 맞는 최적의 솔루션을 제안합니다. 세심한 디테일과 책임감 있는 시공으로 더욱 편안하고 가치 있는 공간을 만들어 드립니다.",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "유지보수", "수리", "서비스", "시공"],
+    cover: "/images/29/cover.jpg",
+    images: [
+      "/images/29/1.jpg",
+      "/images/29/2.jpg",
+      "/images/29/3.jpg",
+      "/images/29/4.jpg",
+    ],
+    hours: "",
+    website: "https://www.irehconstruction.com/",
+    phone: "778-318-0853",
+    gallery: [
+      "/images/29/1.jpg",
+      "/images/29/2.jpg",
+      "/images/29/3.jpg",
+      "/images/29/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/ireh_construction/",
+    kakao: "",
+    email: "josh@irehconstruction.com",
+    isPlaceholder: false,
+    funFact:
+      "🔨 리모델링 전문가들이 가장 자주 듣는 말 중 하나는 '이렇게 달라질 줄 몰랐어요!'라고 합니다 😄<br><br>작은 구조 변경이나 색상 선택만으로도 공간이 훨씬 넓고 밝아 보이는 효과를 만들 수 있기 때문이죠.<br><br>그래서 리모델링은 단순한 수리가 아니라 <strong>공간의 잠재력을 발견하는 과정</strong>이라고도 불립니다 🏠✨",
+  },
+  {
+    id: 31,
+    like: Math.floor(Math.random() * 1000),
+    name: "Smart Choice Moving",
+    description:
+      "🚚 Smart Choice Moving은 로컬, 주간(캐나다 내), 미국 및 국제 이사를 전문으로 하는 전문 이사 서비스 회사입니다. 고객의 이동 과정이 최대한 안전하고 원활하게 진행될 수 있도록 효율적인 계획과 세심한 운송 서비스를 제공합니다.<br><br>주거 및 상업 이사 전반을 지원하며, 합리적인 비용과 경험 많은 전문 인력을 바탕으로 신뢰할 수 있는 이사 서비스를 제공합니다 📦✨",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "이사", "서비스", "운송"],
+    cover: "/images/31/cover.jpg",
+    images: [
+      "/images/31/1.jpg",
+      "/images/31/2.jpg",
+      "/images/31/3.jpg",
+      "/images/31/4.jpg",
+      "/images/31/5.jpg",
+    ],
+    hours: "",
+    website: "https://sbcmoving.ca/",
+    phone: "604-789-3119",
+    gallery: [
+      "/images/31/1.jpg",
+      "/images/31/2.jpg",
+      "/images/31/3.jpg",
+      "/images/31/4.jpg",
+      "/images/31/5.jpg",
+    ],
+    instagram: "https://www.instagram.com/s.b.c.moving/",
+    kakao: "",
+    email: "sbcmoving1@gmail.com",
+    isPlaceholder: false,
+    funFact:
+      "🚚 이사할 때 가장 시간이 오래 걸리는 작업은 ‘운반’이 아니라 <strong>정리와 분류</strong>입니다 📦<br><br>실제로 짐을 옮기는 시간보다 무엇을 가져갈지, 어떻게 포장할지 결정하는 과정이 전체 이사 시간의 큰 부분을 차지한대요.<br><br>효율적인 이사는 단순한 이동이 아니라 <strong>정리와 계획에서 이미 시작된다</strong>고 볼 수 있답니다 📋✨",
+  },
 ];
 
 export const categories = [
