@@ -975,10 +975,32 @@ export const businesses: Business[] = [
     funFact:
       "🪟 블라인드는 단순히 햇빛을 가리는 도구가 아니라, 실내 온도와 에너지 효율에도 영향을 주는 인테리어 요소입니다.<br><br>특히 여름에는 햇빛을 차단해 냉방 비용을 줄이고, 겨울에는 열 손실을 줄여 실내 온도를 유지하는 데 도움을 줍니다 🌞❄️<br><br>그래서 블라인드는 ‘창문 장식’이 아니라 <strong>에너지 절약 장치의 역할</strong>도 함께 한다고 볼 수 있습니다 💡",
   },
+  {
+    id: 33,
+    like: Math.floor(Math.random() * 1000),
+    name: "JHL Mechanical",
+    description:
+      "🛠️ JHL Mechanical 은 밴쿠버를 기반으로 한 전문 기계 및 HVAC 서비스 제공업체로, 다양한 상업 및 주거 프로젝트에서 신뢰할 수 있는 솔루션을 제공합니다.<br><br>경험 많은 기술자들이 최신 장비와 기술을 활용하여 효율적이고 안전한 서비스를 제공하며, 고객 만족을 최우선으로 합니다 🏆✨",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "이사", "서비스", "운송"],
+    cover: "/images/33/cover.jpg",
+    images: [],
+    hours: "",
+    website: "",
+    phone: "236-597-5097",
+    gallery: [],
+    instagram: "",
+    kakao: "",
+    email: "jung.lee@jhlmechanical.com",
+    isPlaceholder: false,
+    funFact:
+      "🚰 집에서 배수구가 막히기 시작할 때 가장 흔한 신호는 ‘완전히 안 내려감’이 아니라 <strong>물이 천천히 내려가는 변화</strong>입니다 💧<br><br>샤워기, 싱크대, 세면대에서 물이 예전보다 조금씩 늦게 빠진다면 이미 내부에 머리카락, 기름, 비누 찌꺼기 등이 쌓이고 있다는 뜻이에요 🧼🧽<br><br>이 단계에서 관리하면 큰 막힘을 예방할 수 있어서, 배관 문제는 ‘완전히 막힌 뒤’보다 <strong>느려졌을 때가 가장 중요한 시점</strong>입니다 🔧",
+  },
 ];
 
 export const categories = [
-  "전체(32)",
+  "전체(33)",
   "홈 & 리빙",
   "미용 & 건강",
   "이벤트",
