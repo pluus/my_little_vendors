@@ -943,10 +943,42 @@ export const businesses: Business[] = [
     funFact:
       "🚚 이사할 때 가장 시간이 오래 걸리는 작업은 ‘운반’이 아니라 <strong>정리와 분류</strong>입니다 📦<br><br>실제로 짐을 옮기는 시간보다 무엇을 가져갈지, 어떻게 포장할지 결정하는 과정이 전체 이사 시간의 큰 부분을 차지한대요.<br><br>효율적인 이사는 단순한 이동이 아니라 <strong>정리와 계획에서 이미 시작된다</strong>고 볼 수 있답니다 📋✨",
   },
+  {
+    id: 32,
+    like: Math.floor(Math.random() * 1000),
+    name: "The Blinds",
+    description:
+      "🪟 The Blinds 는 한국에서 디자인 및 제조된 맞춤형 블라인드 전문 브랜드로, 20년 이상의 제작 경험을 바탕으로 높은 품질과 세련된 디자인을 제공합니다.<br><br>팩토리 직배송 시스템을 통해 주문 후 약 2주 내 설치까지 완료되는 빠르고 효율적인 서비스를 제공하며, 주거 및 상업 공간 모두에 맞는 다양한 스타일의 블라인드를 제안합니다 🇰🇷✨",
+    categories: ["홈 & 리빙"],
+    location: "밴쿠버",
+    tags: ["홈", "이사", "서비스", "운송"],
+    cover: "/images/32/cover.jpg",
+    images: [
+      "/images/32/1.jpg",
+      "/images/32/2.jpg",
+      "/images/32/3.jpg",
+      "/images/32/4.jpg",
+    ],
+    hours: "",
+    website: "https://www.theblinds.ca/",
+    phone: "778-938-5687",
+    gallery: [
+      "/images/32/1.jpg",
+      "/images/32/2.jpg",
+      "/images/32/3.jpg",
+      "/images/32/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/theblinds.ca/",
+    kakao: "",
+    email: "theblinds5687@gmail.com",
+    isPlaceholder: false,
+    funFact:
+      "🪟 블라인드는 단순히 햇빛을 가리는 도구가 아니라, 실내 온도와 에너지 효율에도 영향을 주는 인테리어 요소입니다.<br><br>특히 여름에는 햇빛을 차단해 냉방 비용을 줄이고, 겨울에는 열 손실을 줄여 실내 온도를 유지하는 데 도움을 줍니다 🌞❄️<br><br>그래서 블라인드는 ‘창문 장식’이 아니라 <strong>에너지 절약 장치의 역할</strong>도 함께 한다고 볼 수 있습니다 💡",
+  },
 ];
 
 export const categories = [
-  "전체(31)",
+  "전체(32)",
   "홈 & 리빙",
   "미용 & 건강",
   "이벤트",
