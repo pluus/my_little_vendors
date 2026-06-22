@@ -367,38 +367,6 @@ export const businesses: Business[] = [
   },
   {
     like: Math.floor(Math.random() * 1000),
-    id: 12,
-    name: "Jade Made",
-    description:
-      "🧶💛 한 땀 한 땀 정성으로 만든 수제 뜨개 수세미는 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력입니다 ✨ <br><br>알록달록한 색상으로 주방을 화사하게 밝혀주고 🧼 뛰어난 세척력과 실용성까지 갖춰 매일 쓰기 좋으며, 인테리어 소품으로도 손색없어요 🌈 <br><br>정성 가득한 핸드메이드 제품이라 선물용으로도 인기 많은 감성 아이템입니다 🎁",
-    categories: ["주문제작"],
-    location: "밴쿠버",
-    tags: ["수제", "뜨개질", "수세미", "핸드메이드", "선물용"],
-    cover: "/images/12/cover.jpg",
-    images: [
-      "/images/12/1.jpg",
-      "/images/12/2.jpg",
-      "/images/12/3.jpg",
-      "/images/12/4.jpg",
-    ],
-    hours: "",
-    website: "",
-    phone: "",
-    gallery: [
-      "/images/12/1.jpg",
-      "/images/12/2.jpg",
-      "/images/12/3.jpg",
-      "/images/12/4.jpg",
-    ],
-    instagram: "https://www.instagram.com/jademade_v",
-    kakao: "",
-    email: "",
-    isPlaceholder: false,
-    funFact:
-      "뜨개 수세미는 같은 모양이라도 뜨는 사람의 손압(장력)에 따라 완성 크기와 촉감이 완전히 달라져서 “완전히 동일한 제품이 없는 유니크한 생활 공예품”이에요. <br><br><strong>Jade Made</strong>의 수세미는 한 땀 한 땀 정성으로 만들어져서 기계 제품과는 다른 따뜻한 감성과 귀여운 디테일이 매력적이랍니다! 여러분도 주방에 따뜻한 감성을 더해보시는건 어떨까요? 🌈",
-  },
-  {
-    like: Math.floor(Math.random() * 1000),
     id: 13,
     name: "Aria Piano",
     description:
