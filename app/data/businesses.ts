@@ -965,6 +965,38 @@ export const businesses: Business[] = [
     funFact:
       "🚰 집에서 배수구가 막히기 시작할 때 가장 흔한 신호는 ‘완전히 안 내려감’이 아니라 <strong>물이 천천히 내려가는 변화</strong>입니다 💧<br><br>샤워기, 싱크대, 세면대에서 물이 예전보다 조금씩 늦게 빠진다면 이미 내부에 머리카락, 기름, 비누 찌꺼기 등이 쌓이고 있다는 뜻이에요 🧼🧽<br><br>이 단계에서 관리하면 큰 막힘을 예방할 수 있어서, 배관 문제는 ‘완전히 막힌 뒤’보다 <strong>느려졌을 때가 가장 중요한 시점</strong>입니다 🔧",
   },
+  {
+    id: 34,
+    like: Math.floor(Math.random() * 1000),
+    name: "JFood",
+    description:
+      "🍲 JFood는 써리를 기반으로 한 한식 전문 업체로, 만두, 돈가스, 떡갈비 등 다양한 한식 메뉴와 케이터링 서비스를 제공합니다.<br><br>정성스럽게 준비한 음식으로 일상은 물론 각종 행사와 모임까지 더욱 특별하게 만들어 드립니다. ✨",
+    categories: ["식품"],
+    location: "써리",
+    tags: ["식품", "한식", "포장", "음식", "만두", "케이터링"],
+    cover: "/images/34/cover.jpg",
+    images: [
+      "/images/34/1.jpg",
+      "/images/34/2.jpg",
+      "/images/34/3.jpg",
+      "/images/34/4.jpg",
+    ],
+    hours: "",
+    website: "",
+    phone: "778-874-6649",
+    gallery: [
+      "/images/34/1.jpg",
+      "/images/34/2.jpg",
+      "/images/34/3.jpg",
+      "/images/34/4.jpg",
+    ],
+    instagram: "https://www.instagram.com/jfood_kfood",
+    kakao: "",
+    email: "",
+    isPlaceholder: false,
+    funFact:
+      "🥟 만두는 만두피의 <strong>식감</strong>, 만두소의 <strong>풍미</strong>, <strong>육즙 함량</strong>, <strong>형태 보존력</strong>, 그리고 <strong>영양 및 가성비</strong>를 기준으로 평가된다고 합니다. 맛있는 만두는 이 요소들이 훌륭한 조화를 이루고 있죠.<br><br> JFood의 만두를 보신적 있나요? 모양부터 촉촉한 소까지 어디하나 빠지지 않는 팔방미인이랍니다. 😋",
+  },
 ];
 
 export const categories = [
