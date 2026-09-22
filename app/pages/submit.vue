@@ -143,11 +143,14 @@
         />
       </div>
 
+      <p v-if="submitError" class="text-sm text-rose-500">{{ submitError }}</p>
+
       <button
         type="submit"
-        class="w-full py-3 rounded-2xl bg-amber-400 hover:bg-amber-500 text-white font-semibold text-sm transition-colors shadow-sm shadow-amber-200"
+        :disabled="submitting"
+        class="w-full py-3 rounded-2xl bg-amber-400 hover:bg-amber-500 text-white font-semibold text-sm transition-colors shadow-sm shadow-amber-200 disabled:opacity-60"
       >
-        등록 신청하기 ✨
+        {{ submitting ? "제출 중..." : "등록 신청하기 ✨" }}
       </button>
     </form>
   </div>
@@ -160,7 +163,11 @@ useHead({ title: "내 가게 등록 — my little vendors" });
 
 const nonAllCategories = categories.filter((c) => c !== "전체");
 
+const { client: supabase, isConfigured } = useSupabaseClient();
+
 const submitted = ref(false);
+const submitError = ref("");
+const submitting = ref(false);
 const form = reactive({
   name: "",
   location: "",
@@ -171,9 +178,34 @@ const form = reactive({
   tags: "",
 });
 
-function submit() {
-  // In production, send to an API or form service (e.g. Formspree)
-  console.log("Form submitted:", { ...form });
+async function submit() {
+  if (!supabase || !isConfigured) {
+    submitError.value = "잠시 후 다시 시도해주세요.";
+    return;
+  }
+
+  submitting.value = true;
+  submitError.value = "";
+
+  const { error } = await supabase.from("vendor_applications").insert({
+    name: form.name,
+    location: form.location,
+    category: form.category,
+    description: form.description,
+    instagram: form.instagram || null,
+    contact_email: form.contact || null,
+    tags: form.tags
+      ? form.tags.split(",").map((t) => t.trim()).filter(Boolean)
+      : [],
+  });
+
+  submitting.value = false;
+
+  if (error) {
+    submitError.value = "등록 신청에 실패했어요. 다시 시도해주세요.";
+    return;
+  }
+
   submitted.value = true;
 }
 </script>

@@ -1,4 +1,6 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+
+let browserClient: SupabaseClient | null = null;
 
 export function useSupabaseClient() {
   const config = useRuntimeConfig();
@@ -6,16 +8,18 @@ export function useSupabaseClient() {
     Boolean(config.public.supabaseUrl) &&
     Boolean(config.public.supabaseAnonKey);
 
-  const client = useState("supabase-client", () => {
-    if (!isConfigured) return null;
-    return createClient(
+  // The client holds live sockets/timers and isn't serializable, so it must
+  // never go through Nuxt's SSR payload (useState). It's browser-only.
+  if (!import.meta.client || !isConfigured) {
+    return { client: null, isConfigured };
+  }
+
+  if (!browserClient) {
+    browserClient = createClient(
       config.public.supabaseUrl,
       config.public.supabaseAnonKey,
     );
-  });
+  }
 
-  return {
-    client: client.value,
-    isConfigured,
-  };
+  return { client: browserClient, isConfigured };
 }
