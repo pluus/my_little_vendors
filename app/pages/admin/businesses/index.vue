@@ -43,6 +43,7 @@ definePageMeta({ middleware: "admin" });
 useHead({ title: "업체 관리 — Admin" });
 
 const { adminFetch } = useAdminApi();
+const toast = useAdminToast();
 
 const businesses = ref<AdminBusiness[]>([]);
 const loading = ref(true);
@@ -55,8 +56,13 @@ async function load() {
 
 async function remove(b: AdminBusiness) {
   if (!confirm(`"${b.name}" 업체를 삭제할까요?`)) return;
-  await adminFetch(`/api/admin/businesses/${b.id}`, { method: "DELETE" });
-  await load();
+  try {
+    await adminFetch(`/api/admin/businesses/${b.id}`, { method: "DELETE" });
+    toast.show(`"${b.name}" 삭제했어요.`);
+    await load();
+  } catch (e: unknown) {
+    toast.show(e instanceof Error ? e.message : "삭제에 실패했어요.", "error");
+  }
 }
 
 onMounted(load);

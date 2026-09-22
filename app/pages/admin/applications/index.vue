@@ -70,6 +70,7 @@ definePageMeta({ middleware: "admin" });
 useHead({ title: "등록 신청 — Admin" });
 
 const { adminFetch } = useAdminApi();
+const toast = useAdminToast();
 
 const applications = ref<VendorApplication[]>([]);
 const loading = ref(true);
@@ -95,11 +96,16 @@ async function load() {
 }
 
 async function review(a: VendorApplication, status: "approved" | "rejected") {
-  await adminFetch(`/api/admin/applications/${a.id}`, {
-    method: "PATCH",
-    body: { status },
-  });
-  await load();
+  try {
+    await adminFetch(`/api/admin/applications/${a.id}`, {
+      method: "PATCH",
+      body: { status },
+    });
+    toast.show(status === "approved" ? "승인했어요." : "거절했어요.");
+    await load();
+  } catch (e: unknown) {
+    toast.show(e instanceof Error ? e.message : "처리에 실패했어요.", "error");
+  }
 }
 
 onMounted(load);

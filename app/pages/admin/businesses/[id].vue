@@ -20,6 +20,7 @@ useHead({ title: "업체 수정 — Admin" });
 
 const route = useRoute();
 const { adminFetch } = useAdminApi();
+const toast = useAdminToast();
 
 const business = ref<AdminBusiness | null>(null);
 const loading = ref(true);
@@ -41,8 +42,10 @@ async function onSubmit(updated: AdminBusiness) {
       method: "PATCH",
       body: updated,
     });
+    toast.show("저장됐어요.");
   } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : "저장에 실패했어요.";
+    toast.show(error.value, "error");
   } finally {
     saving.value = false;
   }

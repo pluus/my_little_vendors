@@ -20,6 +20,7 @@ useHead({ title: "새 업체 — Admin" });
 
 const route = useRoute();
 const { adminFetch } = useAdminApi();
+const toast = useAdminToast();
 const saving = ref(false);
 const error = ref("");
 const loading = ref(false);
@@ -58,9 +59,11 @@ async function onSubmit(business: AdminBusiness) {
       method: "POST",
       body: business,
     });
+    toast.show("업체가 등록됐어요.");
     await navigateTo(`/admin/businesses/${created.id}`);
   } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : "저장에 실패했어요.";
+    toast.show(error.value, "error");
   } finally {
     saving.value = false;
   }

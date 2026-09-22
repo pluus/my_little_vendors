@@ -93,6 +93,13 @@
           </svg>
           <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
         </a>
+        <NuxtLink
+          v-if="isAdmin"
+          to="/admin"
+          class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-stone-800 hover:bg-stone-900 text-white text-sm font-medium transition-colors"
+        >
+          <span class="flex-1 text-center sm:text-left">관리자페이지</span>
+        </NuxtLink>
       </nav>
       <!-- Hamburger menu (mobile) -->
       <div class="sm:hidden flex items-center gap-2">
@@ -194,6 +201,14 @@
               </svg>
               가게 추천하기
             </a>
+            <NuxtLink
+              v-if="isAdmin"
+              to="/admin"
+              class="flex items-center gap-2 px-4 py-3 rounded-xl bg-stone-800 hover:bg-stone-900 text-white text-base font-medium transition-colors"
+              @click="mobileMenu = false"
+            >
+              관리자페이지
+            </NuxtLink>
           </div>
         </div>
       </Transition>
@@ -234,6 +249,7 @@
 const search = useSearch();
 const mobileSearch = ref(false);
 const mobileMenu = ref(false);
+const { isAdmin } = useIsAdmin();
 </script>
 
 <style scoped>
