@@ -11,15 +11,6 @@
         <p class="text-3xl font-bold text-stone-900">{{ businessCount ?? "…" }}</p>
         <p class="mt-3 text-sm font-medium text-amber-600">업체 관리 →</p>
       </NuxtLink>
-
-      <NuxtLink
-        to="/admin/applications"
-        class="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 transition"
-      >
-        <p class="text-sm text-stone-500 mb-1">대기 중인 등록 신청</p>
-        <p class="text-3xl font-bold text-stone-900">{{ pendingCount ?? "…" }}</p>
-        <p class="mt-3 text-sm font-medium text-amber-600">신청 검토 →</p>
-      </NuxtLink>
     </div>
   </div>
 </template>
@@ -31,14 +22,9 @@ useHead({ title: "Admin" });
 const { adminFetch } = useAdminApi();
 
 const businessCount = ref<number | null>(null);
-const pendingCount = ref<number | null>(null);
 
 onMounted(async () => {
-  const [businesses, applications] = await Promise.all([
-    adminFetch<unknown[]>("/api/admin/businesses"),
-    adminFetch<{ status: string }[]>("/api/admin/applications"),
-  ]);
+  const businesses = await adminFetch<unknown[]>("/api/admin/businesses");
   businessCount.value = businesses.length;
-  pendingCount.value = applications.filter((a) => a.status === "pending").length;
 });
 </script>
