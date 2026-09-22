@@ -168,18 +168,24 @@
         />
       </div>
 
-      <label class="flex items-start gap-2 text-sm text-stone-600">
-        <input
-          v-model="form.consent"
-          type="checkbox"
-          required
-          class="mt-0.5"
-        />
-        <span
-          >운영진이 가게 홍보 목적으로 사업주의 사진/일러스트를 사용하는데
-          동의합니다.</span
-        >
-      </label>
+      <div>
+        <label class="flex items-start gap-2 text-sm text-stone-600">
+          <input
+            v-model="form.consent"
+            type="checkbox"
+            required
+            class="mt-0.5"
+          />
+          <span
+            >운영진이 가게 홍보 목적으로 사업주의 사진/일러스트를 사용하는데
+            동의합니다. <span class="text-rose-400">*</span></span
+          >
+        </label>
+        <p class="mt-2 text-xs text-stone-400 leading-relaxed">
+          홍보 중단을 원하실 경우, 사업주 본인이 운영진에게 직접 중단 요청을
+          해주셔야 합니다.
+        </p>
+      </div>
 
       <p v-if="submitError" class="text-sm text-rose-500">{{ submitError }}</p>
 
@@ -219,6 +225,11 @@ const form = reactive({
 });
 
 async function submit() {
+  if (!form.consent) {
+    submitError.value = "사진/일러스트 사용 동의가 필요해요.";
+    return;
+  }
+
   if (!supabase || !isConfigured) {
     submitError.value = "잠시 후 다시 시도해주세요.";
     return;
