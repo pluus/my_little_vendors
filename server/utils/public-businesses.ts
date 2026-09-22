@@ -16,7 +16,6 @@ export function toBusiness(row: Record<string, any>) {
     kakao: row.kakao,
     email: row.email,
     phone: row.phone,
-    featured: row.featured,
     isPlaceholder: row.is_placeholder,
     funFact: row.fun_fact,
     slug: row.slug,

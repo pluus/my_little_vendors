@@ -15,7 +15,6 @@ export interface Business {
   kakao?: string;
   email?: string;
   phone?: string;
-  featured?: boolean;
   isPlaceholder: boolean;
   funFact?: string;
   slug?: string;

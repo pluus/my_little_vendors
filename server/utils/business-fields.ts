@@ -14,7 +14,6 @@ export const BUSINESS_FIELDS = [
   "kakao",
   "email",
   "phone",
-  "featured",
   "is_placeholder",
   "fun_fact",
   "vendor_of_week",

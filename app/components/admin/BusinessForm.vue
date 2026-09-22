@@ -122,13 +122,7 @@
 
     <div class="flex flex-wrap items-center gap-5 border-t border-stone-200 pt-4">
       <label class="flex items-center gap-2 text-sm text-stone-700">
-        <input v-model="local.featured" type="checkbox" /> 추천 업체
-      </label>
-      <label class="flex items-center gap-2 text-sm text-stone-700">
         <input v-model="local.vendor_of_week" type="checkbox" /> 이 주의 업체
-      </label>
-      <label class="flex items-center gap-2 text-sm text-stone-700">
-        <input v-model="local.is_placeholder" type="checkbox" /> 플레이스홀더
       </label>
     </div>
 
@@ -165,7 +159,6 @@ export interface AdminBusiness {
   kakao: string | null;
   email: string | null;
   phone: string | null;
-  featured: boolean;
   is_placeholder: boolean;
   fun_fact: string | null;
   vendor_of_week: boolean;
@@ -195,7 +188,6 @@ function emptyBusiness(): AdminBusiness {
     kakao: "",
     email: "",
     phone: "",
-    featured: false,
     is_placeholder: false,
     fun_fact: "",
     vendor_of_week: false,
