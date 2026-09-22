@@ -26,7 +26,9 @@
         <p class="mt-3 text-sm text-stone-700 whitespace-pre-wrap">{{ a.description }}</p>
         <p class="mt-2 text-xs text-stone-500">
           <span v-if="a.instagram">IG: {{ a.instagram }} · </span>
-          <span v-if="a.contact_email">{{ a.contact_email }}</span>
+          <span v-if="a.contact_email">{{ a.contact_email }} · </span>
+          <span v-if="a.phone">{{ a.phone }} · </span>
+          <span v-if="a.kakao">카카오: {{ a.kakao }}</span>
         </p>
 
         <div v-if="a.status === 'pending'" class="mt-4 flex gap-3">

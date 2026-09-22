@@ -31,7 +31,7 @@
               to="https://forms.gle/5i7Bn9vaF8GYuLnu6"
               class="hover:text-amber-600 transition-colors"
               target="_blank"
-              >가게 추천하기</NuxtLink
+              >가게 신청하기</NuxtLink
             >
           </li>
           <li>

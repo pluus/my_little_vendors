@@ -89,7 +89,7 @@
               d="M12 4v16m8-8H4"
             />
           </svg>
-          <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
+          <span class="flex-1 text-center sm:text-left">가게 신청하기</span>
         </NuxtLink>
         <NuxtLink
           v-if="isAdmin"
@@ -196,7 +196,7 @@
                   d="M12 4v16m8-8H4"
                 />
               </svg>
-              가게 추천하기
+              가게 신청하기
             </NuxtLink>
             <NuxtLink
               v-if="isAdmin"

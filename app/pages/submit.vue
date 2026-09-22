@@ -68,7 +68,7 @@
             v-model="form.location"
             type="text"
             required
-            placeholder="서울, 마포구"
+            placeholder="밴쿠버, 버나비"
             class="field"
           />
         </div>
@@ -130,6 +130,31 @@
         </div>
       </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5"
+            >전화번호</label
+          >
+          <input
+            v-model="form.phone"
+            type="tel"
+            placeholder="604-123-4567"
+            class="field"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-stone-700 mb-1.5"
+            >카카오톡 아이디</label
+          >
+          <input
+            v-model="form.kakao"
+            type="text"
+            placeholder="kakao_id"
+            class="field"
+          />
+        </div>
+      </div>
+
       <div>
         <label class="block text-sm font-medium text-stone-700 mb-1.5"
           >태그
@@ -142,6 +167,19 @@
           class="field"
         />
       </div>
+
+      <label class="flex items-start gap-2 text-sm text-stone-600">
+        <input
+          v-model="form.consent"
+          type="checkbox"
+          required
+          class="mt-0.5"
+        />
+        <span
+          >운영진이 가게 홍보 목적으로 사업주의 사진/일러스트를 사용하는데
+          동의합니다.</span
+        >
+      </label>
 
       <p v-if="submitError" class="text-sm text-rose-500">{{ submitError }}</p>
 
@@ -174,7 +212,10 @@ const form = reactive({
   description: "",
   instagram: "",
   contact: "",
+  phone: "",
+  kakao: "",
   tags: "",
+  consent: false,
 });
 
 async function submit() {
@@ -193,6 +234,9 @@ async function submit() {
     description: form.description,
     instagram: form.instagram || null,
     contact_email: form.contact || null,
+    phone: form.phone || null,
+    kakao: form.kakao || null,
+    consent_media_use: form.consent,
     tags: form.tags
       ? form.tags.split(",").map((t) => t.trim()).filter(Boolean)
       : [],
