@@ -61,12 +61,31 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <label class="block">
-        <span class="block text-xs font-semibold text-stone-500 mb-1">커버 이미지 URL</span>
-        <input v-model="local.cover" class="field" />
+        <span class="block text-xs font-semibold text-stone-500 mb-1">커버 이미지</span>
+        <input v-model="local.cover" class="field mb-2" placeholder="URL 직접 입력 또는 아래에서 업로드" />
+        <input type="file" accept="image/*" :disabled="uploadingCover" @change="onCoverFile" class="text-xs" />
+        <img v-if="local.cover" :src="local.cover" class="mt-2 h-20 rounded-lg object-cover border border-stone-200" />
+        <p v-if="uploadError" class="text-xs text-rose-500 mt-1">{{ uploadError }}</p>
       </label>
       <label class="block">
         <span class="block text-xs font-semibold text-stone-500 mb-1">이미지 URL들 (쉼표 구분)</span>
-        <input v-model="imagesText" class="field" />
+        <input v-model="imagesText" class="field mb-2" placeholder="URL 직접 입력 또는 아래에서 업로드" />
+        <input
+          type="file"
+          accept="image/*"
+          multiple
+          :disabled="uploadingImages"
+          @change="onImagesFile"
+          class="text-xs"
+        />
+        <div v-if="parseList(imagesText).length" class="mt-2 flex flex-wrap gap-2">
+          <img
+            v-for="src in parseList(imagesText)"
+            :key="src"
+            :src="src"
+            class="h-16 w-16 rounded-lg object-cover border border-stone-200"
+          />
+        </div>
       </label>
     </div>
 
@@ -201,6 +220,51 @@ function parseList(text: string) {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
+}
+
+const { adminFetch } = useAdminApi();
+const uploadingCover = ref(false);
+const uploadingImages = ref(false);
+const uploadError = ref("");
+
+async function uploadFile(file: File) {
+  const body = new FormData();
+  body.append("file", file);
+  const res = await adminFetch<{ url: string }>("/api/admin/upload", {
+    method: "POST",
+    body,
+  });
+  return res.url;
+}
+
+async function onCoverFile(e: Event) {
+  const file = (e.target as HTMLInputElement).files?.[0];
+  if (!file) return;
+  uploadingCover.value = true;
+  uploadError.value = "";
+  try {
+    local.cover = await uploadFile(file);
+  } catch (err) {
+    uploadError.value = err instanceof Error ? err.message : "업로드 실패";
+  } finally {
+    uploadingCover.value = false;
+  }
+}
+
+async function onImagesFile(e: Event) {
+  const files = Array.from((e.target as HTMLInputElement).files ?? []);
+  if (!files.length) return;
+  uploadingImages.value = true;
+  uploadError.value = "";
+  try {
+    const urls = await Promise.all(files.map(uploadFile));
+    const current = parseList(imagesText.value);
+    imagesText.value = [...current, ...urls].join(", ");
+  } catch (err) {
+    uploadError.value = err instanceof Error ? err.message : "업로드 실패";
+  } finally {
+    uploadingImages.value = false;
+  }
 }
 
 function onSubmit() {

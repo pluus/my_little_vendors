@@ -157,11 +157,10 @@
 </template>
 
 <script setup lang="ts">
-import { categories } from "~/data/businesses";
-
 useHead({ title: "내 가게 등록 — my little vendors" });
 
-const nonAllCategories = categories.filter((c) => c !== "전체");
+const { data: categories } = await useCategoriesData();
+const nonAllCategories = categories.value.filter((c) => !c.startsWith("전체"));
 
 const { client: supabase, isConfigured } = useSupabaseClient();
 
