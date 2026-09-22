@@ -14,8 +14,8 @@
       />
     </div>
 
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <div class="grid gap-8 lg:grid-cols-2">
+    <div class="relative max-w-md mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <div>
         <div
           class="rounded-3xl border border-stone-200 bg-white/90 backdrop-blur p-6 sm:p-8 shadow-lg"
         >
@@ -127,37 +127,6 @@
             </NuxtLink>
           </p>
         </div>
-
-        <aside
-          class="rounded-3xl border border-stone-200 bg-white p-6 sm:p-8 shadow-lg"
-        >
-          <h2 class="text-xl font-semibold text-stone-900">
-            Authentication Notes
-          </h2>
-          <ol
-            class="mt-4 space-y-3 text-sm text-stone-600 list-decimal list-inside"
-          >
-            <li>Enable Google, Facebook, and Kakao in Supabase Auth.</li>
-            <li>Add OAuth callback URLs in each provider dashboard.</li>
-            <li>Add this redirect URL in Supabase: {{ redirectUrl }}</li>
-            <li>For email login, ensure confirmed users can sign in.</li>
-          </ol>
-
-          <div class="mt-5 rounded-2xl bg-stone-50 border border-stone-200 p-4">
-            <p class="text-xs font-semibold text-stone-500 mb-2">
-              Environment keys
-            </p>
-            <pre
-              class="text-xs text-stone-700 leading-relaxed whitespace-pre-wrap"
-            ><code>NUXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
-NUXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY
-NUXT_PUBLIC_SITE_URL={{ runtimeSiteUrl }}</code></pre>
-          </div>
-
-          <p v-if="!isConfigured" class="mt-4 text-xs text-rose-600">
-            Supabase env vars are missing. Add them before testing sign in.
-          </p>
-        </aside>
       </div>
     </div>
   </section>

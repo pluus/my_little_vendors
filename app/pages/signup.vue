@@ -14,8 +14,8 @@
       />
     </div>
 
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-      <div class="grid gap-8 lg:grid-cols-2">
+    <div class="relative max-w-md mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <div>
         <div
           class="rounded-3xl border border-amber-100 bg-white/80 backdrop-blur p-6 sm:p-8 shadow-lg"
         >
@@ -30,52 +30,10 @@
             Create your account
           </h1>
           <p class="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-            Sign up in four ways and start managing your vendor profile.
+            Sign up with your email and password.
           </p>
 
-          <div class="mt-8 space-y-3">
-            <button
-              class="w-full flex items-center justify-center gap-3 rounded-2xl border border-stone-200 bg-white px-4 py-3 text-sm font-medium text-stone-700 hover:border-stone-300 hover:bg-stone-50 transition disabled:opacity-60"
-              :disabled="isBusy"
-              @click="signInWithProvider('google')"
-            >
-              <span
-                class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center text-[10px] font-bold"
-                >G</span
-              >
-              Continue with Google
-            </button>
-            <button
-              class="w-full flex items-center justify-center gap-3 rounded-2xl border border-stone-200 bg-white px-4 py-3 text-sm font-medium text-stone-700 hover:border-stone-300 hover:bg-stone-50 transition disabled:opacity-60"
-              :disabled="isBusy"
-              @click="signInWithProvider('facebook')"
-            >
-              <span
-                class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center text-[10px] font-bold"
-                >f</span
-              >
-              Continue with Facebook
-            </button>
-            <button
-              class="w-full flex items-center justify-center gap-3 rounded-2xl border border-yellow-200 bg-yellow-50 px-4 py-3 text-sm font-medium text-stone-800 hover:bg-yellow-100 transition disabled:opacity-60"
-              :disabled="isBusy"
-              @click="signInWithProvider('kakao')"
-            >
-              <span
-                class="w-5 h-5 rounded-full bg-yellow-300 flex items-center justify-center text-[10px] font-bold"
-                >K</span
-              >
-              Continue with KakaoTalk
-            </button>
-          </div>
-
-          <div class="my-6 flex items-center gap-3">
-            <div class="h-px bg-stone-200 flex-1" />
-            <span class="text-xs font-medium text-stone-400">OR</span>
-            <div class="h-px bg-stone-200 flex-1" />
-          </div>
-
-          <form class="space-y-3" @submit.prevent="signUpWithEmail">
+          <form class="space-y-3 mt-8" @submit.prevent="signUpWithEmail">
             <label class="block">
               <span class="block text-xs font-semibold text-stone-500 mb-1.5"
                 >Name (optional)</span
@@ -138,53 +96,18 @@
             being stored in PostgreSQL.
           </p>
         </div>
-
-        <aside
-          class="rounded-3xl border border-stone-200 bg-white p-6 sm:p-8 shadow-lg"
-        >
-          <h2 class="text-xl font-semibold text-stone-900">
-            Supabase Setup Checklist
-          </h2>
-          <ol
-            class="mt-4 space-y-3 text-sm text-stone-600 list-decimal list-inside"
-          >
-            <li>Create a Supabase project and copy URL + anon key.</li>
-            <li>
-              Set provider credentials for Google, Facebook, and Kakao in
-              Supabase Auth.
-            </li>
-            <li>Add your redirect URL: {{ redirectUrl }}</li>
-            <li>Set env vars in your Nuxt app and restart dev server.</li>
-          </ol>
-
-          <div class="mt-5 rounded-2xl bg-stone-50 border border-stone-200 p-4">
-            <p class="text-xs font-semibold text-stone-500 mb-2">.env</p>
-            <pre
-              class="text-xs text-stone-700 leading-relaxed whitespace-pre-wrap"
-            ><code>NUXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
-NUXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY
-NUXT_PUBLIC_SITE_URL={{ runtimeSiteUrl }}</code></pre>
-          </div>
-
-          <p v-if="!isConfigured" class="mt-4 text-xs text-rose-600">
-            Supabase env vars are missing. Add them before testing sign up.
-          </p>
-        </aside>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import type { Provider } from "@supabase/supabase-js";
-
 useHead({
   title: "Sign Up",
   meta: [
     {
       name: "description",
-      content:
-        "Sign up with Google, Facebook, KakaoTalk, or email and password.",
+      content: "Sign up with email and password.",
     },
   ],
 });
@@ -199,7 +122,6 @@ const email = ref("");
 const password = ref("");
 const statusMessage = ref("");
 const statusType = ref<"success" | "error" | "info">("info");
-const activeProvider = ref<Provider | null>(null);
 const isSubmittingEmail = ref(false);
 
 const redirectUrl = computed(() => {
@@ -207,9 +129,7 @@ const redirectUrl = computed(() => {
   return `${runtimeSiteUrl}/signup`;
 });
 
-const isBusy = computed(
-  () => activeProvider.value !== null || isSubmittingEmail.value,
-);
+const isBusy = computed(() => isSubmittingEmail.value);
 const statusClass = computed(() => {
   if (statusType.value === "success") return "text-emerald-600";
   if (statusType.value === "error") return "text-rose-600";
@@ -222,38 +142,6 @@ function setStatus(
 ) {
   statusMessage.value = message;
   statusType.value = type;
-}
-
-async function signInWithProvider(
-  provider: Extract<Provider, "google" | "facebook" | "kakao">,
-) {
-  if (!supabase || !isConfigured) {
-    setStatus(
-      "Supabase env vars are missing. Set NUXT_PUBLIC_SUPABASE_URL and NUXT_PUBLIC_SUPABASE_ANON_KEY.",
-      "error",
-    );
-    return;
-  }
-
-  try {
-    activeProvider.value = provider;
-    setStatus(`Redirecting to ${provider}...`, "info");
-
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider,
-      options: {
-        redirectTo: redirectUrl.value,
-      },
-    });
-
-    if (error) throw error;
-  } catch (error: unknown) {
-    const message =
-      error instanceof Error ? error.message : "OAuth signup failed.";
-    setStatus(message, "error");
-  } finally {
-    activeProvider.value = null;
-  }
 }
 
 async function signUpWithEmail() {
