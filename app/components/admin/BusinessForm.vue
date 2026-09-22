@@ -13,7 +13,7 @@
 
     <label class="block">
       <span class="block text-xs font-semibold text-stone-500 mb-1">소개</span>
-      <textarea v-model="local.description" rows="3" class="field" />
+      <AdminRichTextEditor v-model="local.description" />
     </label>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -91,7 +91,7 @@
 
     <label class="block">
       <span class="block text-xs font-semibold text-stone-500 mb-1">Fun Fact</span>
-      <textarea v-model="local.fun_fact" rows="3" class="field" />
+      <AdminRichTextEditor v-model="local.fun_fact" />
     </label>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-stone-200 pt-4">
@@ -108,7 +108,7 @@
       </label>
       <label class="block sm:col-span-2">
         <span class="block text-xs font-semibold text-stone-500 mb-1">스토리</span>
-        <textarea v-model="local.vendor_story" rows="3" class="field" />
+        <AdminRichTextEditor v-model="local.vendor_story" />
       </label>
     </div>
 
