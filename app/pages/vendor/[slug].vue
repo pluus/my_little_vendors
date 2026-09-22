@@ -502,7 +502,8 @@
 </template>
 
 <script setup lang="ts">
-import { businesses } from "~/data/businesses";
+const { data: businessesData } = await useBusinessesData();
+const businesses = businessesData.value;
 
 const route = useRoute();
 const slug = route.params.slug as string;

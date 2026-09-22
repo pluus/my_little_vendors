@@ -56,9 +56,11 @@
 </template>
 
 <script setup lang="ts">
-import { businesses } from "~/data/businesses";
 import type { Business } from "~/types/business";
 import { ref as vueRef, computed as vueComputed } from "vue";
+
+const { data: businessesData } = await useBusinessesData();
+const businesses = businessesData.value;
 
 // Pick 9 recommended businesses (non-placeholder)
 const recommendedBusinesses = vueComputed(() => {

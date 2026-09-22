@@ -110,8 +110,10 @@
 </template>
 
 <script setup lang="ts">
-import { businesses } from "~/data/businesses";
 import type { Business } from "~/types/business";
+
+const { data: businessesData } = await useBusinessesData();
+const businesses = businessesData.value;
 
 // Get featured vendor (prioritize vendorOfWeek flag, fallback to first with vendor info)
 const featuredVendor = computed<Business | null>(() => {

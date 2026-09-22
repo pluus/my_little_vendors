@@ -181,9 +181,12 @@
 // ...existing code...
 import DidYouKnowWidget from "~/components/DidYouKnowWidget.vue";
 import ChatWidget from "~/components/ChatWidget.vue";
-import { businesses, categories } from "~/data/businesses";
+import { categories } from "~/data/businesses";
 import type { Business } from "~/types/business";
 import Banner from "~/components/Banner.vue";
+
+const { data: businessesData } = await useBusinessesData();
+const businesses = businessesData.value;
 
 useHead({
   title: "My Little Vendors - 이웃주민의 작은 가게를 함께 응원해요.",
