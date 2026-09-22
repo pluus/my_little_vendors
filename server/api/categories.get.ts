@@ -6,7 +6,10 @@ export default defineEventHandler(async () => {
   const [{ data: categories, error: catError }, { count, error: countError }] =
     await Promise.all([
       client.from("categories").select("name").order("sort_order"),
-      client.from("businesses").select("*", { count: "exact", head: true }),
+      client
+        .from("businesses")
+        .select("*", { count: "exact", head: true })
+        .eq("published", true),
     ]);
 
   if (catError) throw createError({ statusCode: 500, statusMessage: catError.message });

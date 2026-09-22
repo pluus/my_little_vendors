@@ -33,10 +33,11 @@
 
         <div v-if="a.status === 'pending'" class="mt-4 flex gap-3">
           <button
-            class="px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium transition"
-            @click="review(a, 'approved')"
+            class="px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-medium transition disabled:opacity-60"
+            :disabled="creatingId === a.id"
+            @click="createDraftBusiness(a)"
           >
-            승인
+            {{ creatingId === a.id ? "등록 중..." : "비공개 업체로 임시 등록" }}
           </button>
           <button
             class="px-4 py-1.5 rounded-full bg-rose-100 hover:bg-rose-200 text-rose-700 text-sm font-medium transition"
@@ -44,12 +45,6 @@
           >
             거절
           </button>
-          <NuxtLink
-            :to="`/admin/businesses/new?fromApplication=${a.id}`"
-            class="px-4 py-1.5 rounded-full border border-stone-200 hover:border-stone-300 text-sm font-medium transition"
-          >
-            업체로 등록
-          </NuxtLink>
         </div>
       </li>
     </ul>
@@ -65,6 +60,9 @@ interface VendorApplication {
   description: string;
   instagram: string | null;
   contact_email: string | null;
+  phone: string | null;
+  kakao: string | null;
+  tags: string[];
   status: "pending" | "approved" | "rejected";
 }
 
@@ -76,6 +74,18 @@ const toast = useAdminToast();
 
 const applications = ref<VendorApplication[]>([]);
 const loading = ref(true);
+const creatingId = ref<number | null>(null);
+
+function slugify(name: string) {
+  const base = name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+  return base || `business-${Date.now()}`;
+}
 
 function statusLabel(status: string) {
   return { pending: "대기", approved: "승인됨", rejected: "거절됨" }[status] ?? status;
@@ -95,6 +105,38 @@ async function load() {
     "/api/admin/applications",
   );
   loading.value = false;
+}
+
+async function createDraftBusiness(a: VendorApplication) {
+  creatingId.value = a.id;
+  try {
+    const created = await adminFetch<{ id: number }>("/api/admin/businesses", {
+      method: "POST",
+      body: {
+        slug: slugify(a.name),
+        name: a.name,
+        location: a.location,
+        categories: [a.category],
+        description: a.description,
+        instagram: a.instagram ?? "",
+        email: a.contact_email ?? "",
+        phone: a.phone ?? "",
+        kakao: a.kakao ?? "",
+        tags: a.tags ?? [],
+        published: false,
+      },
+    });
+    await adminFetch(`/api/admin/applications/${a.id}`, {
+      method: "PATCH",
+      body: { status: "approved" },
+    });
+    toast.show("비공개 업체로 등록했어요. 마저 편집해주세요.");
+    await navigateTo(`/admin/businesses/${created.id}`);
+  } catch (e: unknown) {
+    toast.show(e instanceof Error ? e.message : "등록에 실패했어요.", "error");
+  } finally {
+    creatingId.value = null;
+  }
 }
 
 async function review(a: VendorApplication, status: "approved" | "rejected") {

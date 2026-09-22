@@ -124,6 +124,10 @@
       <label class="flex items-center gap-2 text-sm text-stone-700">
         <input v-model="local.vendor_of_week" type="checkbox" /> 이 주의 업체
       </label>
+      <label class="flex items-center gap-2 text-sm text-stone-700">
+        <input v-model="local.published" type="checkbox" /> 공개
+        <span class="text-xs text-stone-400">(체크 해제 시 사이트에 안 보임)</span>
+      </label>
     </div>
 
     <div class="flex items-center gap-3 pt-2">
@@ -160,6 +164,7 @@ export interface AdminBusiness {
   email: string | null;
   phone: string | null;
   is_placeholder: boolean;
+  published: boolean;
   fun_fact: string | null;
   vendor_of_week: boolean;
   vendor_name: string | null;
@@ -189,6 +194,7 @@ function emptyBusiness(): AdminBusiness {
     email: "",
     phone: "",
     is_placeholder: false,
+    published: true,
     fun_fact: "",
     vendor_of_week: false,
     vendor_name: "",

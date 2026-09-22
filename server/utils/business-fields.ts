@@ -15,6 +15,7 @@ export const BUSINESS_FIELDS = [
   "email",
   "phone",
   "is_placeholder",
+  "published",
   "fun_fact",
   "vendor_of_week",
   "vendor_name",

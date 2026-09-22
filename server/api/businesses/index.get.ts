@@ -6,6 +6,7 @@ export default defineEventHandler(async () => {
   const { data, error } = await client
     .from("businesses")
     .select("*")
+    .eq("published", true)
     .order("id");
 
   if (error) {

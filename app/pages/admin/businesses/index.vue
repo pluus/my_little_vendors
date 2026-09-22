@@ -22,6 +22,7 @@
           <p class="font-medium text-stone-900">
             {{ b.name }}
             <span v-if="b.vendor_of_week" class="ml-2 text-xs text-amber-600">이 주의 업체</span>
+            <span v-if="!b.published" class="ml-2 text-xs text-rose-500">비공개</span>
           </p>
           <p class="text-sm text-stone-500">{{ b.location }} · {{ b.categories.join(", ") }}</p>
         </div>
