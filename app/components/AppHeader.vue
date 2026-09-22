@@ -72,10 +72,8 @@
         >
           <span class="flex-1 text-center sm:text-left">회원가입</span>
         </NuxtLink> -->
-        <a
-          href="https://forms.gle/AsR5kSVsZrvmFRwq7"
-          target="_blank"
-          rel="noopener noreferrer"
+        <NuxtLink
+          to="/submit"
           class="w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors"
         >
           <svg
@@ -92,7 +90,7 @@
             />
           </svg>
           <span class="flex-1 text-center sm:text-left">가게 추천하기</span>
-        </a>
+        </NuxtLink>
         <NuxtLink
           v-if="isAdmin"
           to="/admin"
@@ -180,11 +178,10 @@
             >
               회원가입
             </NuxtLink> -->
-            <a
-              href="https://forms.gle/AsR5kSVsZrvmFRwq7"
-              target="_blank"
-              rel="noopener noreferrer"
+            <NuxtLink
+              to="/submit"
               class="flex items-center gap-2 px-4 py-3 rounded-xl bg-amber-400 hover:bg-amber-500 text-white text-base font-medium transition-colors"
+              @click="mobileMenu = false"
             >
               <svg
                 class="w-4 h-4"
@@ -200,7 +197,7 @@
                 />
               </svg>
               가게 추천하기
-            </a>
+            </NuxtLink>
             <NuxtLink
               v-if="isAdmin"
               to="/admin"
