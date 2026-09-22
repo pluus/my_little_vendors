@@ -62,14 +62,18 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <label class="block">
         <span class="block text-xs font-semibold text-stone-500 mb-1">커버 이미지</span>
-        <input v-model="local.cover" class="field mb-2" placeholder="URL 직접 입력 또는 아래에서 업로드" />
-        <input type="file" accept="image/*" :disabled="uploadingCover" @change="onCoverFile" class="text-xs" />
+        <input
+          type="file"
+          accept="image/*"
+          :disabled="uploadingCover"
+          @change="onCoverFile"
+          class="text-xs"
+        />
         <img v-if="local.cover" :src="local.cover" class="mt-2 h-20 rounded-lg object-cover border border-stone-200" />
         <p v-if="uploadError" class="text-xs text-rose-500 mt-1">{{ uploadError }}</p>
       </label>
       <label class="block">
-        <span class="block text-xs font-semibold text-stone-500 mb-1">이미지 URL들 (쉼표 구분)</span>
-        <input v-model="imagesText" class="field mb-2" placeholder="URL 직접 입력 또는 아래에서 업로드" />
+        <span class="block text-xs font-semibold text-stone-500 mb-1">추가 이미지</span>
         <input
           type="file"
           accept="image/*"
@@ -79,12 +83,16 @@
           class="text-xs"
         />
         <div v-if="parseList(imagesText).length" class="mt-2 flex flex-wrap gap-2">
-          <img
-            v-for="src in parseList(imagesText)"
-            :key="src"
-            :src="src"
-            class="h-16 w-16 rounded-lg object-cover border border-stone-200"
-          />
+          <div v-for="src in parseList(imagesText)" :key="src" class="relative">
+            <img :src="src" class="h-16 w-16 rounded-lg object-cover border border-stone-200" />
+            <button
+              type="button"
+              class="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-rose-500 text-white text-[10px] leading-4"
+              @click="removeImage(src)"
+            >
+              ×
+            </button>
+          </div>
         </div>
       </label>
     </div>
@@ -249,6 +257,12 @@ async function onCoverFile(e: Event) {
   } finally {
     uploadingCover.value = false;
   }
+}
+
+function removeImage(src: string) {
+  imagesText.value = parseList(imagesText.value)
+    .filter((s) => s !== src)
+    .join(", ");
 }
 
 async function onImagesFile(e: Event) {
