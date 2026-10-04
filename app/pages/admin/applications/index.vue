@@ -124,6 +124,7 @@ async function createDraftBusiness(a: VendorApplication) {
         kakao: a.kakao ?? "",
         tags: a.tags ?? [],
         published: false,
+        is_placeholder: false,
       },
     });
     await adminFetch(`/api/admin/applications/${a.id}`, {
