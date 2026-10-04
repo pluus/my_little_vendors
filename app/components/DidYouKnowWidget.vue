@@ -46,7 +46,7 @@
             </svg>
           </button>
         </div>
-        <p class="did-you-know-content text-sm leading-5" v-html="funFact" />
+        <div class="did-you-know-content text-sm leading-5" v-html="funFact" />
       </div>
       <!-- Balloon tail -->
       <div class="absolute right-8 bottom-[-19px] w-5 h-5 overflow-hidden">

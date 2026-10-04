@@ -260,9 +260,9 @@
           </div>
 
           <!-- Description -->
-          <p class="text-stone-600 text-sm leading-relaxed">
+          <div class="text-stone-600 text-sm leading-relaxed">
             <span v-html="business.description"></span>
-          </p>
+          </div>
         </div>
       </div>
     </section>

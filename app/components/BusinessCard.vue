@@ -98,9 +98,9 @@
       </div>
 
       <!-- Description -->
-      <p class="text-sm text-stone-500 leading-relaxed line-clamp-5 mb-3">
+      <div class="text-sm text-stone-500 leading-relaxed line-clamp-5 mb-3">
         <span v-html="business.description"></span>
-      </p>
+      </div>
 
       <!-- Tags -->
       <div v-if="business.tags?.length" class="flex flex-wrap gap-1.5">

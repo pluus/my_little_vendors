@@ -147,26 +147,26 @@
               class="float-right w-96 mr-6 mb-4"
             />
 
-            <p
+            <div
               class="text-stone-600 leading-relaxed text-base"
               v-html="business.vendor.story"
-            ></p>
+            ></div>
           </div>
 
           <!-- Journey -->
           <div v-if="business.vendor?.journey">
-            <p
+            <div
               class="text-stone-600 leading-relaxed text-base"
               v-html="business.vendor.journey"
-            ></p>
+            ></div>
           </div>
 
           <!-- Passion -->
           <div v-if="business.vendor?.passion">
-            <p
+            <div
               class="text-stone-600 leading-relaxed text-base"
               v-html="business.vendor.passion"
-            ></p>
+            ></div>
           </div>
 
           <!-- Fun Fact -->
@@ -178,10 +178,10 @@
               <span class="text-2xl">✨</span>
               <h3 class="text-lg font-bold text-amber-900">알고 계셨나요?</h3>
             </div>
-            <p
+            <div
               class="text-amber-900/80 leading-relaxed text-base"
               v-html="business.funFact"
-            ></p>
+            ></div>
           </div>
         </div>
       </div>
@@ -255,10 +255,10 @@
           >
             소개
           </h3>
-          <p
+          <div
             class="text-stone-600 leading-relaxed"
             v-html="business.description"
-          ></p>
+          ></div>
         </div>
 
         <!-- Tags -->
