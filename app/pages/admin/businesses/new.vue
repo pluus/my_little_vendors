@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <h1 class="text-2xl font-bold text-stone-900 mb-8">새 업체 등록</h1>
     <AdminBusinessForm :saving="saving" :error="error" @submit="onSubmit" />
   </div>

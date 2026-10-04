@@ -1,5 +1,10 @@
 <template>
-  <form class="space-y-5 max-w-2xl" @submit.prevent="onSubmit">
+  <div class="lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-8 lg:items-start">
+  <aside class="mb-8 lg:mb-0 lg:order-last lg:sticky lg:top-6">
+    <p class="text-xs font-semibold text-stone-500 mb-2">카드 미리보기</p>
+    <BusinessCard :business="previewBusiness" class="pointer-events-none" />
+  </aside>
+  <form class="space-y-5" @submit.prevent="onSubmit">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <label class="block">
         <span class="block text-xs font-semibold text-stone-500 mb-1">이름 *</span>
@@ -163,10 +168,12 @@
       <p v-if="error" class="text-sm text-rose-500">{{ error }}</p>
     </div>
   </form>
+  </div>
 </template>
 
 <script setup lang="ts">
 import type { PropType } from "vue";
+import type { Business } from "~/types/business";
 
 export interface AdminBusiness {
   id?: number;
@@ -253,6 +260,19 @@ function removeCategory(cat: string) {
 }
 const tagsText = ref(local.tags.join(", "));
 const imagesText = ref(local.images.join(", "));
+
+const previewBusiness = computed<Business>(() => ({
+  id: local.id ?? 0,
+  like: local.like_count,
+  name: local.name || "가게 이름",
+  description: local.description || "",
+  categories: local.categories,
+  location: local.location,
+  tags: parseList(tagsText.value),
+  cover: local.cover || "",
+  images: parseList(imagesText.value),
+  isPlaceholder: false,
+}));
 
 function parseList(text: string) {
   return text

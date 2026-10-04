@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <h1 class="text-2xl font-bold text-stone-900 mb-8">업체 수정</h1>
     <p v-if="loading" class="text-sm text-stone-500">불러오는 중...</p>
     <AdminBusinessForm
