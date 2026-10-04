@@ -16,10 +16,10 @@
       </label>
     </div>
 
-    <label class="block">
+    <div class="block">
       <span class="block text-xs font-semibold text-stone-500 mb-1">소개</span>
       <AdminRichTextEditor v-model="local.description" />
-    </label>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <label class="block">
@@ -124,10 +124,10 @@
       </label>
     </div>
 
-    <label class="block">
+    <div class="block">
       <span class="block text-xs font-semibold text-stone-500 mb-1">Fun Fact</span>
       <AdminRichTextEditor v-model="local.fun_fact" />
-    </label>
+    </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-stone-200 pt-4">
       <p class="sm:col-span-2 text-xs font-semibold text-stone-500 uppercase tracking-wide">
@@ -141,10 +141,10 @@
         <span class="block text-xs font-semibold text-stone-500 mb-1">한 줄 인용구</span>
         <input v-model="local.vendor_quote" class="field" />
       </label>
-      <label class="block sm:col-span-2">
+      <div class="block sm:col-span-2">
         <span class="block text-xs font-semibold text-stone-500 mb-1">스토리</span>
         <AdminRichTextEditor v-model="local.vendor_story" />
-      </label>
+      </div>
     </div>
 
     <div class="flex flex-wrap items-center gap-5 border-t border-stone-200 pt-4">
