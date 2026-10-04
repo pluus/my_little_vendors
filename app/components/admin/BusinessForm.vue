@@ -21,10 +21,15 @@
         <span class="block text-xs font-semibold text-stone-500 mb-1">위치</span>
         <input v-model="local.location" class="field" />
       </label>
-      <label class="block">
-        <span class="block text-xs font-semibold text-stone-500 mb-1">카테고리 (쉼표 구분)</span>
-        <input v-model="categoriesText" class="field" />
-      </label>
+      <div>
+        <span class="block text-xs font-semibold text-stone-500 mb-1">카테고리</span>
+        <div class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
+          <label v-for="cat in categoryOptions" :key="cat" class="flex items-center gap-1.5 text-sm text-stone-700">
+            <input v-model="local.categories" type="checkbox" :value="cat" />
+            {{ cat }}
+          </label>
+        </div>
+      </div>
     </div>
 
     <label class="block">
@@ -217,7 +222,10 @@ const emit = defineEmits<{ submit: [AdminBusiness] }>();
 
 const local = reactive<AdminBusiness>({ ...emptyBusiness(), ...props.modelValue });
 
-const categoriesText = ref(local.categories.join(", "));
+const { data: categoriesData } = useCategoriesData();
+const categoryOptions = computed(() =>
+  categoriesData.value.filter((c) => !c.startsWith("전체")),
+);
 const tagsText = ref(local.tags.join(", "));
 const imagesText = ref(local.images.join(", "));
 
@@ -282,7 +290,6 @@ async function onImagesFile(e: Event) {
 function onSubmit() {
   emit("submit", {
     ...local,
-    categories: parseList(categoriesText.value),
     tags: parseList(tagsText.value),
     images: parseList(imagesText.value),
     gallery: parseList(imagesText.value),
