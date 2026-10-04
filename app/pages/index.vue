@@ -15,10 +15,8 @@
         우리 이웃의 손길이 담긴 특별한 서비스!
       </p>
 
-      <a
-        href="https://forms.gle/AsR5kSVsZrvmFRwq7"
-        target="_blank"
-        rel="noopener noreferrer"
+      <NuxtLink
+        to="/submit"
         class="mt-6 w-full sm:w-auto flex sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400 hover:bg-amber-500 text-white text-sm font-medium transition-colors block lg:hidden"
       >
         <svg
@@ -35,7 +33,7 @@
           />
         </svg>
         <span class="flex-1 text-center sm:text-left">가게 신청하기</span>
-      </a>
+      </NuxtLink>
     </section>
 
     <!-- Vendor of the Week Banner -->

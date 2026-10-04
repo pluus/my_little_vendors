@@ -1,10 +1,8 @@
 <template>
   <!-- Placeholder card -->
-  <a
+  <NuxtLink
     v-if="business.isPlaceholder"
-    href="https://forms.gle/RhBXka3hHt31qg5c9"
-    target="_blank"
-    rel="noopener noreferrer"
+    to="/submit"
     class="group rounded-3xl overflow-hidden border-2 border-dashed border-stone-200 cursor-pointer hover:border-amber-300 transition-colors block no-underline"
     style="text-decoration: none"
   >
@@ -43,7 +41,7 @@
         </svg>
       </span>
     </div>
-  </a>
+  </NuxtLink>
 
   <!-- Real business card -->
   <article

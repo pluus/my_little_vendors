@@ -28,9 +28,8 @@
         <ul class="space-y-2 text-sm text-stone-500">
           <li>
             <NuxtLink
-              to="https://forms.gle/5i7Bn9vaF8GYuLnu6"
+              to="/submit"
               class="hover:text-amber-600 transition-colors"
-              target="_blank"
               >가게 신청하기</NuxtLink
             >
           </li>
