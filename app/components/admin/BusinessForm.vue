@@ -23,11 +23,28 @@
       </label>
       <div>
         <span class="block text-xs font-semibold text-stone-500 mb-1">카테고리</span>
-        <div class="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
-          <label v-for="cat in categoryOptions" :key="cat" class="flex items-center gap-1.5 text-sm text-stone-700">
-            <input v-model="local.categories" type="checkbox" :value="cat" />
+        <select
+          class="field"
+          @change="addCategory(($event.target as HTMLSelectElement).value); ($event.target as HTMLSelectElement).value = ''"
+        >
+          <option value="">카테고리 추가…</option>
+          <option
+            v-for="cat in categoryOptions.filter((c) => !local.categories.includes(c))"
+            :key="cat"
+            :value="cat"
+          >
             {{ cat }}
-          </label>
+          </option>
+        </select>
+        <div v-if="local.categories.length" class="mt-2 flex flex-wrap gap-1.5">
+          <span
+            v-for="cat in local.categories"
+            :key="cat"
+            class="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs text-stone-700"
+          >
+            {{ cat }}
+            <button type="button" class="text-stone-400 hover:text-stone-700" @click="removeCategory(cat)">×</button>
+          </span>
         </div>
       </div>
     </div>
@@ -226,6 +243,14 @@ const { data: categoriesData } = useCategoriesData();
 const categoryOptions = computed(() =>
   categoriesData.value.filter((c) => !c.startsWith("전체")),
 );
+
+function addCategory(cat: string) {
+  if (cat && !local.categories.includes(cat)) local.categories.push(cat);
+}
+
+function removeCategory(cat: string) {
+  local.categories = local.categories.filter((c) => c !== cat);
+}
 const tagsText = ref(local.tags.join(", "));
 const imagesText = ref(local.images.join(", "));
 
